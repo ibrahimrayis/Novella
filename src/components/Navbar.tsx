@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Navbar = () => {
@@ -58,6 +58,9 @@ const Navbar = () => {
               </div>
             </div>
             <Link to="/projects" className="font-medium text-novella-navy hover:text-novella-red transition-colors">Projects</Link>
+            <Link to="/events" className="font-medium text-novella-navy hover:text-novella-red transition-colors flex items-center">
+              Events <Instagram size={16} className="ml-1" />
+            </Link>
             <Link to="/about" className="font-medium text-novella-navy hover:text-novella-red transition-colors">About</Link>
             <Link to="/contact">
               <Button className="bg-novella-red hover:bg-red-700 text-white">Contact Us</Button>
@@ -111,6 +114,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Projects
+            </Link>
+            <Link 
+              to="/events" 
+              className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray flex items-center"
+              onClick={() => setIsOpen(false)}
+            >
+              Events <Instagram size={16} className="ml-1" />
             </Link>
             <Link 
               to="/about" 

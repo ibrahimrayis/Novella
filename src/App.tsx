@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Projects from "./pages/Projects";
+import Events from "./pages/Events";
 import ProjectDetail from "./pages/ProjectDetail";
 import Construction from "./pages/services/Construction";
 import ImportExport from "./pages/services/ImportExport";
@@ -61,6 +62,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/events" element={<Events />} />
             <Route path="/projects/:slug" element={<ProjectDetail />} />
             <Route path="/services/construction" element={<Construction />} />
             <Route path="/services/import-export" element={<ImportExport />} />
