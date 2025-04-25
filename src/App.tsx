@@ -35,14 +35,14 @@ const App = () => {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 bg-novella-navy flex items-center justify-center z-50">
+      <div className="fixed inset-0 bg-red-500 flex items-center justify-center z-50">
         <div className="flex flex-col items-center">
           <img 
-            src="/lovable-uploads/a37276e8-d5b1-4fce-967f-f2bf01f89703.png" 
+            src="/lovable-uploads/5971e56a-e915-4ccc-a028-0175de3ca823.png" 
             alt="Novella Logo" 
             className="h-16 mb-4" 
           />
-          <div className="w-16 h-1 bg-novella-red relative overflow-hidden">
+          <div className="w-16 h-1 bg-white relative overflow-hidden">
             <div className="absolute h-full bg-white animate-pulse" style={{ width: '100%' }}></div>
           </div>
         </div>
