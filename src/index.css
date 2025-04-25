@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -96,6 +99,30 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .highlight-text {
+    @apply text-novella-red font-bold;
+  }
+
+  .page-title {
+    @apply text-3xl md:text-5xl font-bold mb-6 md:mb-10;
+  }
+
+  .section-title {
+    @apply text-2xl md:text-4xl font-bold mb-4 md:mb-6;
+  }
+
+  .service-card {
+    @apply bg-white rounded-lg shadow-md p-6 transition-all duration-300 hover:shadow-xl;
+  }
+
+  .service-icon {
+    @apply w-12 h-12 text-novella-red mb-4;
   }
 }
