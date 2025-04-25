@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Building2, Globe, Factory, Users, Award, Briefcase, Clock, ArrowRight } from "lucide-react";
@@ -11,6 +10,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ServiceCard from "@/components/ServiceCard";
 import StatCard from "@/components/StatCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import RealEstateSection from "@/components/RealEstateSection";
 import ProjectCard from "@/components/ProjectCard";
 
 const Home = () => {
@@ -143,46 +143,8 @@ const Home = () => {
           </div>
         </section>
 
-        {/* Featured Projects */}
-        <section className="section-padding">
-          <div className="container mx-auto px-4 md:px-6">
-            <SectionTitle 
-              title="Featured Projects" 
-              subtitle="Our work speaks for itself. Here's a selection of our notable projects."
-            />
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-              <ProjectCard
-                title="Modern Office Complex"
-                category="Commercial"
-                image="/lovable-uploads/217b0ff4-1cf2-4ecc-a3e3-5e9748d39c4e.png"
-                slug="modern-office-complex"
-              />
-              
-              <ProjectCard
-                title="Residential Tower"
-                category="Residential"
-                image="/lovable-uploads/ea28938e-81de-49e8-95d9-befe8572af37.png"
-                slug="residential-tower"
-              />
-              
-              <ProjectCard
-                title="Industrial Facility"
-                category="Industrial"
-                image="/lovable-uploads/4fa5f518-fa61-4305-829c-3bfec8dd5376.png"
-                slug="industrial-facility"
-              />
-            </div>
-            
-            <div className="text-center mt-12">
-              <Link to="/projects">
-                <Button variant="outline" className="border-novella-navy text-novella-navy hover:bg-novella-navy hover:text-white inline-flex items-center">
-                  View All Projects <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* Real Estate Section */}
+        <RealEstateSection />
 
         {/* Testimonials */}
         <section className="section-padding bg-gray-50">
