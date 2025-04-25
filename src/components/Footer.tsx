@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
@@ -11,11 +10,6 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center mb-6">
-              <img 
-                src="/lovable-uploads/a37276e8-d5b1-4fce-967f-f2bf01f89703.png" 
-                alt="Novella Logo" 
-                className="h-10 mr-2" 
-              />
               <span className="text-xl font-bold">Novella</span>
             </div>
             <p className="mb-6 text-gray-300">
