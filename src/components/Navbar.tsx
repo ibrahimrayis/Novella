@@ -30,7 +30,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
             <img src="/lovable-uploads/5971e56a-e915-4ccc-a028-0175de3ca823.png" alt="Novella Logo" className="h-10 md:h-12" />
-            <span className="ml-2 font-script text-amber-400 font-bold text-sm italic">
+            <span className="ml-2 font-script text-novella-red font-bold text-sm md:text-base tracking-wide hover:text-novella-navy transition-colors">
               Your Success, Our Story
             </span>
           </Link>
