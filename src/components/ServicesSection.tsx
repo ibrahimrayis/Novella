@@ -1,5 +1,5 @@
 
-import { Building2, Globe, Factory } from "lucide-react";
+import { Building2, Globe, Factory, Home } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
 
@@ -9,10 +9,10 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6">
         <SectionTitle 
           title="Our Services" 
-          subtitle="We provide comprehensive solutions across construction, import/export, and manufacturing sectors"
+          subtitle="We provide comprehensive solutions across construction, import/export, manufacturing, and real estate sectors"
         />
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           <ServiceCard
             title="Construction"
             description="We create top-quality, enduring spaces where people can thrive, transforming raw materials into lasting stories."
@@ -32,6 +32,13 @@ const ServicesSection = () => {
             description="Dedicated to precision, innovation, and excellence in manufacturing with state-of-the-art facilities and skilled workforce."
             icon={<Factory size={40} />}
             link="/services/manufacturing"
+          />
+          
+          <ServiceCard
+            title="Real Estate"
+            description="Offering premium residential and commercial properties with exceptional investment value and comprehensive property management services."
+            icon={<Home size={40} />}
+            link="/services/real-estate"
           />
         </div>
       </div>

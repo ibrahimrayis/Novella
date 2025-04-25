@@ -16,6 +16,7 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Construction from "./pages/services/Construction";
 import ImportExport from "./pages/services/ImportExport";
 import Manufacturing from "./pages/services/Manufacturing";
+import RealEstate from "./pages/services/RealEstate";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -67,6 +68,7 @@ const App = () => {
             <Route path="/services/construction" element={<Construction />} />
             <Route path="/services/import-export" element={<ImportExport />} />
             <Route path="/services/manufacturing" element={<Manufacturing />} />
+            <Route path="/services/real-estate" element={<RealEstate />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

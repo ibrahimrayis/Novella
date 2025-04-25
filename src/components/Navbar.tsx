@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Instagram } from 'lucide-react';
@@ -42,6 +43,7 @@ const Navbar = () => {
                 <Link to="/services/construction" className="block px-4 py-2 hover:bg-novella-lightGray">Construction</Link>
                 <Link to="/services/import-export" className="block px-4 py-2 hover:bg-novella-lightGray">Import & Export</Link>
                 <Link to="/services/manufacturing" className="block px-4 py-2 hover:bg-novella-lightGray">Manufacturing</Link>
+                <Link to="/services/real-estate" className="block px-4 py-2 hover:bg-novella-lightGray">Real Estate</Link>
               </div>
             </div>
             <Link to="/projects" className="font-medium text-novella-navy hover:text-novella-red transition-colors">Projects</Link>
@@ -72,6 +74,9 @@ const Navbar = () => {
             </Link>
             <Link to="/services/manufacturing" className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Manufacturing
+            </Link>
+            <Link to="/services/real-estate" className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
+              Real Estate
             </Link>
             <Link to="/projects" className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Projects
