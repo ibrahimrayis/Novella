@@ -2,11 +2,9 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -15,32 +13,20 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  return (
-    <nav 
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
-      }`}
-    >
+  return <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/5971e56a-e915-4ccc-a028-0175de3ca823.png" 
-              alt="Novella Logo" 
-              className="h-10 md:h-12" 
-            />
-            <span className="ml-2 text-2xl font-script font-bold text-novella-navy">
+            <img src="/lovable-uploads/5971e56a-e915-4ccc-a028-0175de3ca823.png" alt="Novella Logo" className="h-10 md:h-12" />
+            <span className="ml-2 font-script text-amber-400 font-bold text-sm">
               Your Success, Our Story
             </span>
           </Link>
@@ -69,81 +55,42 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-novella-navy"
-            onClick={toggleMenu}
-          >
+          <button className="md:hidden text-novella-navy" onClick={toggleMenu}>
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg animate-fade-in">
-            <Link 
-              to="/" 
-              className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray"
-              onClick={() => setIsOpen(false)}
-            >
+        {isOpen && <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg animate-fade-in">
+            <Link to="/" className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Home
             </Link>
             <div className="px-4 py-2 text-novella-navy font-medium">Services</div>
-            <Link 
-              to="/services/construction" 
-              className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/services/construction" className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Construction
             </Link>
-            <Link 
-              to="/services/import-export" 
-              className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/services/import-export" className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Import & Export
             </Link>
-            <Link 
-              to="/services/manufacturing" 
-              className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/services/manufacturing" className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Manufacturing
             </Link>
-            <Link 
-              to="/projects" 
-              className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/projects" className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Projects
             </Link>
-            <Link 
-              to="/events" 
-              className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray flex items-center"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/events" className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray flex items-center" onClick={() => setIsOpen(false)}>
               Events <Instagram size={16} className="ml-1" />
             </Link>
-            <Link 
-              to="/about" 
-              className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/about" className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               About
             </Link>
-            <Link 
-              to="/contact" 
-              className="block px-4 py-2 mt-2"
-              onClick={() => setIsOpen(false)}
-            >
+            <Link to="/contact" className="block px-4 py-2 mt-2" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-novella-red hover:bg-red-700 text-white">
                 Contact Us
               </Button>
             </Link>
-          </div>
-        )}
+          </div>}
       </div>
-    </nav>
-  );
+    </nav>;
 };
-
 export default Navbar;
