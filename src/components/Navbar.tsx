@@ -40,7 +40,9 @@ const Navbar = () => {
               alt="Novella Logo" 
               className="h-10 md:h-12" 
             />
-            <span className="ml-2 text-xl font-bold text-novella-navy">Novella</span>
+            <span className="ml-2 text-2xl font-script font-bold text-novella-navy">
+              Your Success, Our Story
+            </span>
           </Link>
 
           {/* Desktop Menu */}
