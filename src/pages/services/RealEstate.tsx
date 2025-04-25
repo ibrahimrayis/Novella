@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import { Home, Check, Star, MapPin } from "lucide-react";
+import { Home, Check, Star, MapPin, Building2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
