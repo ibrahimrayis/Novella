@@ -1,8 +1,8 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import LanguageSelector from './LanguageSelector';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
             <img src="/lovable-uploads/5971e56a-e915-4ccc-a028-0175de3ca823.png" alt="Novella Logo" className="h-10 md:h-12" />
           </Link>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4">
             <Link to="/" className="font-medium text-novella-navy hover:text-novella-red transition-colors">Home</Link>
             <div className="relative group">
               <button className="flex items-center font-medium text-novella-navy hover:text-novella-red transition-colors">
@@ -54,6 +54,7 @@ const Navbar = () => {
             <Link to="/contact">
               <Button className="bg-novella-red hover:bg-red-700 text-white">Contact Us</Button>
             </Link>
+            <LanguageSelector />
           </div>
 
           <button className="md:hidden text-novella-navy" onClick={toggleMenu}>
@@ -87,6 +88,9 @@ const Navbar = () => {
             <Link to="/about" className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               About
             </Link>
+            <div className="px-4 py-2">
+              <LanguageSelector />
+            </div>
             <Link to="/contact" className="block px-4 py-2 mt-2" onClick={() => setIsOpen(false)}>
               <Button className="w-full bg-novella-red hover:bg-red-700 text-white">
                 Contact Us
