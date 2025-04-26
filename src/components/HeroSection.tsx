@@ -16,17 +16,17 @@ const HeroSection = ({
   subtitle,
   ctaText = "Contact Us",
   ctaLink = "/contact",
-  backgroundImage = "/lovable-uploads/49a9fb07-4dca-4c3d-b18b-7a17715a0f00.png"
+  backgroundImage = "/lovable-uploads/797ea2b3-dd4c-485b-abe2-c444b2e40db9.png"
 }: HeroSectionProps) => {
   return (
-    <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ 
           backgroundImage: `url(${backgroundImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-novella-navy/90 to-novella-navy/40"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-novella-navy/95 to-novella-navy/70"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
