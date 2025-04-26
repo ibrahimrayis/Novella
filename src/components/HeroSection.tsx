@@ -16,7 +16,7 @@ const HeroSection = ({
   subtitle,
   ctaText = "Contact Us",
   ctaLink = "/contact",
-  backgroundImage = "/lovable-uploads/6c78052e-6ec1-48bb-823e-b7fae9a01826.png"
+  backgroundImage = "/lovable-uploads/bd7f973c-593f-4226-90f9-ee24e4e86d27.png"
 }: HeroSectionProps) => {
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
