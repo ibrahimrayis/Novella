@@ -24,9 +24,12 @@ const HeroSection = ({
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ 
           backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-novella-navy/95 to-novella-navy/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-novella-navy/80 to-novella-navy/50"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
