@@ -1,6 +1,8 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
+import LanguageSelector from "./LanguageSelector";
 
 interface HeroSectionProps {
   title: string;
@@ -19,6 +21,7 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
+      <LanguageSelector />
       <div 
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{ 
