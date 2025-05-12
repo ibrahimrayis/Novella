@@ -18,13 +18,16 @@ const ThemeToggle = ({ className }: ThemeToggleProps) => {
       size="icon"
       onClick={toggleTheme}
       className={cn(
-        "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-colors",
+        "transition-colors",
+        theme === 'dark' 
+          ? "bg-gray-800/50 backdrop-blur-sm border-gray-700/50 hover:bg-gray-700" 
+          : "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20",
         className
       )}
       aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
     >
       {theme === 'dark' ? (
-        <Sun className="h-4 w-4 text-white" />
+        <Sun className="h-4 w-4 text-yellow-300" />
       ) : (
         <Moon className="h-4 w-4 text-white" />
       )}

@@ -30,7 +30,7 @@ const HeroSection = ({
         }}
       >
         {/* Dark overlay filter with adaptive tint for dark/light mode */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 dark:from-black/70 dark:via-black/60 dark:to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 dark:from-black/75 dark:via-black/65 dark:to-black/80"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
