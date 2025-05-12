@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { 
@@ -137,7 +136,7 @@ const B2B = () => {
                 </div>
                 <h3 className="text-xl font-bold mb-2">Increase Sales</h3>
                 <p className="text-white/80">
-                  Boost your revenue with optimized digital marketing strategies and SEO techniques that drive qualified traffic to your business.
+                  Boost your revenue with optimized digital marketing strategies and SEO techniques that drive qualified traffic to your business website.
                 </p>
               </div>
               
@@ -400,7 +399,7 @@ const B2B = () => {
 
         <CTASection 
           title="Ready to Elevate Your Business?" 
-          description="Partner with Novella for innovative digital solutions that drive growth"
+          subtitle="Partner with Novella for innovative digital solutions that drive growth"
           buttonText="Start Your Project"
           buttonLink="/contact"
         />

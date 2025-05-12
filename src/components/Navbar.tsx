@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown, Instagram, Globe } from 'lucide-react';
@@ -9,17 +8,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
-const languages = [
-  { code: "en", label: "English" },
-  { code: "tr", label: "Turkish" },
-  { code: "ar", label: "Arabic" },
-  { code: "ru", label: "Russian" },
-];
+import { useLanguage, languages } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { currentLanguage, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -47,9 +41,9 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-6">
-            <Link to="/" className="font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20">Home</Link>
+            <Link to="/" className="font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20 backdrop-blur-sm">Home</Link>
             <div className="relative group">
-              <button className="flex items-center font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20">
+              <button className="flex items-center font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20 backdrop-blur-sm">
                 Services <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 bg-white/90 backdrop-blur-md shadow-lg rounded-md py-2">
@@ -60,11 +54,11 @@ const Navbar = () => {
                 <Link to="/services/b2b" className="block px-4 py-2 hover:bg-novella-lightGray">B2B Solutions</Link>
               </div>
             </div>
-            <Link to="/projects" className="font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20">Projects</Link>
-            <Link to="/events" className="font-medium text-novella-navy hover:text-novella-red transition-colors flex items-center px-3 py-1 rounded-md hover:bg-white/20">
+            <Link to="/projects" className="font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20 backdrop-blur-sm">Projects</Link>
+            <Link to="/events" className="font-medium text-novella-navy hover:text-novella-red transition-colors flex items-center px-3 py-1 rounded-md hover:bg-white/20 backdrop-blur-sm">
               Events <Instagram size={16} className="ml-1" />
             </Link>
-            <Link to="/about" className="font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20">About</Link>
+            <Link to="/about" className="font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20 backdrop-blur-sm">About</Link>
             
             <div className="flex items-center space-x-3">
               <DropdownMenu>
@@ -75,7 +69,11 @@ const Navbar = () => {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
                   {languages.map((lang) => (
-                    <DropdownMenuItem key={lang.code} onClick={() => console.log(`Switching to ${lang.label}`)}>
+                    <DropdownMenuItem 
+                      key={lang.code} 
+                      onClick={() => setLanguage(lang)}
+                      className={currentLanguage.code === lang.code ? "bg-muted font-medium" : ""}
+                    >
                       {lang.label}
                     </DropdownMenuItem>
                   ))}
@@ -97,7 +95,11 @@ const Navbar = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 {languages.map((lang) => (
-                  <DropdownMenuItem key={lang.code} onClick={() => console.log(`Switching to ${lang.label}`)}>
+                  <DropdownMenuItem 
+                    key={lang.code} 
+                    onClick={() => setLanguage(lang)}
+                    className={currentLanguage.code === lang.code ? "bg-muted font-medium" : ""}
+                  >
                     {lang.label}
                   </DropdownMenuItem>
                 ))}
