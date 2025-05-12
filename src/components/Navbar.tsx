@@ -57,6 +57,7 @@ const Navbar = () => {
                 <Link to="/services/import-export" className="block px-4 py-2 hover:bg-novella-lightGray">Import & Export</Link>
                 <Link to="/services/manufacturing" className="block px-4 py-2 hover:bg-novella-lightGray">Manufacturing</Link>
                 <Link to="/services/real-estate" className="block px-4 py-2 hover:bg-novella-lightGray">Real Estate</Link>
+                <Link to="/services/b2b" className="block px-4 py-2 hover:bg-novella-lightGray">B2B Solutions</Link>
               </div>
             </div>
             <Link to="/projects" className="font-medium text-novella-navy hover:text-novella-red transition-colors px-3 py-1 rounded-md hover:bg-white/20">Projects</Link>
@@ -125,6 +126,9 @@ const Navbar = () => {
             </Link>
             <Link to="/services/real-estate" className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Real Estate
+            </Link>
+            <Link to="/services/b2b" className="block px-8 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
+              B2B Solutions
             </Link>
             <Link to="/projects" className="block px-4 py-2 text-novella-navy hover:bg-novella-lightGray" onClick={() => setIsOpen(false)}>
               Projects

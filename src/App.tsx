@@ -17,6 +17,7 @@ import Construction from "./pages/services/Construction";
 import ImportExport from "./pages/services/ImportExport";
 import Manufacturing from "./pages/services/Manufacturing";
 import RealEstate from "./pages/services/RealEstate";
+import B2B from "./pages/services/B2B";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -69,6 +70,7 @@ const App = () => {
             <Route path="/services/import-export" element={<ImportExport />} />
             <Route path="/services/manufacturing" element={<Manufacturing />} />
             <Route path="/services/real-estate" element={<RealEstate />} />
+            <Route path="/services/b2b" element={<B2B />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
