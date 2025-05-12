@@ -77,7 +77,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent backdrop-blur-sm bg-white/10 py-4'
+        scrolled ? 'bg-black/80 backdrop-blur-md shadow-md py-2' : 'bg-transparent backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -94,7 +94,7 @@ const Navbar = () => {
                   <Link 
                     to={item.href}
                     className={cn(
-                      "px-4 py-2 rounded-md font-medium text-novella-navy hover:text-novella-red transition-colors",
+                      "px-4 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors",
                       isActive(item.href) && "text-novella-red font-semibold bg-white/10"
                     )}
                   >
@@ -108,7 +108,7 @@ const Navbar = () => {
               <li className="relative group">
                 <button 
                   className={cn(
-                    "px-4 py-2 rounded-md font-medium text-novella-navy hover:text-novella-red transition-colors flex items-center",
+                    "px-4 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors flex items-center",
                     isActive('/services') && "text-novella-red font-semibold bg-white/10"
                   )}
                 >
@@ -117,15 +117,15 @@ const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-black/90 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-1">
                     {services.map((service) => (
                       <Link 
                         key={service.title}
                         to={service.href}
                         className={cn(
-                          "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
-                          isActive(service.href) && "bg-gray-100 text-novella-red font-medium"
+                          "block px-4 py-2 text-sm text-white hover:bg-white/10",
+                          isActive(service.href) && "bg-white/10 text-novella-red font-medium"
                         )}
                       >
                         {service.title}
@@ -140,15 +140,18 @@ const Navbar = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
-                    <Languages className="h-4 w-4 text-novella-navy" />
+                    <Languages className="h-4 w-4 text-white" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="bg-white/90 backdrop-blur-md">
+                <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md">
                   {languages.map((lang) => (
                     <DropdownMenuItem 
                       key={lang.code} 
                       onClick={() => handleLanguageChange(lang)}
-                      className={currentLanguage.code === lang.code ? "bg-muted font-medium" : ""}
+                      className={cn(
+                        "text-white hover:bg-white/10",
+                        currentLanguage.code === lang.code ? "bg-white/10 font-medium" : ""
+                      )}
                     >
                       {lang.label}
                     </DropdownMenuItem>
@@ -167,15 +170,18 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
-                  <Languages className="h-4 w-4 text-novella-navy" />
+                  <Languages className="h-4 w-4 text-white" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white/90 backdrop-blur-md">
+              <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md">
                 {languages.map((lang) => (
                   <DropdownMenuItem 
                     key={lang.code} 
                     onClick={() => handleLanguageChange(lang)}
-                    className={currentLanguage.code === lang.code ? "bg-muted font-medium" : ""}
+                    className={cn(
+                      "text-white hover:bg-white/10",
+                      currentLanguage.code === lang.code ? "bg-white/10 font-medium" : ""
+                    )}
                   >
                     {lang.label}
                   </DropdownMenuItem>
@@ -184,7 +190,7 @@ const Navbar = () => {
             </DropdownMenu>
             
             <button 
-              className="text-novella-navy p-2 rounded-md hover:bg-white/20" 
+              className="text-white p-2 rounded-md hover:bg-white/20" 
               onClick={toggleMenu}
               aria-label={isOpen ? "Close menu" : "Open menu"}
             >
@@ -195,37 +201,37 @@ const Navbar = () => {
 
         {/* Mobile Menu with improved styling and positioning */}
         {isOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white/95 backdrop-blur-md rounded-lg shadow-lg animate-in fade-in slide-in-from-top duration-300">
+          <div className="md:hidden mt-4 py-4 bg-black/95 backdrop-blur-md rounded-lg shadow-lg animate-in fade-in slide-in-from-top duration-300">
             <div className="flex flex-col">
               {navItems.map((item) => (
                 <Link 
                   key={item.title}
                   to={item.href} 
                   className={cn(
-                    "flex items-center px-4 py-3 text-novella-navy hover:bg-novella-lightGray transition-colors",
-                    isActive(item.href) && "bg-novella-lightGray/50 text-novella-red font-medium"
+                    "flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors",
+                    isActive(item.href) && "bg-white/10 text-novella-red font-medium"
                   )}
                 >
                   {item.title} {item.icon && item.icon}
                 </Link>
               ))}
               
-              <div className="px-4 py-3 text-novella-navy font-medium border-t border-gray-100 mt-2">Services</div>
+              <div className="px-4 py-3 text-white font-medium border-t border-white/10 mt-2">Services</div>
               
               {services.map((service) => (
                 <Link 
                   key={service.title}
                   to={service.href} 
                   className={cn(
-                    "block px-8 py-2 text-novella-navy hover:bg-novella-lightGray transition-colors",
-                    isActive(service.href) && "bg-novella-lightGray/50 text-novella-red font-medium"
+                    "block px-8 py-2 text-white hover:bg-white/10 transition-colors",
+                    isActive(service.href) && "bg-white/10 text-novella-red font-medium"
                   )}
                 >
                   {service.title}
                 </Link>
               ))}
               
-              <div className="px-4 py-4 mt-2 border-t border-gray-100">
+              <div className="px-4 py-4 mt-2 border-t border-white/10">
                 <Link to="/contact" className="block">
                   <Button className="w-full bg-novella-red hover:bg-red-700 text-white">
                     Contact Us
