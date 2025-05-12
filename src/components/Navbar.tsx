@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Languages } from 'lucide-react';
@@ -83,18 +84,18 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
-            <img src="/lovable-uploads/5971e56a-e915-4ccc-a028-0175de3ca823.png" alt="Novella Logo" className="h-10 md:h-12" />
+            <img src="/lovable-uploads/5971e56a-e915-4ccc-a028-0175de3ca823.png" alt="Novella Logo" className="h-8 md:h-10" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
-            <ul className="flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-6">
+            <ul className="flex items-center space-x-2">
               {navItems.map((item) => (
                 <li key={item.title}>
                   <Link 
                     to={item.href}
                     className={cn(
-                      "px-4 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors",
+                      "px-3 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors",
                       isActive(item.href) && "text-novella-red font-semibold bg-white/10"
                     )}
                   >
@@ -108,7 +109,7 @@ const Navbar = () => {
               <li className="relative group">
                 <button 
                   className={cn(
-                    "px-4 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors flex items-center",
+                    "px-3 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors flex items-center",
                     isActive('/services') && "text-novella-red font-semibold bg-white/10"
                   )}
                 >
@@ -117,7 +118,7 @@ const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
                 </button>
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-black/90 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="absolute left-0 mt-1 w-48 rounded-md shadow-lg bg-black/90 ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="py-1">
                     {services.map((service) => (
                       <Link 
@@ -136,7 +137,7 @@ const Navbar = () => {
               </li>
             </ul>
             
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-4">
               <ThemeToggle />
               
               <DropdownMenu>
@@ -168,7 +169,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Navigation Controls */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="md:hidden flex items-center space-x-3">
             <ThemeToggle />
             
             <DropdownMenu>
@@ -205,14 +206,14 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 py-4 bg-black/95 backdrop-blur-md dark:bg-black/98 rounded-lg shadow-lg animate-in fade-in slide-in-from-top duration-300">
+          <div className="md:hidden mt-3 py-3 bg-black/95 backdrop-blur-md dark:bg-black/98 rounded-lg shadow-lg animate-in fade-in slide-in-from-top duration-300">
             <div className="flex flex-col">
               {navItems.map((item) => (
                 <Link 
                   key={item.title}
                   to={item.href} 
                   className={cn(
-                    "flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors",
+                    "flex items-center px-4 py-2 text-white hover:bg-white/10 transition-colors",
                     isActive(item.href) && "bg-white/10 text-novella-red font-medium"
                   )}
                 >
@@ -220,14 +221,14 @@ const Navbar = () => {
                 </Link>
               ))}
               
-              <div className="px-4 py-3 text-white font-medium border-t border-white/10 mt-2">Services</div>
+              <div className="px-4 py-2 text-white font-medium border-t border-white/10 mt-1">Services</div>
               
               {services.map((service) => (
                 <Link 
                   key={service.title}
                   to={service.href} 
                   className={cn(
-                    "block px-8 py-2 text-white hover:bg-white/10 transition-colors",
+                    "block px-6 py-2 text-white hover:bg-white/10 transition-colors",
                     isActive(service.href) && "bg-white/10 text-novella-red font-medium"
                   )}
                 >
@@ -235,7 +236,7 @@ const Navbar = () => {
                 </Link>
               ))}
               
-              <div className="px-4 py-4 mt-2 border-t border-white/10">
+              <div className="px-4 py-3 mt-1 border-t border-white/10">
                 <Link to="/contact" className="block">
                   <Button className="w-full bg-novella-red hover:bg-red-700 text-white">
                     Contact Us
