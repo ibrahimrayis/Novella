@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Globe } from 'lucide-react';
+import { Menu, X, Instagram, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -11,15 +11,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, languages } from '@/contexts/LanguageContext';
 import { useIsMobile } from '@/hooks/use-mobile';
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
@@ -76,6 +67,11 @@ const Navbar = () => {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
+  };
+
+  const handleLanguageChange = (lang: typeof languages[0]) => {
+    console.log(`Setting language to ${lang.label}`);
+    setLanguage(lang);
   };
 
   return (
@@ -144,14 +140,14 @@ const Navbar = () => {
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
-                    <Globe className="h-4 w-4 text-novella-navy" />
+                    <Languages className="h-4 w-4 text-novella-navy" />
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end" className="bg-white/90 backdrop-blur-md">
                   {languages.map((lang) => (
                     <DropdownMenuItem 
                       key={lang.code} 
-                      onClick={() => setLanguage(lang)}
+                      onClick={() => handleLanguageChange(lang)}
                       className={currentLanguage.code === lang.code ? "bg-muted font-medium" : ""}
                     >
                       {lang.label}
@@ -171,14 +167,14 @@ const Navbar = () => {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
-                  <Globe className="h-4 w-4 text-novella-navy" />
+                  <Languages className="h-4 w-4 text-novella-navy" />
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end" className="bg-white/90 backdrop-blur-md">
                 {languages.map((lang) => (
                   <DropdownMenuItem 
                     key={lang.code} 
-                    onClick={() => setLanguage(lang)}
+                    onClick={() => handleLanguageChange(lang)}
                     className={currentLanguage.code === lang.code ? "bg-muted font-medium" : ""}
                   >
                     {lang.label}
