@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Instagram, Languages } from 'lucide-react';
@@ -12,6 +11,7 @@ import {
 import { useLanguage, languages } from '@/contexts/LanguageContext';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
+import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,7 +77,7 @@ const Navbar = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/80 backdrop-blur-md shadow-md py-2' : 'bg-transparent backdrop-blur-sm py-4'
+        scrolled ? 'bg-black/80 backdrop-blur-md shadow-md py-2 dark:bg-black/90' : 'bg-transparent backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
@@ -137,13 +137,15 @@ const Navbar = () => {
             </ul>
             
             <div className="flex items-center space-x-3">
+              <ThemeToggle />
+              
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
                     <Languages className="h-4 w-4 text-white" />
                   </Button>
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md">
+                <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md dark:bg-black/95">
                   {languages.map((lang) => (
                     <DropdownMenuItem 
                       key={lang.code} 
@@ -167,13 +169,15 @@ const Navbar = () => {
 
           {/* Mobile Navigation Controls */}
           <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
                   <Languages className="h-4 w-4 text-white" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md">
+              <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md dark:bg-black/95">
                 {languages.map((lang) => (
                   <DropdownMenuItem 
                     key={lang.code} 
@@ -199,9 +203,9 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu with improved styling and positioning */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 py-4 bg-black/95 backdrop-blur-md rounded-lg shadow-lg animate-in fade-in slide-in-from-top duration-300">
+          <div className="md:hidden mt-4 py-4 bg-black/95 backdrop-blur-md dark:bg-black/98 rounded-lg shadow-lg animate-in fade-in slide-in-from-top duration-300">
             <div className="flex flex-col">
               {navItems.map((item) => (
                 <Link 

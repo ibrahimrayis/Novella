@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
 // Pages
 import Home from "./pages/Home";
@@ -57,25 +58,27 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <LanguageProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <ScrollToTop />
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/projects/:slug" element={<ProjectDetail />} />
-              <Route path="/services/construction" element={<Construction />} />
-              <Route path="/services/import-export" element={<ImportExport />} />
-              <Route path="/services/manufacturing" element={<Manufacturing />} />
-              <Route path="/services/real-estate" element={<RealEstate />} />
-              <Route path="/services/b2b" element={<B2B />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
+          <ThemeProvider>
+            <Toaster />
+            <Sonner />
+            <BrowserRouter>
+              <ScrollToTop />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/events" element={<Events />} />
+                <Route path="/projects/:slug" element={<ProjectDetail />} />
+                <Route path="/services/construction" element={<Construction />} />
+                <Route path="/services/import-export" element={<ImportExport />} />
+                <Route path="/services/manufacturing" element={<Manufacturing />} />
+                <Route path="/services/real-estate" element={<RealEstate />} />
+                <Route path="/services/b2b" element={<B2B />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </BrowserRouter>
+          </ThemeProvider>
         </LanguageProvider>
       </TooltipProvider>
     </QueryClientProvider>
