@@ -25,7 +25,7 @@ import { motion } from "@/components/ui/motion";
 import CTASection from "@/components/CTASection";
 import B2BServiceCard from "@/components/B2BServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import { ContactForm } from "@/components/ContactForm";
+import ContactForm from "@/components/ContactForm";
 
 const B2B = () => {
   useEffect(() => {
@@ -116,7 +116,8 @@ const B2B = () => {
             <SectionTitle 
               title="Why Choose Us" 
               subtitle="Partner with us to transform your digital presence and drive exceptional business growth"
-              lightMode={true}
+              align="center"
+              className="text-white"
             />
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -399,7 +400,7 @@ const B2B = () => {
 
         <CTASection 
           title="Ready to Elevate Your Business?" 
-          subtitle="Partner with Novella for innovative digital solutions that drive growth"
+          description="Partner with Novella for innovative digital solutions that drive growth"
           buttonText="Start Your Project"
           buttonLink="/contact"
         />
