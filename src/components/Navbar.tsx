@@ -37,7 +37,11 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
+    
     window.addEventListener('scroll', handleScroll);
+    // Initial check to set correct state based on current scroll position
+    handleScroll();
+    
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -75,7 +79,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent backdrop-blur-sm bg-white/10 py-4'}`}>
+    <nav 
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-2' : 'bg-transparent backdrop-blur-sm bg-white/10 py-4'
+      }`}
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center">
@@ -84,53 +92,53 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <NavigationMenu className="max-w-none">
-              <NavigationMenuList>
-                {navItems.map((item) => (
-                  <NavigationMenuItem key={item.title}>
-                    <Link to={item.href}>
-                      <NavigationMenuLink 
-                        className={cn(
-                          navigationMenuTriggerStyle(),
-                          "font-medium text-novella-navy hover:text-novella-red transition-colors bg-transparent hover:bg-white/20",
-                          isActive(item.href) && "text-novella-red font-semibold bg-white/10"
-                        )}
-                      >
-                        {item.title} {item.icon}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                ))}
-                
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger 
+            <ul className="flex items-center space-x-1">
+              {navItems.map((item) => (
+                <li key={item.title}>
+                  <Link 
+                    to={item.href}
                     className={cn(
-                      "font-medium text-novella-navy hover:text-novella-red transition-colors bg-transparent hover:bg-white/20",
-                      isActive('/services') && "text-novella-red font-semibold bg-white/10"
+                      "px-4 py-2 rounded-md font-medium text-novella-navy hover:text-novella-red transition-colors",
+                      isActive(item.href) && "text-novella-red font-semibold bg-white/10"
                     )}
                   >
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <ul className="grid w-[220px] gap-1 p-2 bg-white/90 backdrop-blur-md shadow-lg rounded-md">
-                      {services.map((service) => (
-                        <li key={service.title}>
-                          <Link 
-                            to={service.href}
-                            className={cn(
-                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-novella-lightGray hover:text-novella-red",
-                              isActive(service.href) && "bg-novella-lightGray text-novella-red font-medium"
-                            )}
-                          >
-                            <div className="text-sm font-medium leading-none">{service.title}</div>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+                    <span className="flex items-center">
+                      {item.title} {item.icon && item.icon}
+                    </span>
+                  </Link>
+                </li>
+              ))}
+              
+              <li className="relative group">
+                <button 
+                  className={cn(
+                    "px-4 py-2 rounded-md font-medium text-novella-navy hover:text-novella-red transition-colors flex items-center",
+                    isActive('/services') && "text-novella-red font-semibold bg-white/10"
+                  )}
+                >
+                  Services
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                  </svg>
+                </button>
+                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="py-1">
+                    {services.map((service) => (
+                      <Link 
+                        key={service.title}
+                        to={service.href}
+                        className={cn(
+                          "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100",
+                          isActive(service.href) && "bg-gray-100 text-novella-red font-medium"
+                        )}
+                      >
+                        {service.title}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </li>
+            </ul>
             
             <div className="flex items-center space-x-3">
               <DropdownMenu>
@@ -179,51 +187,55 @@ const Navbar = () => {
               </DropdownMenuContent>
             </DropdownMenu>
             
-            <button className="text-novella-navy p-2 rounded-md hover:bg-white/20" onClick={toggleMenu}>
+            <button 
+              className="text-novella-navy p-2 rounded-md hover:bg-white/20" 
+              onClick={toggleMenu}
+              aria-label={isOpen ? "Close menu" : "Open menu"}
+            >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu with improved styling and positioning */}
         {isOpen && (
           <div className="md:hidden mt-4 py-4 bg-white/95 backdrop-blur-md rounded-lg shadow-lg animate-in fade-in slide-in-from-top duration-300">
-            {navItems.map((item) => (
-              <Link 
-                key={item.title}
-                to={item.href} 
-                className={cn(
-                  "flex items-center px-4 py-3 text-novella-navy hover:bg-novella-lightGray transition-colors",
-                  isActive(item.href) && "bg-novella-lightGray/50 text-novella-red font-medium"
-                )}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.title} {item.icon}
-              </Link>
-            ))}
-            
-            <div className="px-4 py-3 text-novella-navy font-medium border-t border-gray-100 mt-2">Services</div>
-            
-            {services.map((service) => (
-              <Link 
-                key={service.title}
-                to={service.href} 
-                className={cn(
-                  "block px-8 py-2 text-novella-navy hover:bg-novella-lightGray transition-colors",
-                  isActive(service.href) && "bg-novella-lightGray/50 text-novella-red font-medium"
-                )}
-                onClick={() => setIsOpen(false)}
-              >
-                {service.title}
-              </Link>
-            ))}
-            
-            <div className="px-4 py-4 mt-2 border-t border-gray-100">
-              <Link to="/contact" className="block" onClick={() => setIsOpen(false)}>
-                <Button className="w-full bg-novella-red hover:bg-red-700 text-white">
-                  Contact Us
-                </Button>
-              </Link>
+            <div className="flex flex-col">
+              {navItems.map((item) => (
+                <Link 
+                  key={item.title}
+                  to={item.href} 
+                  className={cn(
+                    "flex items-center px-4 py-3 text-novella-navy hover:bg-novella-lightGray transition-colors",
+                    isActive(item.href) && "bg-novella-lightGray/50 text-novella-red font-medium"
+                  )}
+                >
+                  {item.title} {item.icon && item.icon}
+                </Link>
+              ))}
+              
+              <div className="px-4 py-3 text-novella-navy font-medium border-t border-gray-100 mt-2">Services</div>
+              
+              {services.map((service) => (
+                <Link 
+                  key={service.title}
+                  to={service.href} 
+                  className={cn(
+                    "block px-8 py-2 text-novella-navy hover:bg-novella-lightGray transition-colors",
+                    isActive(service.href) && "bg-novella-lightGray/50 text-novella-red font-medium"
+                  )}
+                >
+                  {service.title}
+                </Link>
+              ))}
+              
+              <div className="px-4 py-4 mt-2 border-t border-gray-100">
+                <Link to="/contact" className="block">
+                  <Button className="w-full bg-novella-red hover:bg-red-700 text-white">
+                    Contact Us
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         )}
