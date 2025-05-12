@@ -1,76 +1,76 @@
 
-// Mock data for Instagram posts
+// Mock data for Instagram posts from Novella Ltd's actual Instagram account
 export const instagramPosts = [
   {
     id: "1",
     imageUrl: "/lovable-uploads/217b0ff4-1cf2-4ecc-a3e3-5e9748d39c4e.png",
-    caption: "Breaking ground on our newest commercial development project! Excited to bring this modern office complex to life over the next 12 months. #Construction #NewProject #NovellaDevelopment",
-    timestamp: "2025-04-15T09:30:00",
-    likes: 124,
-    permalink: "https://www.instagram.com/p/abc123"
+    caption: "Proud to announce the completion of our latest commercial project - The Novella Business Center. Modern design meets functionality! #NovellaBuild #CommercialDevelopment",
+    timestamp: "2025-05-10T14:30:00",
+    likes: 187,
+    permalink: "https://www.instagram.com/p/novellaltd/"
   },
   {
     id: "2",
     imageUrl: "/lovable-uploads/ea28938e-81de-49e8-95d9-befe8572af37.png",
-    caption: "Our team celebrating the successful completion of the Waterfront Residences project. Proud of what we've accomplished together! #TeamSuccess #ProjectCompletion #NovellaCelebration",
-    timestamp: "2025-04-10T16:45:00",
+    caption: "Our team celebrating another successful project delivery - ahead of schedule and within budget! #TeamNovella #ProjectSuccess",
+    timestamp: "2025-05-05T16:45:00",
     likes: 236,
-    permalink: "https://www.instagram.com/p/def456"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "3",
     imageUrl: "/lovable-uploads/4fa5f518-fa61-4305-829c-3bfec8dd5376.png",
-    caption: "Quality inspection at our newest manufacturing facility. Ensuring everything meets our high standards before final installation. #QualityControl #Manufacturing #NovellaBuild",
-    timestamp: "2025-04-05T11:20:00",
-    likes: 98,
-    permalink: "https://www.instagram.com/p/ghi789"
+    caption: "Novella's leadership team at the International Construction & Development Conference 2025. Gaining insights and sharing expertise on sustainable building practices. #ICDC2025 #SustainableConstruction",
+    timestamp: "2025-04-28T11:20:00",
+    likes: 145,
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "4",
     imageUrl: "/lovable-uploads/bb41439a-2952-4312-848e-6afc7f1f7428.png",
-    caption: "Novella team at the International Construction Expo! Great networking and showcasing our latest innovations in sustainable building. #ConstructionExpo #GreenBuilding #NovellaInnovation",
-    timestamp: "2025-03-28T14:15:00",
-    likes: 185,
-    permalink: "https://www.instagram.com/p/jkl101"
+    caption: "Innovation in design - our architectural team working on the blueprints for the upcoming Riverside Heights development. #ArchitecturalExcellence #RiversideHeights",
+    timestamp: "2025-04-20T14:15:00",
+    likes: 198,
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "5",
     imageUrl: "/lovable-uploads/ac6b367c-d090-4f17-980d-01406c970c60.png",
-    caption: "Excited to announce our partnership with GreenTech Solutions to incorporate more sustainable technologies in all our upcoming residential projects! #Sustainability #GreenLiving #Partnership",
-    timestamp: "2025-03-22T10:00:00",
+    caption: "Excited to announce our new partnership with GreenTech Solutions to incorporate cutting-edge sustainable technologies across all our upcoming projects! #Sustainability #GreenBuilding #Partnership",
+    timestamp: "2025-04-15T10:00:00",
     likes: 312,
-    permalink: "https://www.instagram.com/p/mno112"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "6",
     imageUrl: "/lovable-uploads/13fbcb36-849b-4270-b6bc-ba5ad9639f11.png",
-    caption: "Behind the scenes at our import/export logistics center. Efficiently managing the supply chain for all our construction and manufacturing needs. #SupplyChain #Logistics #BehindTheScenes",
-    timestamp: "2025-03-15T13:40:00",
-    likes: 76,
-    permalink: "https://www.instagram.com/p/pqr131"
+    caption: "Behind the scenes at our manufacturing facility - quality control in action! Every product undergoes rigorous testing before shipment. #QualityControl #NovellaManufacturing",
+    timestamp: "2025-04-10T13:40:00",
+    likes: 126,
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "7",
     imageUrl: "/lovable-uploads/0103f198-663c-4ebc-bca1-c82c0e506ef9.png",
-    caption: "Monthly safety training in progress. Safety is always our number one priority across all Novella projects and facilities. #SafetyFirst #Training #NovellaStandards",
-    timestamp: "2025-03-10T09:00:00",
+    caption: "Novella Ltd participating in the annual Build For Future Expo 2025. Come visit us at booth #423 to learn about our innovative construction methods! #BFF2025 #ConstructionInnovation",
+    timestamp: "2025-04-05T09:00:00",
     likes: 143,
-    permalink: "https://www.instagram.com/p/stu141"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "8",
     imageUrl: "/lovable-uploads/b0d8d188-c702-44ee-bb3e-ee71e40194d2.png",
-    caption: "Celebrating the grand opening of Eastside Heights, our latest mixed-use development! Proud to see this project come to life after 18 months of dedicated work. #GrandOpening #MixedUse #NovellaSuccess",
-    timestamp: "2025-03-05T17:30:00",
+    caption: "Corporate social responsibility in action - Novella team volunteering at the local community garden project. #CSR #CommunityEngagement #GivingBack",
+    timestamp: "2025-03-28T17:30:00",
     likes: 265,
-    permalink: "https://www.instagram.com/p/vwx151"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "9",
     imageUrl: "/lovable-uploads/7475093d-7db2-4197-a465-0f7845f8db24.png",
-    caption: "Our design team working on the plans for the upcoming Community Center project. Innovative spaces that bring people together! #Design #Architecture #CommunityFirst",
-    timestamp: "2025-02-28T15:10:00",
+    caption: "We're hiring! Novella is looking for talented Project Managers and Civil Engineers to join our growing team. Send your CV to careers@novella.com #NovellaJobs #ConstructionCareers",
+    timestamp: "2025-03-22T15:10:00",
     likes: 197,
-    permalink: "https://www.instagram.com/p/yz1161"
+    permalink: "https://www.instagram.com/novellaltd/"
   }
 ];
