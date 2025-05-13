@@ -19,7 +19,7 @@ interface Property {
 
 const featuredProperties: Property[] = [
   {
-    id: "1",
+    id: "modern-office-complex",
     title: "SELVI PARK",
     location: "Bağcılar, Istanbul",
     image: "/lovable-uploads/c2d3c0ca-753b-4a98-afca-7ef9890dcd22.png",
@@ -29,7 +29,7 @@ const featuredProperties: Property[] = [
     features: ["Various apartment types", "Extensive amenities", "Design-Build Approach"]
   },
   {
-    id: "2",
+    id: "residential-tower",
     title: "BAHARYAKA",
     location: "Bağcılar, Istanbul",
     image: "/lovable-uploads/e6d71d7a-a12e-422f-8042-d51d3b2ef4e0.png",
@@ -38,7 +38,7 @@ const featuredProperties: Property[] = [
     features: ["Central location", "Social facilities", "Design-Build Approach"]
   },
   {
-    id: "3",
+    id: "industrial-facility",
     title: "MEGA GARDEN",
     location: "Istanbul, Zeytinburnu",
     image: "/lovable-uploads/c9b49626-f18c-4dbf-a2de-a6e89645ec27.png",
@@ -48,7 +48,7 @@ const featuredProperties: Property[] = [
     features: ["Convenient location", "Modern design", "Design-Build Approach"]
   },
   {
-    id: "4",
+    id: "shopping-center",
     title: "NIVO ISTANBUL",
     location: "Küçükçekmece district, Istanbul, European side",
     image: "/lovable-uploads/35a35189-1081-4b7f-8d9a-752d623087bc.png",
