@@ -8,8 +8,8 @@ export const projectsData = {
     client: "Novella Development",
     completionDate: "April 30, 2024",
     description: "Covers an area of 11,500 square meters and includes 6 residential blocks with 586 apartment units and 8 stores. The project offers a premium living experience in the heart of Istanbul.",
-    challenge: "Creating a large-scale residential complex with multiple buildings while maintaining cohesive design and ensuring efficient use of space within an urban environment.",
-    solution: "We implemented a master-planned approach with a focus on community spaces and modern architecture. Each building was designed to maximize natural light and provide optimal views, while shared amenities create a sense of community.",
+    challenge: "Finding the right property that offers both scale and quality for our discerning clients in the competitive Istanbul real estate market.",
+    solution: "We selected this exceptional development that features a master-planned approach with community spaces and modern architecture, providing our clients with an outstanding investment opportunity.",
     images: [
       "/lovable-uploads/c2d3c0ca-753b-4a98-afca-7ef9890dcd22.png",
       "/lovable-uploads/ea28938e-81de-49e8-95d9-befe8572af37.png",
