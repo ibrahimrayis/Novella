@@ -9,6 +9,7 @@ import ThemeToggle from './ThemeToggle';
 import NavbarLink from './navbar/NavbarLink';
 import ServiceDropdown from './navbar/ServiceDropdown';
 import MobileMenu from './navbar/MobileMenu';
+import LanguageSelector from './LanguageSelector';
 import { navItems } from '@/data/navigationData';
 
 const Navbar = () => {
@@ -82,9 +83,7 @@ const Navbar = () => {
             
             <div className="flex items-center space-x-4">
               <ThemeToggle />
-              
-              {/* Weglot will be added here by their script */}
-              <div className="weglot-container"></div>
+              <LanguageSelector />
               
               <Link to="/contact">
                 <Button className="bg-novella-red hover:bg-red-700 text-white">Contact Us</Button>
@@ -95,9 +94,7 @@ const Navbar = () => {
           {/* Mobile Navigation Controls */}
           <div className="md:hidden flex items-center space-x-3">
             <ThemeToggle />
-            
-            {/* Weglot will be added here on mobile */}
-            <div className="weglot-container"></div>
+            <LanguageSelector />
             
             <button 
               className="text-white p-2 rounded-md hover:bg-white/20" 
