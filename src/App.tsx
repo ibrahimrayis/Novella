@@ -5,9 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { LanguageProvider } from "./contexts/LanguageContext";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import LanguageSelector from "./components/LanguageSelector";
 
 // Pages
 import Home from "./pages/Home";
@@ -63,7 +61,7 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
-            <LanguageSelector />
+            <div className="weglot-container fixed top-4 right-4 z-50"></div>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

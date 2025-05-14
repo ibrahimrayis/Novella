@@ -1,0 +1,55 @@
+
+/* Custom styles for Weglot language dropdown */
+.weglot-container .country-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.weglot-container .country-selector button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.weglot-container .country-selector button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.weglot-container .country-selector ul {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  min-width: 10rem;
+  background: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  z-index: 100;
+}
+
+.weglot-container .country-selector ul li {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.weglot-container .country-selector ul li:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.weglot-container .country-selector ul li[aria-selected="true"] {
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
