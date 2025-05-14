@@ -1,15 +1,8 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Instagram, Languages } from 'lucide-react';
+import { Menu, X, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { useLanguage, languages } from '@/contexts/LanguageContext';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { cn } from '@/lib/utils';
 import ThemeToggle from './ThemeToggle';
@@ -17,7 +10,6 @@ import ThemeToggle from './ThemeToggle';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { currentLanguage, setLanguage } = useLanguage();
   const isMobile = useIsMobile();
   const location = useLocation();
 
@@ -68,11 +60,6 @@ const Navbar = () => {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(path);
-  };
-
-  const handleLanguageChange = (lang: typeof languages[0]) => {
-    console.log(`Setting language to ${lang.label}`);
-    setLanguage(lang);
   };
 
   return (
@@ -140,27 +127,8 @@ const Navbar = () => {
             <div className="flex items-center space-x-4">
               <ThemeToggle />
               
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
-                    <Languages className="h-4 w-4 text-white" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md dark:bg-black/95">
-                  {languages.map((lang) => (
-                    <DropdownMenuItem 
-                      key={lang.code} 
-                      onClick={() => handleLanguageChange(lang)}
-                      className={cn(
-                        "text-white hover:bg-white/10",
-                        currentLanguage.code === lang.code ? "bg-white/10 font-medium" : ""
-                      )}
-                    >
-                      {lang.label}
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
+              {/* Weglot will be added here by their script */}
+              <div className="weglot-container"></div>
               
               <Link to="/contact">
                 <Button className="bg-novella-red hover:bg-red-700 text-white">Contact Us</Button>
@@ -172,27 +140,8 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-3">
             <ThemeToggle />
             
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="icon" className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20">
-                  <Languages className="h-4 w-4 text-white" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-black/90 backdrop-blur-md dark:bg-black/95">
-                {languages.map((lang) => (
-                  <DropdownMenuItem 
-                    key={lang.code} 
-                    onClick={() => handleLanguageChange(lang)}
-                    className={cn(
-                      "text-white hover:bg-white/10",
-                      currentLanguage.code === lang.code ? "bg-white/10 font-medium" : ""
-                    )}
-                  >
-                    {lang.label}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* Weglot will be added here on mobile */}
+            <div className="weglot-container"></div>
             
             <button 
               className="text-white p-2 rounded-md hover:bg-white/20" 

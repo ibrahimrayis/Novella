@@ -61,7 +61,6 @@ const App = () => {
           <Sonner />
           <BrowserRouter>
             <ScrollToTop />
-            <div className="weglot-container fixed top-4 right-4 z-50"></div>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />

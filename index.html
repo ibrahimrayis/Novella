@@ -25,11 +25,13 @@
     <!-- Weglot Script -->
     <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
     <script>
-      Weglot.initialize({
-        api_key: 'wg_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
-        original_language: 'en',
-        destination_languages: ['tr', 'ar', 'ru'],
-        auto_switch: false
+      document.addEventListener('DOMContentLoaded', function() {
+        Weglot.initialize({
+          api_key: 'wg_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', // Replace with your actual API key
+          original_language: 'en',
+          destination_languages: ['tr', 'ar', 'ru'],
+          auto_switch: false
+        });
       });
     </script>
   </head>
