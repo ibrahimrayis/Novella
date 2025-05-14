@@ -2,24 +2,10 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { useEffect } from 'react'
-import { useLanguage, LanguageProvider } from './contexts/LanguageContext.tsx'
-
-// Component to handle document direction
-const DirectionHandler = () => {
-  const { direction, currentLanguage } = useLanguage();
-  
-  useEffect(() => {
-    document.documentElement.dir = direction;
-    document.documentElement.lang = currentLanguage.code;
-  }, [direction, currentLanguage]);
-  
-  return null;
-}
+import { LanguageProvider } from './contexts/LanguageContext.tsx'
 
 createRoot(document.getElementById("root")!).render(
   <LanguageProvider>
     <App />
-    <DirectionHandler />
   </LanguageProvider>
 );

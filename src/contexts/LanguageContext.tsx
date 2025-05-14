@@ -1,5 +1,5 @@
 
-import React, { createContext, useState, useContext, ReactNode, useCallback } from "react";
+import React, { createContext, useState, useContext, ReactNode, useCallback, useEffect } from "react";
 import { translations, TranslationKeys } from "@/translations";
 
 type Language = {
@@ -49,31 +49,57 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     document.documentElement.lang = language.code;
   }, []);
 
-  // Translation function
+  // Update document direction and language on initial load
+  useEffect(() => {
+    document.documentElement.dir = currentLanguage.direction || "ltr";
+    document.documentElement.lang = currentLanguage.code;
+  }, [currentLanguage]);
+
+  // Translation function with improved path resolution
   const t = useCallback((path: string): string => {
-    const keys = path.split('.');
-    let current: any = translations[currentLanguage.code as keyof typeof translations];
-    
-    for (const key of keys) {
-      if (current && key in current) {
-        current = current[key];
-      } else {
-        // Fallback to English if translation not found
-        let fallback: any = translations.en;
-        for (const fallbackKey of keys) {
-          if (fallback && fallbackKey in fallback) {
-            fallback = fallback[fallbackKey];
-          } else {
-            console.warn(`Translation key not found: ${path}`);
-            return path;
-          }
-        }
-        return typeof fallback === 'string' ? fallback : path;
+    try {
+      const keys = path.split('.');
+      const langCode = currentLanguage.code as keyof typeof translations;
+      
+      if (!translations[langCode]) {
+        console.warn(`Translation not found for language: ${langCode}`);
+        return getFallbackTranslation(path, keys) || path;
       }
+      
+      let current: any = translations[langCode];
+      
+      for (const key of keys) {
+        if (current && key in current) {
+          current = current[key];
+        } else {
+          return getFallbackTranslation(path, keys) || path;
+        }
+      }
+      
+      return typeof current === 'string' ? current : path;
+    } catch (error) {
+      console.error(`Translation error for key: ${path}`, error);
+      return path;
     }
-    
-    return typeof current === 'string' ? current : path;
   }, [currentLanguage.code]);
+  
+  // Helper function to get fallback translation
+  const getFallbackTranslation = (path: string, keys: string[]): string | null => {
+    try {
+      let fallback: any = translations.en;
+      for (const key of keys) {
+        if (fallback && key in fallback) {
+          fallback = fallback[key];
+        } else {
+          console.warn(`Translation key not found (even in fallback): ${path}`);
+          return null;
+        }
+      }
+      return typeof fallback === 'string' ? fallback : null;
+    } catch {
+      return null;
+    }
+  };
 
   // Current direction
   const direction = currentLanguage.direction || "ltr";
