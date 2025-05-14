@@ -20,7 +20,9 @@ const LanguageSelector = () => {
           size="icon" 
           className="fixed top-4 right-4 z-50 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"
         >
-          <Globe className="h-4 w-4 text-white" />
+          <div className="flex items-center justify-center">
+            <span className="text-white text-xs font-medium">{currentLanguage.code.toUpperCase()}</span>
+          </div>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

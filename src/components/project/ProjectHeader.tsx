@@ -2,12 +2,15 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft, Map, Users, Clock } from "lucide-react";
 import { ProjectDataType, ProjectSlug } from "@/data/projectsData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface ProjectHeaderProps {
   project: ProjectDataType[ProjectSlug];
 }
 
 const ProjectHeader = ({ project }: ProjectHeaderProps) => {
+  const { t } = useLanguage();
+  
   return (
     <section className="relative h-[60vh]">
       <div 
@@ -19,7 +22,7 @@ const ProjectHeader = ({ project }: ProjectHeaderProps) => {
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 h-full flex flex-col justify-end pb-12">
         <Link to="/projects" className="flex items-center text-white hover:text-novella-red transition-colors mb-6">
-          <ArrowLeft className="mr-2 h-5 w-5" /> Back to Projects
+          <ArrowLeft className="mr-2 h-5 w-5" /> {t("common.backToProjects")}
         </Link>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
           {project.title}

@@ -2,48 +2,51 @@
 import { Building2, Globe, Factory, Home, LayoutDashboard } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section className="section-padding">
       <div className="container mx-auto px-4 md:px-6">
         <SectionTitle 
-          title="Our Services" 
-          subtitle="We provide comprehensive solutions across construction, import/export, manufacturing, and real estate sectors"
+          title={t("services.title")}
+          subtitle={t("services.subtitle")}
         />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mt-12">
           <ServiceCard
-            title="Construction"
-            description="We create top-quality, enduring spaces where people can thrive, transforming raw materials into lasting stories."
+            title={t("services.construction")}
+            description={t("services.constructionDesc")}
             icon={<Building2 size={40} />}
             link="/services/construction"
           />
           
           <ServiceCard
-            title="Import & Export"
-            description="Ensuring smooth flow of import and export activities for businesses across diverse industries with our global network."
+            title={t("services.importExport")}
+            description={t("services.importExportDesc")}
             icon={<Globe size={40} />}
             link="/services/import-export"
           />
           
           <ServiceCard
-            title="Manufacturing"
-            description="Dedicated to precision, innovation, and excellence in manufacturing with state-of-the-art facilities and skilled workforce."
+            title={t("services.manufacturing")}
+            description={t("services.manufacturingDesc")}
             icon={<Factory size={40} />}
             link="/services/manufacturing"
           />
           
           <ServiceCard
-            title="Real Estate"
-            description="Offering premium residential and commercial properties with exceptional investment value and comprehensive property management services."
+            title={t("services.realEstate")}
+            description={t("services.realEstateDesc")}
             icon={<Home size={40} />}
             link="/services/real-estate"
           />
           
           <ServiceCard
-            title="B2B Solutions"
-            description="Comprehensive digital solutions tailored for businesses to enhance market presence and accelerate growth."
+            title={t("services.b2b")}
+            description={t("services.b2bDesc")}
             icon={<LayoutDashboard size={40} />}
             link="/services/b2b"
           />
