@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import { useEffect } from 'react'
-import { useLanguage } from './contexts/LanguageContext.tsx'
+import { useLanguage, LanguageProvider } from './contexts/LanguageContext.tsx'
 
 // Component to handle document direction
 const DirectionHandler = () => {
@@ -18,8 +18,8 @@ const DirectionHandler = () => {
 }
 
 createRoot(document.getElementById("root")!).render(
-  <>
+  <LanguageProvider>
     <App />
     <DirectionHandler />
-  </>
+  </LanguageProvider>
 );
