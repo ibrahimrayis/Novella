@@ -24,16 +24,16 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
         <Dialog>
           <DialogTrigger asChild>
             <img 
-              src="/lovable-uploads/a65fbf63-d795-4137-9e6e-c8080792cf06.png" 
+              src={project.images[0]}
               alt={`${project.title} - Garden View with Pool`} 
               className="rounded-lg shadow-md h-48 w-full object-cover cursor-pointer hover:opacity-90 transition-opacity"
             />
           </DialogTrigger>
           <DialogContent className="max-w-4xl">
-            <DialogTitle className="sr-only">{project.title} - Garden View with Pool</DialogTitle>
+            <DialogTitle className="text-lg font-semibold mb-1">{project.title} - Garden View with Pool</DialogTitle>
             <AspectRatio ratio={16 / 9}>
               <img 
-                src="/lovable-uploads/a65fbf63-d795-4137-9e6e-c8080792cf06.png" 
+                src={project.images[0]}
                 alt={`${project.title} - Garden View with Pool`} 
                 className="w-full h-full object-cover rounded"
               />
@@ -50,7 +50,7 @@ const ProjectOverview = ({ project }: ProjectOverviewProps) => {
               />
             </DialogTrigger>
             <DialogContent className="max-w-4xl">
-              <DialogTitle className="sr-only">{`${project.title} - Image ${index + 1}`}</DialogTitle>
+              <DialogTitle className="text-lg font-semibold mb-1">{`${project.title} - Image ${index + 1}`}</DialogTitle>
               <AspectRatio ratio={16 / 9}>
                 <img 
                   src={image} 
