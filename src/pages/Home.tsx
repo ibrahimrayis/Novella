@@ -68,11 +68,11 @@ const Home = () => {
         </section>
 
         <CTASection 
-          title="Ready to Start Your Construction Project?"
-          subtitle="Whether you need construction, import/export services, or manufacturing solutions, we're here to help you achieve your goals."
+          title="Ready to Start Your Next Project?"
+          subtitle="Whether you need construction, import & export services, or manufacturing solutions, we're here to help you achieve your goals."
           buttonText="Contact Us Today"
           buttonLink="/contact"
-          backgroundImage="/lovable-uploads/2fe1e116-a36d-4499-8574-b3de6b14e9d2.png"
+          backgroundImage="/lovable-uploads/259ac89e-f9dc-4539-a1d2-7140ab91439d.png"
         />
       </main>
       

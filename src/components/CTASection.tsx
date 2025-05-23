@@ -12,10 +12,10 @@ interface CTASectionProps {
 
 const CTASection = ({ 
   title = "Ready to Start Your Next Project?",
-  subtitle = "Whether you need construction, import/export services, or manufacturing solutions, we're here to help you achieve your goals.",
+  subtitle = "Whether you need construction, import & export services, or manufacturing solutions, we're here to help you achieve your goals.",
   buttonText = "Contact Us Today",
   buttonLink = "/contact",
-  backgroundImage = "/lovable-uploads/aa0dc49a-7bf9-4cf0-9d0e-d488fd9d0539.png"
+  backgroundImage = "/lovable-uploads/259ac89e-f9dc-4539-a1d2-7140ab91439d.png"
 }: CTASectionProps) => {
   return (
     <section className="py-20 bg-novella-navy relative">
