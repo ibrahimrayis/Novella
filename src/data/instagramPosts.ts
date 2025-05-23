@@ -1,3 +1,4 @@
+
 export const instagramPosts = [
   {
     id: "1",
@@ -57,7 +58,7 @@ export const instagramPosts = [
   },
   {
     id: "8",
-    imageUrl: "/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png",
+    imageUrl: "/lovable-uploads/c6edf182-be0e-4597-99df-b106fb7624b6.png",
     caption: "Innovation in action. Our latest technology integration is revolutionizing our processes. #Innovation #Technology #Progress",
     timestamp: "2023-12-28T12:00:00Z",
     likes: 134,
