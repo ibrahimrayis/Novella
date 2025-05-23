@@ -74,3 +74,65 @@ export const instagramPosts = [
     permalink: "https://www.instagram.com/novellaltd/"
   }
 ];
+
+// Types for Instagram API response
+export interface InstagramMediaResponse {
+  data: InstagramMedia[];
+  paging: {
+    cursors: {
+      before: string;
+      after: string;
+    };
+    next: string;
+  };
+}
+
+export interface InstagramMedia {
+  id: string;
+  caption: string;
+  media_type: string;
+  media_url: string;
+  permalink: string;
+  timestamp: string;
+  username: string;
+  like_count?: number;
+  children?: {
+    data: {
+      id: string;
+      media_type: string;
+      media_url: string;
+    }[];
+  };
+}
+
+// Fetch Instagram posts using access token
+export const fetchInstagramPosts = async (accessToken: string) => {
+  try {
+    // Fields to retrieve from the Instagram Graph API
+    const fields = 'id,caption,media_type,media_url,permalink,timestamp,username,like_count,children{media_url}';
+    const url = `https://graph.instagram.com/me/media?fields=${fields}&access_token=${accessToken}`;
+    
+    const response = await fetch(url);
+    
+    if (!response.ok) {
+      throw new Error(`Instagram API responded with status: ${response.status}`);
+    }
+    
+    const data: InstagramMediaResponse = await response.json();
+    
+    // Transform the API response to match our app's data structure
+    return data.data.map(post => ({
+      id: post.id,
+      imageUrl: post.media_url,
+      caption: post.caption || "",
+      timestamp: post.timestamp,
+      likes: post.like_count || 0,
+      permalink: post.permalink,
+      username: post.username
+    }));
+  } catch (error) {
+    console.error('Error fetching Instagram posts:', error);
+    // Return mock data as fallback
+    return instagramPosts;
+  }
+};

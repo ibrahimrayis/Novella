@@ -1,5 +1,6 @@
 
 import { Instagram } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface InstagramPostProps {
   id: string;
@@ -8,18 +9,51 @@ interface InstagramPostProps {
   timestamp: string;
   likes: number;
   permalink: string;
+  username?: string;
 }
 
-const InstagramPost = ({ imageUrl, caption, timestamp, likes, permalink }: InstagramPostProps) => {
+const InstagramPost = ({ 
+  imageUrl, 
+  caption, 
+  timestamp, 
+  likes, 
+  permalink, 
+  username = "novellaltd" 
+}: InstagramPostProps) => {
+  const { currentLanguage } = useLanguage();
+  
   // Format the timestamp to a readable date
-  const formattedDate = new Date(timestamp).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const formattedDate = new Date(timestamp).toLocaleDateString(
+    currentLanguage.code === "en" ? "en-US" : 
+    currentLanguage.code === "tr" ? "tr-TR" : 
+    currentLanguage.code === "ar" ? "ar-SA" : 
+    currentLanguage.code === "ru" ? "ru-RU" : "en-US", 
+    {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }
+  );
 
   // Truncate caption if too long
   const shortCaption = caption.length > 100 ? `${caption.substring(0, 100)}...` : caption;
+
+  const translations = {
+    en: {
+      viewOnInstagram: "View on Instagram"
+    },
+    tr: {
+      viewOnInstagram: "Instagram'da Görüntüle"
+    },
+    ar: {
+      viewOnInstagram: "عرض على انستغرام"
+    },
+    ru: {
+      viewOnInstagram: "Посмотреть в Instagram"
+    }
+  };
+
+  const t = translations[currentLanguage.code] || translations.en;
 
   return (
     <div className="group bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
@@ -40,7 +74,7 @@ const InstagramPost = ({ imageUrl, caption, timestamp, likes, permalink }: Insta
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center space-x-2">
             <Instagram size={18} className="text-novella-red" />
-            <span className="text-sm font-medium text-gray-500">@novellaltd</span>
+            <span className="text-sm font-medium text-gray-500">@{username}</span>
           </div>
           <span className="text-xs text-gray-400">{formattedDate}</span>
         </div>
@@ -53,7 +87,7 @@ const InstagramPost = ({ imageUrl, caption, timestamp, likes, permalink }: Insta
           rel="noopener noreferrer" 
           className="inline-block text-novella-navy font-medium text-sm hover:text-novella-red transition-colors"
         >
-          View on Instagram →
+          {t.viewOnInstagram} →
         </a>
       </div>
     </div>
