@@ -2,6 +2,7 @@
 import { Building2, Globe, Factory, Home, Code } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
+import { motion } from "./ui/motion";
 
 const ServicesSection = () => {
   return (
@@ -42,7 +43,24 @@ const ServicesSection = () => {
           />
           
           <ServiceCard
-            title={<span>Novella <span className="text-amber-400 font-semibold">Tech</span></span>}
+            title={
+              <span>
+                Novella{" "}
+                <motion.div 
+                  className="inline-block relative"
+                  delay={300}
+                  duration={700}
+                >
+                  <span className="text-amber-600 font-bold relative z-10">
+                    Tech
+                    <span className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-amber-500 to-amber-700 opacity-20 blur-sm"></span>
+                    <span className="absolute -top-1 left-1 text-yellow-300 opacity-70">✦</span>
+                    <span className="absolute top-0 right-0 text-yellow-300 opacity-60">✧</span>
+                    <span className="absolute -bottom-1 right-2 text-yellow-300 opacity-50">✦</span>
+                  </span>
+                </motion.div>
+              </span>
+            }
             description="Tailored technology solutions to boost your company's growth"
             icon={<Code size={40} />}
             link="https://github.com/ibrahimrayis/novella-digital-growth.git"
