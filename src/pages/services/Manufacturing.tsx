@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Factory, Settings, Microscope, Recycle, Server, ArrowRight } from "lucide-react";
@@ -66,7 +67,7 @@ const Manufacturing = () => {
 
         {/* Markets Section */}
         <section className="py-16 bg-novella-navy relative">
-          <div className="absolute inset-0 bg-[url('/lovable-uploads/efaa69c5-e65a-4e42-8cab-698f8db85e6e.png')] bg-cover bg-center opacity-10"></div>
+          <div className="absolute inset-0 bg-[url('/lovable-uploads/13d5602e-5860-4186-b7d6-5dfd2545080b.png')] bg-cover bg-center opacity-10"></div>
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
