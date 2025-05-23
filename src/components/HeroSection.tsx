@@ -16,7 +16,7 @@ const HeroSection = ({
   subtitle,
   ctaText = "Contact Us",
   ctaLink = "/contact",
-  backgroundImage = "/lovable-uploads/408f50dd-a5bc-41d8-8340-b9ba67e50704.png"
+  backgroundImage = "/lovable-uploads/0e699234-99c4-4ab4-bf5f-acdf31bf2cf0.png"
 }: HeroSectionProps) => {
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
@@ -29,20 +29,20 @@ const HeroSection = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Dark overlay filter with adaptive tint for dark/light mode */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/75 dark:from-black/80 dark:via-black/70 dark:to-black/85"></div>
+        {/* Enhanced dark overlay with stronger gradient for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/85 dark:from-black/90 dark:via-black/80 dark:to-black/90"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
         <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
             {title}
           </h1>
-          <p className="text-lg md:text-xl text-white/90 mb-8">
+          <p className="text-lg md:text-xl text-white/95 mb-8 drop-shadow-md">
             {subtitle}
           </p>
           <Link to={ctaLink}>
-            <Button className="bg-novella-red hover:bg-red-700 text-white px-6 py-3 rounded-md text-lg flex items-center">
+            <Button className="bg-novella-red hover:bg-red-700 text-white px-6 py-3 rounded-md text-lg flex items-center shadow-lg">
               {ctaText} <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
