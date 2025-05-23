@@ -4,12 +4,16 @@ import SectionTitle from "./SectionTitle";
 import StatCard from "./StatCard";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-const StatsSection = () => {
+interface StatsSectionProps {
+  backgroundImage?: string;
+}
+
+const StatsSection = ({ backgroundImage = "/lovable-uploads/aa0dc49a-7bf9-4cf0-9d0e-d488fd9d0539.png" }: StatsSectionProps) => {
   const { t } = useLanguage();
   
   return (
     <section className="py-20 bg-novella-navy relative">
-      <div className="absolute inset-0 bg-[url('/lovable-uploads/aa0dc49a-7bf9-4cf0-9d0e-d488fd9d0539.png')] bg-cover bg-center opacity-20"></div>
+      <div className={`absolute inset-0 bg-[url('${backgroundImage}')] bg-cover bg-center opacity-20`}></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title={t("stats.title")}

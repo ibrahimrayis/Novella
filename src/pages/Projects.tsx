@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -7,6 +6,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import CTASection from "@/components/CTASection";
 
 // Sample project data
 const projectsData = [
@@ -148,7 +148,7 @@ const Projects = () => {
         
         {/* Call to Action */}
         <section className="py-20 bg-novella-navy relative">
-          <div className="absolute inset-0 bg-[url('/lovable-uploads/efaa69c5-e65a-4e42-8cab-698f8db85e6e.png')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/lovable-uploads/508c237b-68d6-4271-a574-e1fde52b8324.png')] bg-cover bg-center opacity-20"></div>
           <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Have a Project in Mind?
