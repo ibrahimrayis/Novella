@@ -33,33 +33,6 @@ const HeroSection = ({
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/98 via-black/85 to-black/98"></div>
       </div>
-      {/* SVG linear gradient overlay on top of the image and below content */}
-      <svg
-        className="absolute inset-0 w-full h-full z-0 pointer-events-none"
-        viewBox="0 0 820 400" // Responsive vector space
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="none"
-        style={{
-          mixBlendMode: "screen",
-        }}
-      >
-        <defs>
-          <linearGradient
-            id="hero-gradient"
-            x1="80"
-            y1="10"
-            x2="700"
-            y2="390"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop offset="0.025" stopColor="#FF8E63"/>
-            <stop offset="0.56" stopColor="#FF7EB0"/>
-            <stop offset="0.95" stopColor="#6AC7FF"/>
-          </linearGradient>
-        </defs>
-        <rect width="100%" height="100%" fill="url(#hero-gradient)" fillOpacity="0.44"/>
-      </svg>
       {/* Hero Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
         <div className="max-w-3xl animate-fade-in-up">
@@ -81,4 +54,3 @@ const HeroSection = ({
 };
 
 export default HeroSection;
-
