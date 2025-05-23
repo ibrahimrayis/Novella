@@ -23,7 +23,7 @@ const Home = () => {
       <main className="flex-grow">
         <HeroSection
           title="Designing Innovation, Building Success"
-          subtitle="At Novella, we combine vision with expertise to deliver exceptional construction, International trade, and manufacturing solutions tailored to your unique needs."
+          subtitle="At Novella, we combine vision with expertise to deliver exceptional construction, manufacturing, and international trade solutions—tailored to your unique needs."
           ctaText="Discover Our Services"
           ctaLink="/services/construction"
           backgroundImage="/lovable-uploads/9f59861b-556a-4e31-a45b-5636dce1288b.png"
