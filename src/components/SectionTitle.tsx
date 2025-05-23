@@ -5,6 +5,7 @@ interface SectionTitleProps {
   align?: 'left' | 'center' | 'right';
   className?: string;
   titleClassName?: string;
+  subtitleClassName?: string;
 }
 
 const SectionTitle = ({ 
@@ -12,7 +13,8 @@ const SectionTitle = ({
   subtitle, 
   align = 'center',
   className = '',
-  titleClassName = 'text-novella-navy'
+  titleClassName = 'text-novella-navy',
+  subtitleClassName = 'text-gray-600'
 }: SectionTitleProps) => {
   const alignmentClasses = {
     left: 'text-left',
@@ -26,7 +28,7 @@ const SectionTitle = ({
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-gray-600 max-w-3xl">
+        <p className={`text-lg max-w-3xl ${subtitleClassName}`}>
           {subtitle}
         </p>
       )}
