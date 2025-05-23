@@ -20,31 +20,34 @@ const HeroSection = ({
 }: HeroSectionProps) => {
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
-      {/* Background image */}
+      {/* Background image with improved mobile quality */}
       <div 
-        className="absolute inset-0 bg-cover bg-center z-0"
+        className="absolute inset-0 z-0"
         style={{ 
           backgroundImage: `url('${backgroundImage}')`,
           backgroundSize: "cover",
           backgroundPosition: "center center", 
           backgroundRepeat: "no-repeat",
+          transform: "scale(1.01)", // Slight scale to prevent white edges during transitions
+          willChange: "transform", // Optimization hint for browsers
         }}
       >
-        {/* Enhanced gradient overlay for better text readability - made darker for industrial images */}
+        {/* Enhanced gradient overlay for better text readability - optimized for mobile */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/85 backdrop-blur-[1px]"></div>
       </div>
+      
       {/* Hero Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
         <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-xl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 drop-shadow-xl">
             {title}
           </h1>
-          <p className="text-xl md:text-2xl text-white/95 mb-8 drop-shadow-lg">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/95 mb-6 sm:mb-8 drop-shadow-lg">
             {subtitle}
           </p>
           <Link to={ctaLink}>
-            <Button className="bg-novella-red hover:bg-red-700 text-white px-6 py-3 rounded-md text-lg flex items-center shadow-lg">
-              {ctaText} <ChevronRight className="ml-2 h-5 w-5" />
+            <Button className="bg-novella-red hover:bg-red-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md text-base sm:text-lg flex items-center shadow-lg">
+              {ctaText} <ChevronRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
           </Link>
         </div>
