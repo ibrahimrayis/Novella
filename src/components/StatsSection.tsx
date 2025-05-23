@@ -13,7 +13,10 @@ const StatsSection = ({ backgroundImage = "/lovable-uploads/18a63eb7-ebe6-4f09-b
   
   return (
     <section className="py-20 bg-novella-navy relative">
-      <div className={`absolute inset-0 bg-[url('${backgroundImage}')] bg-cover bg-center opacity-20`}></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      ></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionTitle 
           title={t("stats.title")}

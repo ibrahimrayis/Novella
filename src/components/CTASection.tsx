@@ -19,7 +19,10 @@ const CTASection = ({
 }: CTASectionProps) => {
   return (
     <section className="py-20 bg-novella-navy relative">
-      <div className={`absolute inset-0 bg-[url('${backgroundImage}')] bg-cover bg-center opacity-20`}></div>
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-20"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      ></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
           {title}
