@@ -41,7 +41,7 @@ const About = () => {
           subtitle="Learn about our journey, values, and vision for the future"
           ctaText="Contact Us"
           ctaLink="/contact"
-          backgroundImage="/lovable-uploads/b0d8d188-c702-44ee-bb3e-ee71e40194d2.png"
+          backgroundImage="/lovable-uploads/0e699234-99c4-4ab4-bf5f-acdf31bf2cf0.png"
         />
 
         {/* Our Story Section */}
