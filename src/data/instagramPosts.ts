@@ -1,4 +1,3 @@
-
 export const instagramPosts = [
   {
     id: "1",
@@ -10,7 +9,7 @@ export const instagramPosts = [
   },
   {
     id: "2",
-    imageUrl: "/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png",
+    imageUrl: "/lovable-uploads/e47605bd-2ce4-4ea1-879b-bc3ea2e081a9.png",
     caption: "Proud to showcase our manufacturing capabilities. Innovation meets precision in our state-of-the-art facilities. #Manufacturing #Innovation #Technology",
     timestamp: "2024-01-12T14:45:00Z",
     likes: 89,
