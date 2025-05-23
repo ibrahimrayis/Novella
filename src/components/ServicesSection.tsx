@@ -55,7 +55,6 @@ const ServicesSection = () => {
                     Tech
                     <span className="absolute top-0 left-0 h-full w-full bg-gradient-to-r from-amber-500 to-amber-700 opacity-20 blur-sm"></span>
                     <span className="absolute top-0 right-0 text-yellow-300 opacity-60">✧</span>
-                    <span className="absolute -bottom-1 right-2 text-yellow-300 opacity-50">✦</span>
                   </span>
                 </motion.div>
               </span>
