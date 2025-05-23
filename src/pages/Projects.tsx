@@ -42,7 +42,7 @@ const projectsData = [
     id: 5,
     title: "Luxury Apartments",
     category: "Residential",
-    image: "/lovable-uploads/ac6b367c-d090-4f17-980d-01406c970c60.png",
+    image: "/lovable-uploads/4f9fc6da-9fcf-48ec-b152-432d4c4232cb.png",
     slug: "luxury-apartments"
   },
   {
