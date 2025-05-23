@@ -118,12 +118,14 @@ const About = () => {
 
         {/* Stats Section */}
         <section className="py-20 bg-novella-navy relative">
-          <div className="absolute inset-0 bg-[url('/lovable-uploads/efaa69c5-e65a-4e42-8cab-698f8db85e6e.png')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/lovable-uploads/0103f198-663c-4ebc-bca1-c82c0e506ef9.png')] bg-cover bg-center opacity-20"></div>
           <div className="container mx-auto px-4 md:px-6 relative z-10">
             <SectionTitle 
               title="Our Achievements" 
               subtitle="The numbers that reflect our dedication and success"
               className="text-white"
+              titleClassName="text-white"
+              subtitleClassName="text-white"
             />
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
