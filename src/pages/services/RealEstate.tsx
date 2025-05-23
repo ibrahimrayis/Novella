@@ -66,7 +66,7 @@ const RealEstate = () => {
               </div>
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/4fa5f518-fa61-4305-829c-3bfec8dd5376.png" 
+                  src="/lovable-uploads/5e569e4d-1488-42b3-bb18-b1bcb6bd48cf.png" 
                   alt="Real Estate Services" 
                   className="rounded-lg shadow-lg"
                 />
