@@ -16,7 +16,7 @@ const HeroSection = ({
   subtitle,
   ctaText = "Contact Us",
   ctaLink = "/contact",
-  backgroundImage = "/lovable-uploads/bc577194-c7cb-446d-a633-f38688dcd47d.png"
+  backgroundImage = "/lovable-uploads/408f50dd-a5bc-41d8-8340-b9ba67e50704.png"
 }: HeroSectionProps) => {
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
@@ -30,7 +30,7 @@ const HeroSection = ({
         }}
       >
         {/* Dark overlay filter with adaptive tint for dark/light mode */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70 dark:from-black/75 dark:via-black/65 dark:to-black/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/75 dark:from-black/80 dark:via-black/70 dark:to-black/85"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
