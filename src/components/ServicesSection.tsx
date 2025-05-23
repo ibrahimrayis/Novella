@@ -42,7 +42,7 @@ const ServicesSection = () => {
           />
           
           <ServiceCard
-            title={<span>B2B <span className="text-amber-400 font-semibold">Tech</span></span>}
+            title={<span>Novella <span className="text-amber-400 font-semibold">Tech</span></span>}
             description="Tailored technology solutions to boost your company's growth"
             icon={<Code size={40} />}
             link="https://github.com/ibrahimrayis/novella-digital-growth.git"
