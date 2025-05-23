@@ -25,7 +25,7 @@ export const instagramPosts = [
   },
   {
     id: "4",
-    imageUrl: "/lovable-uploads/e2a9a34b-4584-4a75-abfc-c0a1ff93d513.png",
+    imageUrl: "/lovable-uploads/3133b714-c3c3-492a-964f-fed4d89e9e2d.png",
     caption: "Real estate development that transforms communities. Building the future, one project at a time. #RealEstate #Development #Community",
     timestamp: "2024-01-08T16:20:00Z",
     likes: 203,
@@ -41,7 +41,7 @@ export const instagramPosts = [
   },
   {
     id: "6",
-    imageUrl: "/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png",
+    imageUrl: "/lovable-uploads/3133b714-c3c3-492a-964f-fed4d89e9e2d.png",
     caption: "Quality materials make all the difference. Our commitment to excellence shows in every detail. #Quality #Materials #Excellence",
     timestamp: "2024-01-03T13:30:00Z",
     likes: 118,
