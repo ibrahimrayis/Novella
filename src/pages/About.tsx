@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { Shield, CheckCircle, Briefcase, Users, Award, Clock, ChevronRight, Building2, Globe, Factory } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -7,6 +6,7 @@ import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import CTASection from "@/components/CTASection";
 
 const About = () => {
   useEffect(() => {
@@ -36,6 +36,7 @@ const About = () => {
       <Navbar />
       
       <main className="flex-grow">
+        {/* Hero Section */}
         <HeroSection
           title="About Novella Ltd"
           subtitle="Learn about our journey, values, and vision for the future"
@@ -253,21 +254,13 @@ const About = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-novella-red relative">
-          <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Collaborate with Us?
-            </h2>
-            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Get in touch to discuss how Novella can help bring your vision to life with our expertise and dedication to excellence.
-            </p>
-            <Link to="/contact">
-              <Button className="bg-white hover:bg-gray-100 text-novella-red font-medium px-8 py-3 text-lg">
-                Contact Us Today
-              </Button>
-            </Link>
-          </div>
-        </section>
+        <CTASection 
+          title="Ready to Collaborate with Us?"
+          subtitle="Get in touch to discuss how Novella can help bring your vision to life with our expertise and dedication to excellence."
+          buttonText="Contact Us Today"
+          buttonLink="/contact"
+          backgroundImage="/lovable-uploads/daff9eb8-a2c8-432f-8503-6744b76963f2.png"
+        />
       </main>
       
       <Footer />
