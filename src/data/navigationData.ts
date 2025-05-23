@@ -4,7 +4,7 @@ export const services = [
   { title: "Import & Export", href: "/services/import-export" },
   { title: "Manufacturing", href: "/services/manufacturing" },
   { title: "Real Estate", href: "/services/real-estate" },
-  { title: "B2B Solutions", href: "/services/b2b" },
+  { title: "B2B Tech", href: "/services/b2b" },
 ];
 
 export const navItems = [

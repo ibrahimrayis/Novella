@@ -1,5 +1,5 @@
 
-import { Building2, Globe, Factory, Home, LayoutDashboard } from "lucide-react";
+import { Building2, Globe, Factory, Home, Code } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
 
@@ -42,10 +42,11 @@ const ServicesSection = () => {
           />
           
           <ServiceCard
-            title="B2B Solutions"
-            description="Tailored business solutions to boost your company's growth"
-            icon={<LayoutDashboard size={40} />}
-            link="/services/b2b"
+            title={<span>B2B <span className="text-amber-400 font-semibold">Tech</span></span>}
+            description="Tailored technology solutions to boost your company's growth"
+            icon={<Code size={40} />}
+            link="https://github.com/ibrahimrayis/novella-digital-growth.git"
+            isExternalLink={true}
           />
         </div>
       </div>
