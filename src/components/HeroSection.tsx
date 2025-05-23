@@ -29,16 +29,16 @@ const HeroSection = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Enhanced dark overlay with even stronger gradient for better readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/80 to-black/90 dark:from-black/95 dark:via-black/85 dark:to-black/95"></div>
+        {/* Enhanced dark overlay with stronger gradient for better readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/85 to-black/95 dark:from-black/98 dark:via-black/90 dark:to-black/98"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">
         <div className="max-w-3xl animate-fade-in-up">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-xl">
             {title}
           </h1>
-          <p className="text-lg md:text-xl text-white/95 mb-8 drop-shadow-md">
+          <p className="text-xl md:text-2xl text-white/95 mb-8 drop-shadow-lg">
             {subtitle}
           </p>
           <Link to={ctaLink}>

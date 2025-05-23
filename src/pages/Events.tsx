@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -61,7 +60,7 @@ const Events = () => {
       feedSubtitle: "تابعنا على انستغرام للبقاء على اطلاع بأحدث الفعاليات وتحديثات المشاريع وأخبار الشركة",
       followButton: "تابع @novellaltd",
       stayConnected: "ابق على اتصال معنا",
-      stayConnectedDesc: "تابعنا على وسائل التواصل الاجتماعي للبقاء على اطلاع بأحدث مشاريعنا وفعالياتنا وأخبار الشركة.",
+      stayConnectedDesc: "ابق على اتصال معنا على وسائل التواصل الاجتماعي للبقاء على اطلاع بأحدث مشاريعنا وفعالياتنا وأخبار الشركة.",
       followInstagram: "تابعنا على انستغرام",
       viewOnInstagram: "عرض صفحتنا على انستغرام"
     },
@@ -91,7 +90,7 @@ const Events = () => {
           subtitle={t.subtitle}
           ctaText={t.ctaText}
           ctaLink="https://www.instagram.com/novellaltd/"
-          backgroundImage="/lovable-uploads/efaa69c5-e65a-4e42-8cab-698f8db85e6e.png"
+          backgroundImage="/lovable-uploads/d2a575be-7111-4156-a375-dbc7340581b6.png"
         />
 
         {/* Instagram Feed */}
@@ -167,7 +166,7 @@ const Events = () => {
         
         {/* Call to Action */}
         <section className="py-20 bg-novella-navy relative">
-          <div className="absolute inset-0 bg-[url('/lovable-uploads/efaa69c5-e65a-4e42-8cab-698f8db85e6e.png')] bg-cover bg-center opacity-20"></div>
+          <div className="absolute inset-0 bg-[url('/lovable-uploads/d2a575be-7111-4156-a375-dbc7340581b6.png')] bg-cover bg-center opacity-20"></div>
           <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               {t.stayConnected}
