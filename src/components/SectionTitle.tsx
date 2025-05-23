@@ -20,7 +20,7 @@ const SectionTitle = ({
 
   return (
     <div className={`mb-12 ${alignmentClasses[align]} ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-novella-navy">
         {title}
       </h2>
       {subtitle && (
