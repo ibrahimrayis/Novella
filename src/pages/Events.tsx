@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -90,7 +91,7 @@ const Events = () => {
           subtitle={t.subtitle}
           ctaText={t.ctaText}
           ctaLink="https://www.instagram.com/novellaltd/"
-          backgroundImage="/lovable-uploads/d2a575be-7111-4156-a375-dbc7340581b6.png"
+          backgroundImage="/lovable-uploads/9faedb94-9bed-4410-8214-dbf5dd15a1ba.png"
         />
 
         {/* Instagram Feed */}
