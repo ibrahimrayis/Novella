@@ -26,7 +26,7 @@ const Home = () => {
           subtitle="At Novella, we combine vision with expertise to deliver exceptional construction, import/export, and manufacturing solutions tailored to your unique needs."
           ctaText="Discover Our Services"
           ctaLink="/services/construction"
-          backgroundImage="/lovable-uploads/ac6b367c-d090-4f17-980d-01406c970c60.png"
+          backgroundImage="/lovable-uploads/9f59861b-556a-4e31-a45b-5636dce1288b.png"
         />
 
         <AboutSection />
