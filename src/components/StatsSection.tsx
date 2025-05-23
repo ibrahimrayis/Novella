@@ -22,6 +22,7 @@ const StatsSection = ({ backgroundImage = "/lovable-uploads/18a63eb7-ebe6-4f09-b
           title={t("stats.title")}
           subtitle={t("stats.subtitle")}
           className="text-white"
+          titleClassName="text-white"
         />
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">

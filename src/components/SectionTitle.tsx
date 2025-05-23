@@ -4,13 +4,15 @@ interface SectionTitleProps {
   subtitle?: string;
   align?: 'left' | 'center' | 'right';
   className?: string;
+  titleClassName?: string;
 }
 
 const SectionTitle = ({ 
   title, 
   subtitle, 
   align = 'center',
-  className = ''
+  className = '',
+  titleClassName = 'text-novella-navy'
 }: SectionTitleProps) => {
   const alignmentClasses = {
     left: 'text-left',
@@ -20,7 +22,7 @@ const SectionTitle = ({
 
   return (
     <div className={`mb-12 ${alignmentClasses[align]} ${className}`}>
-      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-novella-navy">
+      <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${titleClassName}`}>
         {title}
       </h2>
       {subtitle && (
