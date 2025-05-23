@@ -1,7 +1,7 @@
 export const instagramPosts = [
   {
     id: "1",
-    imageUrl: "/lovable-uploads/8e0fb659-18ac-4e7d-a48a-bc510eae1e9d.png",
+    imageUrl: "/lovable-uploads/e8dcaefb-474a-4928-9036-df9adddef88a.png",
     caption: "Exciting developments in our latest construction project! Our team is working hard to deliver excellence in every detail. #Construction #Quality #NovellaLtd",
     timestamp: "2024-01-15T10:30:00Z",
     likes: 127,
