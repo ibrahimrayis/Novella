@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 // Pages
 import Home from "./pages/Home";
@@ -73,6 +74,9 @@ const App = () => {
               <Route path="/services/real-estate" element={<RealEstate />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
+            
+            {/* WhatsApp Button - will appear on all pages */}
+            <WhatsAppButton phoneNumber="+905528800005" />
           </BrowserRouter>
         </ThemeProvider>
       </TooltipProvider>
