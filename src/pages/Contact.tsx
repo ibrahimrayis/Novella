@@ -45,7 +45,7 @@ const Contact = () => {
           subtitle="Get in touch with our team to discuss your project or inquire about our services"
           ctaText="Our Services"
           ctaLink="/services/construction"
-          backgroundImage="/lovable-uploads/7475093d-7db2-4197-a465-0f7845f8db24.png"
+          backgroundImage="/lovable-uploads/d0cf6519-7cc2-4a38-9fda-22271d15a3dd.png"
         />
 
         {/* Contact Information */}
