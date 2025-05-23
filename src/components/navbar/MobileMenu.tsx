@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import { navItems } from '@/data/navigationData';
 import ServiceDropdown from './ServiceDropdown';
 import NavbarLink from './NavbarLink';
+import LanguageSelector from '../LanguageSelector';
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -32,7 +33,14 @@ const MobileMenu = ({ isOpen, isActive }: MobileMenuProps) => {
         
         <ServiceDropdown isActive={isActive} isMobile={true} />
         
-        <div className="px-4 py-3 mt-1 border-t border-white/10">
+        <div className="px-4 py-2 border-t border-white/10">
+          <div className="flex items-center justify-between">
+            <span className="text-white text-sm">Language</span>
+            <LanguageSelector />
+          </div>
+        </div>
+        
+        <div className="px-4 py-3 border-t border-white/10">
           <Link to="/contact" className="block">
             <Button className="w-full bg-novella-red hover:bg-red-700 text-white">
               Contact Us

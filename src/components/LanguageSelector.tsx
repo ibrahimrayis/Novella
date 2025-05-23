@@ -9,9 +9,11 @@ import {
 import { Button } from "@/components/ui/button";
 import { useLanguage, languages } from "@/contexts/LanguageContext";
 import { cn } from "@/lib/utils";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const LanguageSelector = () => {
   const { currentLanguage, setLanguage } = useLanguage();
+  const isMobile = useIsMobile();
 
   return (
     <DropdownMenu>
@@ -19,7 +21,12 @@ const LanguageSelector = () => {
         <Button 
           variant="outline" 
           size="icon" 
-          className="fixed top-4 right-4 z-50 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 transition-all"
+          className={cn(
+            "transition-all",
+            isMobile 
+              ? "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 relative" 
+              : "fixed top-4 right-4 z-50 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"
+          )}
         >
           <div className="flex items-center justify-center">
             <Globe className="h-4 w-4 mr-1 text-white opacity-70" />
@@ -27,7 +34,7 @@ const LanguageSelector = () => {
           </div>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-40">
+      <DropdownMenuContent align="end" className="w-40 bg-white dark:bg-gray-800 z-50">
         {languages.map((lang) => (
           <DropdownMenuItem 
             key={lang.code} 

@@ -94,7 +94,6 @@ const Navbar = () => {
           {/* Mobile Navigation Controls */}
           <div className="md:hidden flex items-center space-x-3">
             <ThemeToggle />
-            <LanguageSelector />
             
             <button 
               className="text-white p-2 rounded-md hover:bg-white/20" 
