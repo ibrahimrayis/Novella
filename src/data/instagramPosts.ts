@@ -1,4 +1,3 @@
-
 export const instagramPosts = [
   {
     id: "1",
@@ -66,7 +65,7 @@ export const instagramPosts = [
   },
   {
     id: "9",
-    imageUrl: "/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png",
+    imageUrl: "/lovable-uploads/1ba14fa5-aa92-4e84-8308-b4e6b2db287b.png",
     caption: "Looking forward to 2024 with exciting new projects and partnerships on the horizon. #2024 #Future #Growth",
     timestamp: "2023-12-25T18:00:00Z",
     likes: 187,
