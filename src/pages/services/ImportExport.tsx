@@ -23,7 +23,7 @@ const ImportExport = () => {
           subtitle="Excellence is all that we deliver"
           ctaText="Contact Us"
           ctaLink="/contact"
-          backgroundImage="/lovable-uploads/8952e562-8a43-4f85-8290-8f6282dd237d.png"
+          backgroundImage="/lovable-uploads/d0cf6519-7cc2-4a38-9fda-22271d15a3dd.png"
         />
 
         {/* Overview Section */}
