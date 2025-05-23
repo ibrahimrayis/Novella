@@ -59,7 +59,7 @@ const InstagramPost = ({
     <div className="group bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
       <div className="relative">
         <img 
-          src={imageUrl} 
+          src="/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png" 
           alt={shortCaption} 
           className="w-full h-64 object-cover"
         />
