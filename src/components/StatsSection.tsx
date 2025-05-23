@@ -8,7 +8,7 @@ interface StatsSectionProps {
   backgroundImage?: string;
 }
 
-const StatsSection = ({ backgroundImage = "/lovable-uploads/aa0dc49a-7bf9-4cf0-9d0e-d488fd9d0539.png" }: StatsSectionProps) => {
+const StatsSection = ({ backgroundImage = "/lovable-uploads/18a63eb7-ebe6-4f09-b2e7-4b581916be17.png" }: StatsSectionProps) => {
   const { t } = useLanguage();
   
   return (
