@@ -1,3 +1,4 @@
+
 export const instagramPosts = [
   {
     id: "1",
@@ -25,7 +26,7 @@ export const instagramPosts = [
   },
   {
     id: "4",
-    imageUrl: "/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png",
+    imageUrl: "/lovable-uploads/e2a9a34b-4584-4a75-abfc-c0a1ff93d513.png",
     caption: "Real estate development that transforms communities. Building the future, one project at a time. #RealEstate #Development #Community",
     timestamp: "2024-01-08T16:20:00Z",
     likes: 203,
