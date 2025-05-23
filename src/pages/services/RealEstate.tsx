@@ -32,7 +32,7 @@ const RealEstate = () => {
           subtitle="Exceptional properties and comprehensive real estate solutions tailored to your needs"
           ctaText="Contact Us"
           ctaLink="/contact"
-          backgroundImage="/lovable-uploads/8952e562-8a43-4f85-8290-8f6282dd237d.png"
+          backgroundImage="/lovable-uploads/da50d497-0226-498b-bdfe-69b204bbd486.png"
         />
 
         {/* Overview Section */}
