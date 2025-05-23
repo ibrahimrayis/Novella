@@ -1,4 +1,3 @@
-
 export const instagramPosts = [
   {
     id: "1",
@@ -34,7 +33,7 @@ export const instagramPosts = [
   },
   {
     id: "5",
-    imageUrl: "/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png",
+    imageUrl: "/lovable-uploads/d3608369-3f43-406d-bd8b-c4b53c03e172.png",
     caption: "Team meeting discussing our upcoming projects. Collaboration and planning are key to our success. #Teamwork #Planning #Success",
     timestamp: "2024-01-05T11:00:00Z",
     likes: 92,
