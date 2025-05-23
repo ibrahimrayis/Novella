@@ -67,7 +67,13 @@ const Home = () => {
           </div>
         </section>
 
-        <CTASection />
+        <CTASection 
+          title="Ready to Start Your Construction Project?"
+          subtitle="Whether you need construction, import/export services, or manufacturing solutions, we're here to help you achieve your goals."
+          buttonText="Contact Us Today"
+          buttonLink="/contact"
+          backgroundImage="/lovable-uploads/2fe1e116-a36d-4499-8574-b3de6b14e9d2.png"
+        />
       </main>
       
       <Footer />

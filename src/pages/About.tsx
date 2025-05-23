@@ -259,7 +259,7 @@ const About = () => {
           subtitle="Get in touch to discuss how Novella can help bring your vision to life with our expertise and dedication to excellence."
           buttonText="Contact Us Today"
           buttonLink="/contact"
-          backgroundImage="/lovable-uploads/daff9eb8-a2c8-432f-8503-6744b76963f2.png"
+          backgroundImage="/lovable-uploads/aa0dc49a-7bf9-4cf0-9d0e-d488fd9d0539.png"
         />
       </main>
       
