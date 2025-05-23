@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -88,7 +89,7 @@ const Contact = () => {
                 </p>
                 <div className="bg-white p-4 rounded-lg shadow-md h-[500px]">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.8535600252754!2d28.949119!3d41.015908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9e7a7777c43%3A0x7d75715e081dfa5c!2sVenezia%20Mega%20Outlet!5e0!3m2!1sen!2sus!4v1650888285760!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96239.62300378433!2d28.72405499726561!3d41.0801783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb4e6b12ffdb%3A0xe402d5173c0df704!2sNovella!5e0!3m2!1sen!2str!4v1747992306538!5m2!1sen!2str"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
