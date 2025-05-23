@@ -98,7 +98,7 @@ const Projects = () => {
           subtitle="Explore our portfolio of completed and ongoing projects across various sectors"
           ctaText="Contact Us"
           ctaLink="/contact"
-          backgroundImage="/lovable-uploads/b0d8d188-c702-44ee-bb3e-ee71e40194d2.png"
+          backgroundImage="/lovable-uploads/7475093d-7db2-4197-a465-0f7845f8db24.png"
         />
 
         {/* Projects Gallery */}
