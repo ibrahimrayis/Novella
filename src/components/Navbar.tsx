@@ -65,7 +65,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
             <ul className="flex items-center space-x-2">
               {navItems.map((item) => (
                 <li key={item.title}>
@@ -81,7 +81,7 @@ const Navbar = () => {
               <ServiceDropdown isActive={isActive} />
             </ul>
             
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
               <ThemeToggle />
               <LanguageSelector />
               

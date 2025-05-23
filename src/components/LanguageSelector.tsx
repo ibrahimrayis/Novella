@@ -20,12 +20,12 @@ const LanguageSelector = () => {
       <DropdownMenuTrigger asChild>
         <Button 
           variant="outline" 
-          size="icon" 
+          size="sm"
           className={cn(
-            "transition-all",
+            "transition-all h-9",
             isMobile 
-              ? "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20 relative" 
-              : "fixed top-4 right-4 z-50 bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"
+              ? "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20" 
+              : "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"
           )}
         >
           <div className="flex items-center justify-center">
