@@ -35,7 +35,7 @@ const projectsData = [
     id: 4,
     title: "Shopping Center",
     category: "Commercial",
-    image: "/lovable-uploads/bb41439a-2952-4312-848e-6afc7f1f7428.png",
+    image: "/lovable-uploads/c8e3fd2c-bd9f-407d-bd2e-113c2b56f564.png",
     slug: "shopping-center"
   },
   {
