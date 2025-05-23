@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -45,7 +44,7 @@ const Contact = () => {
           subtitle="Get in touch with our team to discuss your project or inquire about our services"
           ctaText="Our Services"
           ctaLink="/services/construction"
-          backgroundImage="/lovable-uploads/d0cf6519-7cc2-4a38-9fda-22271d15a3dd.png"
+          backgroundImage="/lovable-uploads/bd2e6280-5b16-49f3-a868-acd23fcc6d33.png"
         />
 
         {/* Contact Information */}
@@ -69,7 +68,7 @@ const Contact = () => {
             </div>
           </div>
         </section>
-
+        
         {/* Contact Form and Map */}
         <section className="section-padding bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
