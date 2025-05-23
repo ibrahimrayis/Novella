@@ -49,7 +49,7 @@ export const instagramPosts = [
   },
   {
     id: "7",
-    imageUrl: "/lovable-uploads/9db85d57-4473-4a6d-b3ae-4d5a17718d30.png",
+    imageUrl: "/lovable-uploads/d504e8fb-ac23-49db-b358-31cfa02079eb.png",
     caption: "Celebrating another successful project completion. Thank you to our amazing team! #Success #Team #Celebration",
     timestamp: "2024-01-01T15:45:00Z",
     likes: 245,
