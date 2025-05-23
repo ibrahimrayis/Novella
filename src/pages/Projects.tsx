@@ -49,7 +49,7 @@ const projectsData = [
     id: 6,
     title: "Manufacturing Plant",
     category: "Industrial",
-    image: "/lovable-uploads/13fbcb36-849b-4270-b6bc-ba5ad9639f11.png",
+    image: "/lovable-uploads/614c0fe9-3102-4574-a97e-91ccd1586ede.png",
     slug: "manufacturing-plant"
   },
   {
