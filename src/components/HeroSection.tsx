@@ -30,8 +30,8 @@ const HeroSection = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Enhanced gradient overlay for better text readability - made 17% lighter */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/60 to-black/75 backdrop-blur-[2px]"></div>
+        {/* Enhanced gradient overlay for better text readability - made darker for industrial images */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/85 backdrop-blur-[1px]"></div>
       </div>
       {/* Hero Content */}
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">

@@ -24,7 +24,7 @@ const Manufacturing = () => {
           subtitle="Where Quality Takes Shape"
           ctaText="Contact Us"
           ctaLink="/contact"
-          backgroundImage="/lovable-uploads/2c75ab80-a01c-41fb-8c91-a646b583fbcd.png"
+          backgroundImage="/lovable-uploads/29ece65d-6b3c-40f3-84ea-bacdcfae4839.png"
         />
 
         {/* Overview Section */}
