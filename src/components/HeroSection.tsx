@@ -29,8 +29,8 @@ const HeroSection = ({
           backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Enhanced dark overlay with stronger gradient for better readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/85 to-black/95 dark:from-black/98 dark:via-black/90 dark:to-black/98"></div>
+        {/* Enhanced dark overlay with stronger gradient for better text readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95 dark:from-black/98 dark:via-black/95 dark:to-black/98"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 relative z-10 pt-16">

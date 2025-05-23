@@ -23,7 +23,7 @@ const Construction = () => {
           subtitle="Every project has a story beyond the structure"
           ctaText="Contact Us"
           ctaLink="/contact"
-          backgroundImage="/lovable-uploads/49a9fb07-4dca-4c3d-b18b-7a17715a0f00.png"
+          backgroundImage="/lovable-uploads/4b387313-45b5-4968-9402-3b8c0271e5e9.png"
         />
 
         {/* Overview Section */}
