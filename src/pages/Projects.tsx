@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -15,7 +14,7 @@ const projectsData = [
     id: 1,
     title: "Modern Office Complex",
     category: "Commercial",
-    image: "/lovable-uploads/614c0fe9-3102-4574-a97e-91ccd1586ede.png",
+    image: "/lovable-uploads/2740304c-e48e-47fd-bd15-965a7f730604.png",
     slug: "modern-office-complex"
   },
   {
