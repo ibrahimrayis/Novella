@@ -29,7 +29,7 @@ const ServiceCard = ({ title, description, icon, link, isExternalLink = false }:
           className="inline-flex"
         >
           <Button variant="outline" className="border-novella-red text-novella-red hover:bg-novella-red hover:text-white flex items-center">
-            GitHub Repo <ExternalLink className="ml-1 h-4 w-4" />
+            Learn More <ExternalLink className="ml-1 h-4 w-4" />
           </Button>
         </a>
       ) : (
