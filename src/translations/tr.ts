@@ -184,5 +184,108 @@ export const tr = {
     ctaTitle: "Mükemmellikle Üretmeye Hazır mısınız?",
     ctaSubtitle: "Üretim kapasitelerimizin üretim ihtiyaçlarınızı hassasiyet ve kaliteyle nasıl karşılayabileceğini görüşmek için bugün bizimle iletişime geçin.",
     ctaButton: "Üretim Teklifi İsteyin"
+  },
+  importExport: {
+    title: "İthalat & İhracat Hizmetleri",
+    subtitle: "Mükemmellik, sunduğumuz tek şeydir",
+    overview: "Global Ticaret Mükemmelliği",
+    overviewSubtitle: "Çeşitli sektörlerdeki ithalat ve ihracat faaliyetlerinin sorunsuz akışını sağlamak",
+    description1: "Novella, çeşitli sektörlerdeki işletmeler için ithalat ve ihracat faaliyetlerinin sorunsuz akışını sağlamaya adanmıştır. Uzman ekibimiz ve geniş küresel ortak ağımız sayesinde tedarik zincirlerini düzenlemeyi, lojistiği basitleştirmeyi ve ticaret etkinliğini artırmayı amaçlayan bütünsel çözümler sunuyoruz.",
+    description2: "Uluslararası pazarda ayak izlerini genişletmeyi hedefleyen işletmeler için en iyi tercihiz. İster yüksek kaliteli malları temin etmek, ister karmaşık düzenleyici ortamlarda gezinmek, ister zamanında teslimatları garanti etmek olsun, Novella'nın İthalat ve İhracat Bölümü, küresel ticaret alanında güvenilir bir yol arkadaşıdır.",
+    getInTouch: "İletişime Geçin",
+    services: {
+      title: "İthalat & İhracat Hizmetlerimiz",
+      subtitle: "Tüm uluslararası ticaret ihtiyaçlarınız için kapsamlı çözümler",
+      international: {
+        title: "Uluslararası Ticaret",
+        description: "Uluslararası ticaret hizmetlerimiz, işletmeleri küresel pazarlarla birleştirerek, sınır ötesi işlemleri kolaylaştırır ve pazar erişiminizi genişletir.",
+        features: {
+          market: "Pazar giriş stratejisi geliştirme",
+          partner: "Ticari ortak belirleme",
+          negotiation: "Sözleşme müzakere desteği"
+        }
+      },
+      sourcing: {
+        title: "Tedarik & Satın Alma",
+        description: "Tedarik ve satın alma hizmetlerimiz, özel gereksinimlerinizi karşılayan güvenilir tedarikçiler ve yüksek kaliteli ürünler bulmanıza yardımcı olur.",
+        features: {
+          supplier: "Tedarikçi tanımlama ve doğrulama",
+          quality: "Ürün kalite güvencesi",
+          price: "Fiyat müzakeresi ve optimizasyonu"
+        }
+      },
+      logistics: {
+        title: "Lojistik Yönetimi",
+        description: "Lojistik yönetimi hizmetlerimiz, malların sınırlar arasında verimli bir şekilde hareket etmesini sağlar, taşıma maliyetlerini ve teslimat sürelerini optimize eder.",
+        features: {
+          freight: "Nakliye hizmetleri",
+          customs: "Gümrük işlemleri yönetimi",
+          supply: "Tedarik zinciri optimizasyonu"
+        }
+      },
+      market: {
+        title: "Pazar Araştırmaları",
+        description: "Kapsamlı pazar araştırmalarımız, uluslararası ticaret kararlarınızı bilgilendirmek ve büyüme fırsatlarını belirlemek için değerli bilgiler sunar.",
+        features: {
+          demand: "Pazar talep analizi",
+          competitor: "Rakip ve fiyatlandırma araştırması",
+          regulatory: "Düzenleyici ortam değerlendirmesi"
+        }
+      },
+      compliance: {
+        title: "Mevzuata Uyum",
+        description: "Karmaşık uluslararası ticaret düzenlemelerinde gezinmenize yardımcı oluyoruz ve operasyonlarınızın tüm yargı bölgelerinde uyumlu kalmasını sağlıyoruz.",
+        features: {
+          documentation: "İthalat/ihracat belgeleri",
+          audits: "Uygunluk denetimleri",
+          training: "Düzenleyici güncellemeler ve eğitim"
+        }
+      },
+      finance: {
+        title: "Ticaret Finansmanı",
+        description: "Ticaret finansmanı çözümlerimiz, uluslararası ticaret operasyonları için gerekli fonları güvence altına almaya, riskleri en aza indirmeye ve nakit akışını optimize etmeye yardımcı olur.",
+        features: {
+          letters: "Akreditif yönetimi",
+          insurance: "Ticari kredi sigortası",
+          capital: "İşletme sermayesi çözümleri"
+        }
+      }
+    },
+    network: {
+      title: "Küresel Ağımız",
+      subtitle: "Uluslararası ticaret ihtiyaçlarınızı kolaylaştırmak için dünyanın dört bir yanında stratejik ortaklıklar",
+      strong: "Güçlü Uluslararası Varlık",
+      description1: "Başarımızın temel taşı, onlarca yıl boyunca yetiştirdiğimiz kalıcı bağlantılardır. Novella, kreditörler, devlet kurumları, organizasyonlar ve çeşitli sektörlerdeki mülk sahipleriyle etkili bir şekilde işbirliği yapmanın uzun süreli geçmişi sayesinde müşteriler ve finansal destekçilerle verimli ortaklıklar yetiştirmiştir.",
+      description2: "İtibarımız ve geniş ağımız, uluslararası ticaret girişimlerinizin gerekli desteği güvence altına almasını ve sarsılmaz bir güvenle eşsiz bir değer sunmasını sağlar.",
+      partners: "Dünyadaki Önemli Ortaklarımız",
+      partner1: "Stratejik Ticaret Ortağı",
+      partner2: "Dış Ekonomik İlişkiler",
+      partner3: "Kalkınma İşbirliği"
+    },
+    why: {
+      title: "Neden Novella İthalat & İhracatı Seçmelisiniz",
+      subtitle: "Küresel ticaret sektöründe bizi farklı kılan nedir",
+      global: {
+        title: "Küresel Erişim",
+        description: "Dünya çapında kilit pazarlarda geniş bir ortak ve temsilci ağı"
+      },
+      expert: {
+        title: "Uzman Ekip",
+        description: "Uluslararası ticaret düzenlemeleri ve uygulamaları hakkında derin bilgiye sahip uzmanlar"
+      },
+      integrated: {
+        title: "Entegre Çözümler",
+        description: "İthalat/ihracat sürecinin her yönünü kapsayan kapsamlı hizmetler"
+      },
+      intelligence: {
+        title: "Pazar İstihbaratı",
+        description: "Stratejik ticaret kararlarını bilgilendirmek için gerçek zamanlı veriler ve öngörüler"
+      }
+    },
+    cta: {
+      title: "Küresel Erişiminizi Genişletmeye Hazır mısınız?",
+      subtitle: "İthalat ve ihracat hizmetlerimizin işletmenizin uluslararası pazarda başarılı olmasına nasıl yardımcı olabileceğini tartışmak için bugün bizimle iletişime geçin.",
+      button: "Ticaret Uzmanlarımızla İletişime Geçin"
+    }
   }
 };

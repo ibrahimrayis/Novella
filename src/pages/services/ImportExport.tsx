@@ -7,21 +7,25 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { cn } from "@/lib/utils";
 
 const ImportExport = () => {
+  const { t, direction } = useLanguage();
+  
   useEffect(() => {
-    document.title = "Import & Export Services - Novella Ltd";
-  }, []);
+    document.title = `${t("importExport.title")} - Novella Ltd`;
+  }, [t]);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className={cn("flex flex-col min-h-screen", direction === "rtl" ? "text-right" : "text-left")}>
       <Navbar />
       
       <main className="flex-grow">
         <HeroSection
           title="Novella Import & Export"
-          subtitle="Excellence is all that we deliver"
-          ctaText="Contact Us"
+          subtitle={t("importExport.subtitle")}
+          ctaText={t("common.contactUs")}
           ctaLink="/contact"
           backgroundImage="/lovable-uploads/d0cf6519-7cc2-4a38-9fda-22271d15a3dd.png"
         />
@@ -30,26 +34,20 @@ const ImportExport = () => {
         <section className="section-padding">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
+              <div className={direction === "rtl" ? "order-last" : ""}>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-novella-navy">
-                  Global Trade Excellence
+                  {t("importExport.overview")}
                 </h2>
-                <div className="h-1 w-24 bg-novella-red mb-6"></div>
+                <div className={cn("h-1 w-24 bg-novella-red mb-6", direction === "rtl" ? "mr-0" : "ml-0")}></div>
                 <p className="text-gray-700 mb-6">
-                  Novella is dedicated to ensuring the smooth flow of import and export activities for
-                  businesses spanning diverse industries. Our team of experts, coupled with an extensive
-                  global network of partners, allows us to deliver holistic solutions aimed at streamlining
-                  supply chains, simplifying logistics, and boosting trade effectiveness.
+                  {t("importExport.description1")}
                 </p>
                 <p className="text-gray-700 mb-6">
-                  We stand as the top choice for enterprises aiming to broaden their footprint in the international market.
-                  Whether the need is to secure high-quality goods, navigate intricate regulatory
-                  landscapes, or guarantee punctual deliveries, Novella's Imports and Exports Division is
-                  the dependable companion in the realm of global trade.
+                  {t("importExport.description2")}
                 </p>
                 <Link to="/contact">
                   <Button className="mt-2 bg-novella-red hover:bg-red-700 text-white">
-                    Get in Touch
+                    {t("importExport.getInTouch")}
                   </Button>
                 </Link>
               </div>
@@ -68,145 +66,157 @@ const ImportExport = () => {
         <section className="section-padding bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <SectionTitle 
-              title="Our Import & Export Services" 
-              subtitle="Comprehensive solutions for all your international trade needs"
+              title={t("importExport.services.title")} 
+              subtitle={t("importExport.services.subtitle")}
             />
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
               <div className="bg-white rounded-lg shadow-md p-8 border-t-4 border-novella-red">
                 <Globe className="h-12 w-12 text-novella-red mb-4" />
-                <h3 className="text-xl font-bold mb-4 text-novella-navy">International Trade</h3>
+                <h3 className="text-xl font-bold mb-4 text-novella-navy">{t("importExport.services.international.title")}</h3>
                 <p className="text-gray-700 mb-6">
-                  Our international trade services connect businesses with global markets, facilitating seamless 
-                  cross-border transactions and expanding your market reach.
+                  {t("importExport.services.international.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Market entry strategy development</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.international.features.market")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Trade partner identification</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.international.features.partner")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Contract negotiation support</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.international.features.negotiation")}</span>
                   </li>
                 </ul>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-8 border-t-4 border-novella-red">
                 <ShoppingBag className="h-12 w-12 text-novella-red mb-4" />
-                <h3 className="text-xl font-bold mb-4 text-novella-navy">Sourcing & Procurement</h3>
+                <h3 className="text-xl font-bold mb-4 text-novella-navy">{t("importExport.services.sourcing.title")}</h3>
                 <p className="text-gray-700 mb-6">
-                  Our sourcing and procurement services help you find reliable suppliers and high-quality products 
-                  that meet your specific requirements.
+                  {t("importExport.services.sourcing.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Supplier identification and verification</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.sourcing.features.supplier")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Product quality assurance</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.sourcing.features.quality")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Price negotiation and optimization</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.sourcing.features.price")}</span>
                   </li>
                 </ul>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-8 border-t-4 border-novella-red">
                 <Truck className="h-12 w-12 text-novella-red mb-4" />
-                <h3 className="text-xl font-bold mb-4 text-novella-navy">Logistics Management</h3>
+                <h3 className="text-xl font-bold mb-4 text-novella-navy">{t("importExport.services.logistics.title")}</h3>
                 <p className="text-gray-700 mb-6">
-                  Our logistics management services ensure the efficient movement of goods across borders, 
-                  optimizing transportation costs and delivery times.
+                  {t("importExport.services.logistics.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Freight forwarding services</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.logistics.features.freight")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Customs clearance management</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.logistics.features.customs")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Supply chain optimization</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.logistics.features.supply")}</span>
                   </li>
                 </ul>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-8 border-t-4 border-novella-red">
                 <BarChart4 className="h-12 w-12 text-novella-red mb-4" />
-                <h3 className="text-xl font-bold mb-4 text-novella-navy">Market Studies</h3>
+                <h3 className="text-xl font-bold mb-4 text-novella-navy">{t("importExport.services.market.title")}</h3>
                 <p className="text-gray-700 mb-6">
-                  Our comprehensive market studies provide valuable insights to inform your international trade decisions 
-                  and identify growth opportunities.
+                  {t("importExport.services.market.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Market demand analysis</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.market.features.demand")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Competitor and pricing research</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.market.features.competitor")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Regulatory environment assessment</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.market.features.regulatory")}</span>
                   </li>
                 </ul>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-8 border-t-4 border-novella-red">
                 <FileText className="h-12 w-12 text-novella-red mb-4" />
-                <h3 className="text-xl font-bold mb-4 text-novella-navy">Regulatory Compliance</h3>
+                <h3 className="text-xl font-bold mb-4 text-novella-navy">{t("importExport.services.compliance.title")}</h3>
                 <p className="text-gray-700 mb-6">
-                  We help navigate the complex world of international trade regulations, ensuring your operations 
-                  remain compliant across all jurisdictions.
+                  {t("importExport.services.compliance.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Import/export documentation</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.compliance.features.documentation")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Compliance audits</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.compliance.features.audits")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Regulatory updates and training</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.compliance.features.training")}</span>
                   </li>
                 </ul>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-8 border-t-4 border-novella-red">
-                <ArrowRight className="h-12 w-12 text-novella-red mb-4" />
-                <h3 className="text-xl font-bold mb-4 text-novella-navy">Trade Finance</h3>
+                <ArrowRight className={cn("h-12 w-12 text-novella-red mb-4", direction === "rtl" ? "transform rotate-180" : "")} />
+                <h3 className="text-xl font-bold mb-4 text-novella-navy">{t("importExport.services.finance.title")}</h3>
                 <p className="text-gray-700 mb-6">
-                  Our trade finance solutions help secure the funding needed for international trade operations, 
-                  minimizing risk and optimizing cash flow.
+                  {t("importExport.services.finance.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Letters of credit management</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.finance.features.letters")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Trade credit insurance</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.finance.features.insurance")}</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3"></span>
-                    <span>Working capital solutions</span>
+                    <span className={cn("inline-block w-2 h-2 bg-novella-red rounded-full mt-2 mr-3", 
+                      direction === "rtl" ? "ml-3 mr-0" : "mr-3")}></span>
+                    <span>{t("importExport.services.finance.features.capital")}</span>
                   </li>
                 </ul>
               </div>
@@ -218,22 +228,18 @@ const ImportExport = () => {
         <section className="section-padding">
           <div className="container mx-auto px-4 md:px-6">
             <SectionTitle 
-              title="Our Global Network" 
-              subtitle="Strategic partnerships around the world to facilitate your international trade needs"
+              title={t("importExport.network.title")} 
+              subtitle={t("importExport.network.subtitle")}
             />
             
             <div className="bg-white rounded-lg shadow-xl overflow-hidden mt-12">
               <div className="p-8">
-                <h3 className="text-2xl font-bold mb-6 text-novella-navy">Strong International Presence</h3>
+                <h3 className="text-2xl font-bold mb-6 text-novella-navy">{t("importExport.network.strong")}</h3>
                 <p className="text-gray-700 mb-6">
-                  The cornerstone of our success lies in the enduring connections we've cultivated over numerous
-                  decades. Novella has nurtured prosperous partnerships with clients and financial backers, thanks to
-                  our extensive, time-tested history of collaborating effectively with lenders, government bodies,
-                  organizations, and property owners across various sectors.
+                  {t("importExport.network.description1")}
                 </p>
                 <p className="text-gray-700 mb-6">
-                  Our standing and extensive network pave the path, ensuring your international trade endeavors secure 
-                  the necessary support and offers unmatched value with unwavering confidence.
+                  {t("importExport.network.description2")}
                 </p>
               </div>
               
@@ -244,7 +250,7 @@ const ImportExport = () => {
                   className="h-full object-cover"
                 />
                 <div className="bg-novella-navy p-8 text-white">
-                  <h4 className="text-xl font-bold mb-6">Our Key Partners Around the World</h4>
+                  <h4 className="text-xl font-bold mb-6">{t("importExport.network.partners")}</h4>
                   <div className="space-y-4">
                     <div className="flex items-center">
                       <img 
@@ -254,7 +260,7 @@ const ImportExport = () => {
                       />
                       <div>
                         <p className="font-semibold">MAB Turkey</p>
-                        <p className="text-sm text-white/70">Strategic Trade Partner</p>
+                        <p className="text-sm text-white/70">{t("importExport.network.partner1")}</p>
                       </div>
                     </div>
                     <div className="flex items-center">
@@ -265,7 +271,7 @@ const ImportExport = () => {
                       />
                       <div>
                         <p className="font-semibold">DEIK</p>
-                        <p className="text-sm text-white/70">Foreign Economic Relations</p>
+                        <p className="text-sm text-white/70">{t("importExport.network.partner2")}</p>
                       </div>
                     </div>
                     <div className="flex items-center">
@@ -276,7 +282,7 @@ const ImportExport = () => {
                       />
                       <div>
                         <p className="font-semibold">TİKA</p>
-                        <p className="text-sm text-white/70">Development Cooperation</p>
+                        <p className="text-sm text-white/70">{t("importExport.network.partner3")}</p>
                       </div>
                     </div>
                   </div>
@@ -290,8 +296,8 @@ const ImportExport = () => {
         <section className="section-padding bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <SectionTitle 
-              title="Why Choose Novella Import & Export" 
-              subtitle="What sets us apart in the global trade industry"
+              title={t("importExport.why.title")} 
+              subtitle={t("importExport.why.subtitle")}
             />
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
@@ -299,9 +305,9 @@ const ImportExport = () => {
                 <div className="w-16 h-16 bg-novella-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-novella-red" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-novella-navy">Global Reach</h3>
+                <h3 className="text-lg font-bold mb-2 text-novella-navy">{t("importExport.why.global.title")}</h3>
                 <p className="text-gray-600">
-                  Extensive network of partners and agents across key markets worldwide
+                  {t("importExport.why.global.description")}
                 </p>
               </div>
               
@@ -309,9 +315,9 @@ const ImportExport = () => {
                 <div className="w-16 h-16 bg-novella-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <ShoppingBag className="h-8 w-8 text-novella-red" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-novella-navy">Expert Team</h3>
+                <h3 className="text-lg font-bold mb-2 text-novella-navy">{t("importExport.why.expert.title")}</h3>
                 <p className="text-gray-600">
-                  Specialists with deep knowledge of international trade regulations and practices
+                  {t("importExport.why.expert.description")}
                 </p>
               </div>
               
@@ -319,9 +325,9 @@ const ImportExport = () => {
                 <div className="w-16 h-16 bg-novella-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Truck className="h-8 w-8 text-novella-red" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-novella-navy">Integrated Solutions</h3>
+                <h3 className="text-lg font-bold mb-2 text-novella-navy">{t("importExport.why.integrated.title")}</h3>
                 <p className="text-gray-600">
-                  Comprehensive services that cover every aspect of the import/export process
+                  {t("importExport.why.integrated.description")}
                 </p>
               </div>
               
@@ -329,9 +335,9 @@ const ImportExport = () => {
                 <div className="w-16 h-16 bg-novella-red/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <BarChart4 className="h-8 w-8 text-novella-red" />
                 </div>
-                <h3 className="text-lg font-bold mb-2 text-novella-navy">Market Intelligence</h3>
+                <h3 className="text-lg font-bold mb-2 text-novella-navy">{t("importExport.why.intelligence.title")}</h3>
                 <p className="text-gray-600">
-                  Real-time data and insights to inform strategic trade decisions
+                  {t("importExport.why.intelligence.description")}
                 </p>
               </div>
             </div>
@@ -342,14 +348,14 @@ const ImportExport = () => {
         <section className="py-20 bg-novella-red relative">
           <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Expand Your Global Reach?
+              {t("importExport.cta.title")}
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss how our import and export services can help your business thrive in the international market.
+              {t("importExport.cta.subtitle")}
             </p>
             <Link to="/contact">
               <Button className="bg-white hover:bg-gray-100 text-novella-red font-medium px-8 py-6 text-lg">
-                Contact Our Trade Specialists
+                {t("importExport.cta.button")}
               </Button>
             </Link>
           </div>
