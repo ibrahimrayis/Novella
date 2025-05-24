@@ -73,6 +73,7 @@ const App = () => {
               <Route path="/services/import-export" element={<ImportExport />} />
               <Route path="/services/manufacturing" element={<Manufacturing />} />
               <Route path="/services/real-estate" element={<RealEstate />} />
+              <Route path="/novella-tech" element={<NovellaTech />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
             
