@@ -14,7 +14,7 @@ const projectsData = [
     id: 1,
     title: "SELVI PARK",
     category: "Commercial",
-    image: "/lovable-uploads/bfbad59d-2149-412c-a006-9919fdccf225.png",
+    image: "/lovable-uploads/3a26d2ae-2056-4b75-b471-50d3557c57f2.png",
     slug: "modern-office-complex"
   },
   {
