@@ -1,4 +1,3 @@
-
 import { Building2, Globe, Factory, Home, Code } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import ServiceCard from "./ServiceCard";
@@ -61,8 +60,8 @@ const ServicesSection = () => {
             }
             description="Tailored technology solutions to boost your company's growth"
             icon={<Code size={40} />}
-            link="https://github.com/ibrahimrayis/novella-digital-growth.git"
-            isExternalLink={true}
+            link="/novella-tech"
+            isExternalLink={false}
           />
         </div>
       </div>

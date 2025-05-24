@@ -19,6 +19,7 @@ import Construction from "./pages/services/Construction";
 import ImportExport from "./pages/services/ImportExport";
 import Manufacturing from "./pages/services/Manufacturing";
 import RealEstate from "./pages/services/RealEstate";
+import NovellaTech from "./pages/NovellaTech";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 
