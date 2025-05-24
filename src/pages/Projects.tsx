@@ -12,9 +12,9 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const projectsData = [
   {
     id: 1,
-    title: "Modern Office Complex",
+    title: "SELVI PARK",
     category: "Commercial",
-    image: "/lovable-uploads/fa82dbcd-bc08-43f2-b03d-8f62dabf0b05.png",
+    image: "/lovable-uploads/bfbad59d-2149-412c-a006-9919fdccf225.png",
     slug: "modern-office-complex"
   },
   {
