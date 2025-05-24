@@ -1,5 +1,4 @@
 
-
 export const instagramPosts = [
   {
     id: "1",
@@ -60,7 +59,7 @@ export const instagramPosts = [
   {
     id: "8",
     imageUrl: "/lovable-uploads/c6edf182-be0e-4597-99df-b106fb7624b6.png",
-    caption: "Innovation in action. Our latest technology integration is revolutionizing our processes. #Innovation #Technology #Progress",
+    caption: "Why wait for tomorrow when the change is needed today? Every effort counts — whether big or small. Progress begins when we show up, speak up, and take part. Let's be present, be involved, and build the future together.",
     timestamp: "2023-12-28T12:00:00Z",
     likes: 134,
     permalink: "https://www.instagram.com/p/example8/"
