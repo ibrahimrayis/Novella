@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -14,14 +15,14 @@ const projectsData = [
     id: 1,
     title: "Modern Office Complex",
     category: "Commercial",
-    image: "/lovable-uploads/2740304c-e48e-47fd-bd15-965a7f730604.png",
+    image: "/lovable-uploads/fa82dbcd-bc08-43f2-b03d-8f62dabf0b05.png",
     slug: "modern-office-complex"
   },
   {
     id: 2,
     title: "Residential Tower",
     category: "Residential",
-    image: "/lovable-uploads/fa82dbcd-bc08-43f2-b03d-8f62dabf0b05.png",
+    image: "/lovable-uploads/2740304c-e48e-47fd-bd15-965a7f730604.png",
     slug: "residential-tower"
   },
   {
@@ -35,7 +36,7 @@ const projectsData = [
     id: 4,
     title: "Shopping Center",
     category: "Commercial",
-    image: "/lovable-uploads/c8e3fd2c-bd9f-407d-bd2e-113c2b56f564.png",
+    image: "/lovable-uploads/4fa5f518-fa61-4305-829c-3bfec8dd5376.png",
     slug: "shopping-center"
   },
   {
