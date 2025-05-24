@@ -6,7 +6,7 @@ export const instagramPosts = [
     caption: "An engaging and fruitful discussion with the Sakarya Governor on launching a states twinning initiative between Sakarya and a Sudanese state, aiming for cooperation in diverse areas",
     timestamp: "2024-01-15T10:30:00Z",
     likes: 127,
-    permalink: "https://www.instagram.com/p/example1/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "2",
@@ -14,7 +14,7 @@ export const instagramPosts = [
     caption: "Proud to showcase our manufacturing capabilities. Innovation meets precision in our state-of-the-art facilities. #Manufacturing #Innovation #Technology",
     timestamp: "2024-01-12T14:45:00Z",
     likes: 89,
-    permalink: "https://www.instagram.com/p/example2/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "3",
@@ -22,7 +22,7 @@ export const instagramPosts = [
     caption: "Global partnerships drive our import/export success. Connecting businesses worldwide with quality solutions. #ImportExport #Global #Business",
     timestamp: "2024-01-10T09:15:00Z",
     likes: 156,
-    permalink: "https://www.instagram.com/p/example3/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "4",
@@ -30,7 +30,7 @@ export const instagramPosts = [
     caption: "Real estate development that transforms communities. Building the future, one project at a time. #RealEstate #Development #Community",
     timestamp: "2024-01-08T16:20:00Z",
     likes: 203,
-    permalink: "https://www.instagram.com/p/example4/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "5",
@@ -38,7 +38,7 @@ export const instagramPosts = [
     caption: "Discussions drive progress, raise ideas, and build connections. These moments of dialogue turn vision into success. #LeadershipInAction #DrivingChange #StrategicDialogue",
     timestamp: "2024-01-05T11:00:00Z",
     likes: 92,
-    permalink: "https://www.instagram.com/p/example5/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "6",
@@ -46,7 +46,7 @@ export const instagramPosts = [
     caption: "Quality materials make all the difference. Our commitment to excellence shows in every detail. #Quality #Materials #Excellence",
     timestamp: "2024-01-03T13:30:00Z",
     likes: 118,
-    permalink: "https://www.instagram.com/p/example6/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "7",
@@ -54,7 +54,7 @@ export const instagramPosts = [
     caption: "Celebrating another successful project completion. Thank you to our amazing team! #Success #Team #Celebration",
     timestamp: "2024-01-01T15:45:00Z",
     likes: 245,
-    permalink: "https://www.instagram.com/p/example7/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "8",
@@ -62,7 +62,7 @@ export const instagramPosts = [
     caption: "Why wait for tomorrow when the change is needed today? Every effort counts — whether big or small. Progress begins when we show up, speak up, and take part. Let's be present, be involved, and build the future together.",
     timestamp: "2023-12-28T12:00:00Z",
     likes: 134,
-    permalink: "https://www.instagram.com/p/example8/"
+    permalink: "https://www.instagram.com/novellaltd/"
   },
   {
     id: "9",
@@ -70,6 +70,6 @@ export const instagramPosts = [
     caption: "Honored by the presence of Sudan's Minister of Finance at the Sudanese Agricultural Forum in Turkey. Proud to support this important event and contribute to meaningful discussions on agriculture and sustainable development.",
     timestamp: "2023-12-25T18:00:00Z",
     likes: 187,
-    permalink: "https://www.instagram.com/p/example9/"
+    permalink: "https://www.instagram.com/novellaltd/"
   }
 ];
