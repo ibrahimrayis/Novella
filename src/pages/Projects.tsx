@@ -15,7 +15,7 @@ const projectsData = [
     id: 1,
     title: "Modern Office Complex",
     category: "Commercial",
-    image: "/lovable-uploads/217b0ff4-1cf2-4ecc-a3e3-5e9748d39c4e.png",
+    image: "/lovable-uploads/614c0fe9-3102-4574-a97e-91ccd1586ede.png",
     slug: "modern-office-complex"
   },
   {
@@ -50,7 +50,7 @@ const projectsData = [
     id: 6,
     title: "Manufacturing Plant",
     category: "Industrial",
-    image: "/lovable-uploads/614c0fe9-3102-4574-a97e-91ccd1586ede.png",
+    image: "/lovable-uploads/217b0ff4-1cf2-4ecc-a3e3-5e9748d39c4e.png",
     slug: "manufacturing-plant"
   },
   {
