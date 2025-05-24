@@ -442,5 +442,6 @@ export const tr = {
     ctaTitle: "Bir Sonraki Projenize Başlamaya Hazır mısınız?",
     ctaSubtitle: "Proje ihtiyaçlarınızı ve vizyonunuzu görüşmek için inşaat uzmanlarımızla ücretsiz bir danışma alın.",
     ctaButton: "Ücretsiz Danışmanlık Alın"
-  }
+  },
+  contact
 };

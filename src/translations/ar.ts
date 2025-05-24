@@ -2,18 +2,18 @@ export const ar = {
   common: {
     home: "الرئيسية",
     projects: "المشاريع",
-    events: "الفعاليات",
+    events: "الأحداث",
     about: "من نحن",
     services: "الخدمات",
     contactUs: "اتصل بنا",
     viewAllProjects: "عرض جميع المشاريع",
     viewDetails: "عرض التفاصيل",
     viewAllProperties: "عرض جميع العقارات",
-    backToProjects: "العودة إلى المشاريع",
-    learnMore: "معرفة المزيد",
-    contactSalesTeam: "التواصل مع فريق المبيعات",
-    contactOurTeam: "التواصل مع فريقنا",
-    viewSimilarProjects: "عرض مشاريع مماثلة"
+    backToProjects: "العودة للمشاريع",
+    learnMore: "اعرف المزيد",
+    contactSalesTeam: "اتصل بفريق المبيعات",
+    contactOurTeam: "اتصل بفريقنا",
+    viewSimilarProjects: "عرض المشاريع المماثلة"
   },
   home: {
     pageTitle: "نوفيلا المحدودة - البناء، الاستيراد/التصدير والتصنيع",
@@ -442,5 +442,6 @@ export const ar = {
     ctaTitle: "هل أنت جاهز لبدء مشروعك القادم؟",
     ctaSubtitle: "احصل على استشارة مجانية مع خبراء البناء لدينا لمناقشة احتياجات ورؤية مشروعك.",
     ctaButton: "احصل على استشارة مجانية"
-  }
+  },
+  contact
 };

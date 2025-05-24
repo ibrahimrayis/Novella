@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Loader2 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface FormData {
   name: string;
@@ -17,6 +18,7 @@ interface FormData {
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormData>();
 
@@ -29,15 +31,15 @@ const ContactForm = () => {
       console.log("Form submitted:", data);
       
       toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
+        title: t('contact.messageSent'),
+        description: t('contact.messageSuccess'),
       });
       
       reset();
     } catch (error) {
       toast({
-        title: "Error",
-        description: "There was a problem sending your message. Please try again.",
+        title: t('contact.errorTitle'),
+        description: t('contact.errorMessage'),
         variant: "destructive",
       });
     } finally {
@@ -50,12 +52,12 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-            Full Name *
+            {t('contact.fullName')} *
           </label>
           <Input
             id="name"
-            placeholder="Enter your name"
-            {...register("name", { required: "Name is required" })}
+            placeholder={t('contact.fullNamePlaceholder')}
+            {...register("name", { required: t('contact.nameRequired') })}
             className={errors.name ? "border-red-500" : ""}
           />
           {errors.name && (
@@ -65,17 +67,17 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-            Email Address *
+            {t('contact.email')} *
           </label>
           <Input
             id="email"
             type="email"
-            placeholder="Enter your email"
+            placeholder={t('contact.emailPlaceholder')}
             {...register("email", { 
-              required: "Email is required", 
+              required: t('contact.emailRequired'), 
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Invalid email address"
+                message: t('contact.emailInvalid')
               }
             })}
             className={errors.email ? "border-red-500" : ""}
@@ -89,23 +91,23 @@ const ContactForm = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-            Phone Number
+            {t('contact.phone')}
           </label>
           <Input
             id="phone"
-            placeholder="Enter your phone number"
+            placeholder={t('contact.phonePlaceholder')}
             {...register("phone")}
           />
         </div>
 
         <div>
           <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-            Subject *
+            {t('contact.subject')} *
           </label>
           <Input
             id="subject"
-            placeholder="Enter subject"
-            {...register("subject", { required: "Subject is required" })}
+            placeholder={t('contact.subjectPlaceholder')}
+            {...register("subject", { required: t('contact.subjectRequired') })}
             className={errors.subject ? "border-red-500" : ""}
           />
           {errors.subject && (
@@ -116,13 +118,13 @@ const ContactForm = () => {
 
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-          Message *
+          {t('contact.message')} *
         </label>
         <Textarea
           id="message"
           rows={5}
-          placeholder="Enter your message"
-          {...register("message", { required: "Message is required" })}
+          placeholder={t('contact.messagePlaceholder')}
+          {...register("message", { required: t('contact.messageRequired') })}
           className={errors.message ? "border-red-500" : ""}
         />
         {errors.message && (
@@ -138,9 +140,9 @@ const ContactForm = () => {
         {isSubmitting ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Sending...
+            {t('contact.sending')}
           </>
-        ) : 'Send Message'}
+        ) : t('contact.sendMessageBtn')}
       </Button>
     </form>
   );

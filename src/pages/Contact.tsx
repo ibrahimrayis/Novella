@@ -6,32 +6,35 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import SectionTitle from "@/components/SectionTitle";
 import ContactForm from "@/components/ContactForm";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
-    document.title = "Contact Us - Novella Ltd";
-  }, []);
+    document.title = `${t('contact.title')} - Novella Ltd`;
+  }, [t]);
 
   const contactInfo = [
     {
       icon: <MapPin className="h-10 w-10" />,
-      title: "Our Location",
-      details: "Istanbul, Venezia Mega Outlet, Block G5, Floor 0, Office 49"
+      title: t('contact.ourLocation'),
+      details: t('contact.locationDetails')
     },
     {
       icon: <Phone className="h-10 w-10" />,
-      title: "Phone Number",
-      details: "+90-552 88 00005"
+      title: t('contact.phoneNumber'),
+      details: t('contact.phoneDetails')
     },
     {
       icon: <Mail className="h-10 w-10" />,
-      title: "Email Address",
-      details: "info@novellaltd.com"
+      title: t('contact.emailAddress'),
+      details: t('contact.emailDetails')
     },
     {
       icon: <Clock className="h-10 w-10" />,
-      title: "Working Hours",
-      details: "Monday - Friday: 9:00 AM - 6:00 PM"
+      title: t('contact.workingHours'),
+      details: t('contact.hoursDetails')
     }
   ];
 
@@ -41,9 +44,9 @@ const Contact = () => {
       
       <main className="flex-grow">
         <HeroSection
-          title="Contact Us"
-          subtitle="Get in touch with our team to discuss your project or inquire about our services"
-          ctaText="Our Services"
+          title={t('contact.title')}
+          subtitle={t('contact.subtitle')}
+          ctaText={t('common.services')}
           ctaLink="/services/construction"
           backgroundImage="/lovable-uploads/bd2e6280-5b16-49f3-a868-acd23fcc6d33.png"
         />
@@ -52,8 +55,8 @@ const Contact = () => {
         <section className="section-padding">
           <div className="container mx-auto px-4 md:px-6">
             <SectionTitle 
-              title="Get In Touch" 
-              subtitle="We're here to answer any questions you have about our services"
+              title={t('contact.getInTouch')} 
+              subtitle={t('contact.getInTouchSubtitle')}
             />
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
@@ -75,17 +78,17 @@ const Contact = () => {
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-novella-navy">Send Us a Message</h2>
+                <h2 className="text-3xl font-bold mb-6 text-novella-navy">{t('contact.sendMessage')}</h2>
                 <p className="text-gray-600 mb-8">
-                  Fill out the form below, and we'll get back to you as soon as possible.
+                  {t('contact.sendMessageDesc')}
                 </p>
                 <ContactForm />
               </div>
               
               <div>
-                <h2 className="text-3xl font-bold mb-6 text-novella-navy">Our Location</h2>
+                <h2 className="text-3xl font-bold mb-6 text-novella-navy">{t('contact.ourLocationSection')}</h2>
                 <p className="text-gray-600 mb-8">
-                  Visit our office in Istanbul or contact us using the details below.
+                  {t('contact.locationSectionDesc')}
                 </p>
                 <div className="bg-white p-4 rounded-lg shadow-md h-[500px]">
                   <iframe
@@ -108,8 +111,8 @@ const Contact = () => {
         <section className="py-16">
           <div className="container mx-auto px-4 md:px-6">
             <SectionTitle 
-              title="Our Offices" 
-              subtitle="A glimpse of our modern workspace where we bring ideas to life"
+              title={t('contact.ourOffices')} 
+              subtitle={t('contact.officesSubtitle')}
             />
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">

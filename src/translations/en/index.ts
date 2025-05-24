@@ -9,6 +9,7 @@ import { realEstate } from './realEstate';
 import { manufacturing } from './manufacturing';
 import { importExport } from './importExport';
 import { construction } from './construction';
+import { contact } from './contact';
 
 export const en = {
   common,
@@ -20,5 +21,6 @@ export const en = {
   realEstate,
   manufacturing,
   importExport,
-  construction
+  construction,
+  contact
 };
