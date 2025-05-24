@@ -29,13 +29,13 @@ const StatsSection = ({ backgroundImage = "/lovable-uploads/a18f477e-9c66-409c-b
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
           <StatCard
             icon={<Briefcase size={40} />}
-            value="250+"
+            value="100+"
             label={t("stats.projectsCompleted")}
           />
           
           <StatCard
             icon={<Users size={40} />}
-            value="120+"
+            value="30+"
             label={t("stats.expertTeam")}
           />
           
