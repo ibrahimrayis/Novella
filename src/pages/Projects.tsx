@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -19,7 +20,7 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Residential Tower",
+    title: "BAHARYAKA",
     category: "Residential",
     image: "/lovable-uploads/2740304c-e48e-47fd-bd15-965a7f730604.png",
     slug: "residential-tower"
