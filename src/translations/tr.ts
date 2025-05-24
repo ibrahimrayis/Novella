@@ -57,5 +57,54 @@ export const tr = {
     contactPrompt: "Mükemmel mülkünüzü bulmanıza nasıl yardımcı olabileceğimiz veya bu geliştirme hakkında sorularınız için bizimle iletişime geçin.",
     quickFacts: "Proje Hızlı Bilgiler",
     contact: "İletişim"
+  },
+  realEstate: {
+    title: "Gayrimenkul Hizmetleri",
+    subtitle: "İhtiyaçlarınıza göre özelleştirilmiş istisnai mülkler ve kapsamlı gayrimenkul çözümleri",
+    overview: "Gayrimenkul Hizmetleri",
+    overviewSubtitle: "Dürüstlük ve uzmanlıkla istisnai gayrimenkul çözümleri sunuyoruz",
+    description1: "Novella'da, hem konut hem de ticari mülkler için kapsamlı gayrimenkul hizmetleri sunuyoruz. Deneyimli profesyonellerden oluşan ekibimiz, mükemmel mülkü bulmanıza, gayrimenkul yatırımlarınızı yönetmenize ve getirilerinizi maksimize etmenize yardımcı olmak için özveriyle çalışıyor.",
+    description2: "İster satın almak, ister satmak, isterse mülk yatırımı yapmak istiyor olun, uzmanlarımız sürecin her adımında size rehberlik ederek, sorunsuz ve başarılı bir işlem gerçekleştirmenizi sağlayacaktır.",
+    features: {
+      residentialProperties: "Premium Konut Mülkleri",
+      commercialRealEstate: "Ticari Gayrimenkul",
+      propertyManagement: "Mülk Yönetimi",
+      investmentConsultation: "Yatırım Danışmanlığı",
+      realEstateDevelopment: "Gayrimenkul Geliştirme",
+      propertyValuationServices: "Mülk Değerleme Hizmetleri"
+    },
+    trustedClients: "1000+ müşterinin güvenini kazandık",
+    offerings: "Gayrimenkul Hizmetlerimiz",
+    offeringsSubtitle: "Tüm gayrimenkul ihtiyaçlarınız için kapsamlı çözümler",
+    residential: {
+      title: "Konut Mülkleri",
+      description: "Lüks dairelerden aile evlerine kadar uzanan özel konut koleksiyonumuzla hayalinizdeki evi keşfedin.",
+      features: {
+        premiumLocations: "Premium Lokasyonlar",
+        modernAmenities: "Modern Olanaklar",
+        financingOptions: "Esnek Finansman Seçenekleri"
+      }
+    },
+    commercial: {
+      title: "Ticari Gayrimenkul",
+      description: "Operasyonel ihtiyaçlarınızı ve büyüme hedeflerinizi karşılamak üzere tasarlanmış stratejik ticari mülklerimizle işinizi yükseltin.",
+      features: {
+        primeLocations: "Birinci Sınıf İş Lokasyonları",
+        customizableSpaces: "Özelleştirilebilir Ofis Alanları",
+        retailProperties: "Perakende ve Endüstriyel Mülkler"
+      }
+    },
+    management: {
+      title: "Mülk Yönetimi",
+      description: "Özel ihtiyaçlarınıza göre tasarlanmış kapsamlı mülk yönetimi hizmetlerimizle yatırım potansiyelinizi en üst düzeye çıkarın.",
+      features: {
+        tenantAcquisition: "Kiracı Edinme & Eleme",
+        propertyMaintenance: "Mülk Bakımı",
+        financialReporting: "Finansal Raporlama & Analiz"
+      }
+    },
+    ctaTitle: "Bir Sonraki Projenize Başlamaya Hazır mısınız?",
+    ctaSubtitle: "İster inşaat, ister ithalat ve ihracat hizmetleri veya üretim çözümleri ihtiyacınız olsun, hedeflerinize ulaşmanıza yardımcı olmak için buradayız.",
+    ctaButton: "Bugün Bize Ulaşın"
   }
 };

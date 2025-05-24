@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface CTASectionProps {
   title?: string;
@@ -8,15 +9,24 @@ interface CTASectionProps {
   buttonText?: string;
   buttonLink?: string;
   backgroundImage?: string;
+  translationPrefix?: string;
 }
 
 const CTASection = ({ 
-  title = "Ready to Start Your Next Project?",
-  subtitle = "Whether you need construction, import & export services, or manufacturing solutions, we're here to help you achieve your goals.",
-  buttonText = "Contact Us Today",
+  title,
+  subtitle,
+  buttonText,
   buttonLink = "/contact",
-  backgroundImage = "/lovable-uploads/259ac89e-f9dc-4539-a1d2-7140ab91439d.png"
+  backgroundImage = "/lovable-uploads/259ac89e-f9dc-4539-a1d2-7140ab91439d.png",
+  translationPrefix,
 }: CTASectionProps) => {
+  const { t } = useLanguage();
+  
+  // If translationPrefix is provided, use translations, otherwise use props
+  const displayTitle = translationPrefix ? t(`${translationPrefix}.ctaTitle`) : title || t("realEstate.ctaTitle");
+  const displaySubtitle = translationPrefix ? t(`${translationPrefix}.ctaSubtitle`) : subtitle || t("realEstate.ctaSubtitle");
+  const displayButtonText = translationPrefix ? t(`${translationPrefix}.ctaButton`) : buttonText || t("realEstate.ctaButton");
+
   return (
     <section className="py-20 bg-novella-navy relative">
       <div 
@@ -25,14 +35,14 @@ const CTASection = ({
       ></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-          {title}
+          {displayTitle}
         </h2>
         <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-          {subtitle}
+          {displaySubtitle}
         </p>
         <Link to={buttonLink}>
           <Button className="bg-novella-red hover:bg-red-700 text-white px-8 py-6 text-lg">
-            {buttonText}
+            {displayButtonText}
           </Button>
         </Link>
       </div>
