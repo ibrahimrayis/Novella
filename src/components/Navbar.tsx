@@ -68,7 +68,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <ul className="flex items-center space-x-2">
+            <ul className="flex items-center space-x-4">
               {navItems.map((item) => (
                 <li key={item.titleKey}>
                   <NavbarLink
