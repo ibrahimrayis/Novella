@@ -123,11 +123,17 @@ export const ar = {
     onTimeDelivery: "التسليم في الموعد المحدد"
   },
   projects: {
+    title: "مشاريعنا",
+    heroSubtitle: "استكشف محفظة مشاريعنا المكتملة والجارية عبر قطاعات مختلفة",
     featuredProperties: "العقارات المميزة",
     subtitle: "اكتشف مجموعتنا الحصرية من العقارات الفاخرة في جميع أنحاء إسطنبول",
     residential: "سكني",
     commercial: "تجاري",
+    industrial: "صناعي",
     delivery: "التسليم",
+    portfolioTitle: "محفظة المشاريع",
+    portfolioSubtitle: "تصفح مجموعتنا المتنوعة من المشاريع التي تعرض خبرتنا وابتكارنا",
+    allProjects: "جميع المشاريع",
     projectOverview: "نظرة عامة على المشروع",
     keyHighlights: "النقاط الرئيسية",
     sellingPoints: "نقاط البيع",
@@ -140,7 +146,10 @@ export const ar = {
     interestedIn: "مهتم بهذا المشروع؟",
     contactPrompt: "اتصل بنا لمناقشة كيف يمكننا مساعدتك في العثور على العقار المثالي أو الإجابة على أي أسئلة حول هذا التطوير.",
     quickFacts: "حقائق سريعة عن المشروع",
-    contact: "اتصال"
+    contact: "اتصال",
+    ctaTitle: "هل لديك مشروع في ذهنك؟",
+    ctaSubtitle: "تواصل مع فريقنا لمناقشة كيف يمكننا تحقيق رؤيتك بخبرتنا وتفانينا في التميز.",
+    ctaButton: "ابدأ مشروعك"
   },
   realEstate: {
     title: "خدمات العقارات",

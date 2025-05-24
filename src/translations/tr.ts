@@ -123,11 +123,17 @@ export const tr = {
     onTimeDelivery: "Zamanında Teslimat"
   },
   projects: {
+    title: "Projelerimiz",
+    heroSubtitle: "Çeşitli sektörlerdeki tamamlanmış ve devam eden projelerimizin portföyünü keşfedin",
     featuredProperties: "Öne Çıkan Mülkler",
     subtitle: "İstanbul genelinde özel premium mülk seçkimizi keşfedin",
     residential: "Konut",
     commercial: "Ticari",
+    industrial: "Endüstriyel",
     delivery: "Teslimat",
+    portfolioTitle: "Proje Portföyü",
+    portfolioSubtitle: "Uzmanlığımızı ve yeniliğimizi sergileyen çeşitli projelerimize göz atın",
+    allProjects: "Tüm Projeler",
     projectOverview: "Proje Genel Bakışı",
     keyHighlights: "Önemli Özellikler",
     sellingPoints: "Satış Noktaları",
@@ -140,7 +146,10 @@ export const tr = {
     interestedIn: "Bu Projeyle İlgileniyor musunuz?",
     contactPrompt: "Mükemmel mülkünüzü bulmanıza nasıl yardımcı olabileceğimiz veya bu geliştirme hakkında sorularınız için bizimle iletişime geçin.",
     quickFacts: "Proje Hızlı Bilgiler",
-    contact: "İletişim"
+    contact: "İletişim",
+    ctaTitle: "Aklınızda Bir Proje mi Var?",
+    ctaSubtitle: "Uzmanlığımız ve mükemmelliğe olan bağlılığımızla vizyonunuzu hayata geçirmeyi nasıl sağlayabileceğimizi görüşmek için ekibimizle iletişime geçin.",
+    ctaButton: "Projenizi Başlatın"
   },
   realEstate: {
     title: "Gayrimenkul Hizmetleri",

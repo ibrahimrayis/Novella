@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -6,7 +7,7 @@ import SectionTitle from "@/components/SectionTitle";
 import ProjectCard from "@/components/ProjectCard";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import CTASection from "@/components/CTASection";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 // Sample project data
 const projectsData = [
@@ -76,9 +77,11 @@ const projectsData = [
 ];
 
 const Projects = () => {
+  const { t } = useLanguage();
+  
   useEffect(() => {
-    document.title = "Our Projects - Novella Ltd";
-  }, []);
+    document.title = `${t("common.projects")} - Novella Ltd`;
+  }, [t]);
 
   const [filter, setFilter] = useState<string | null>(null);
 
@@ -88,15 +91,29 @@ const Projects = () => {
     ? projectsData.filter(project => project.category === filter) 
     : projectsData;
 
+  // Translation mapping for categories
+  const getCategoryTranslation = (category: string) => {
+    switch (category) {
+      case "Commercial":
+        return t("projects.commercial");
+      case "Residential":
+        return t("projects.residential");
+      case "Industrial":
+        return t("projects.industrial");
+      default:
+        return category;
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
       
       <main className="flex-grow">
         <HeroSection
-          title="Our Projects"
-          subtitle="Explore our portfolio of completed and ongoing projects across various sectors"
-          ctaText="Contact Us"
+          title={t("projects.title")}
+          subtitle={t("projects.heroSubtitle")}
+          ctaText={t("common.contactUs")}
           ctaLink="/contact"
           backgroundImage="/lovable-uploads/db878a62-c16f-47dd-8984-e97a9a7156d8.png"
         />
@@ -105,8 +122,8 @@ const Projects = () => {
         <section className="section-padding">
           <div className="container mx-auto px-4 md:px-6">
             <SectionTitle 
-              title="Project Portfolio" 
-              subtitle="Browse through our diverse range of projects showcasing our expertise and innovation"
+              title={t("projects.portfolioTitle")} 
+              subtitle={t("projects.portfolioSubtitle")}
             />
             
             {/* Filter Buttons */}
@@ -116,7 +133,7 @@ const Projects = () => {
                 className={filter === null ? "bg-novella-navy" : "border-novella-navy text-novella-navy"}
                 onClick={() => setFilter(null)}
               >
-                All Projects
+                {t("projects.allProjects")}
               </Button>
               
               {categories.map((category, index) => (
@@ -126,7 +143,7 @@ const Projects = () => {
                   className={filter === category ? "bg-novella-navy" : "border-novella-navy text-novella-navy"}
                   onClick={() => setFilter(category)}
                 >
-                  {category}
+                  {getCategoryTranslation(category)}
                 </Button>
               ))}
             </div>
@@ -137,7 +154,7 @@ const Projects = () => {
                 <ProjectCard
                   key={project.id}
                   title={project.title}
-                  category={project.category}
+                  category={getCategoryTranslation(project.category)}
                   image={project.image}
                   slug={project.slug}
                 />
@@ -151,13 +168,13 @@ const Projects = () => {
           <div className="absolute inset-0 bg-[url('/lovable-uploads/508c237b-68d6-4271-a574-e1fde52b8324.png')] bg-cover bg-center opacity-20"></div>
           <div className="container mx-auto px-4 md:px-6 relative z-10 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Have a Project in Mind?
+              {t("projects.ctaTitle")}
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-              Get in touch with our team to discuss how we can bring your vision to life with our expertise and dedication to excellence.
+              {t("projects.ctaSubtitle")}
             </p>
             <Button className="bg-novella-red hover:bg-red-700 text-white px-8 py-6 text-lg">
-              Start Your Project
+              {t("projects.ctaButton")}
             </Button>
           </div>
         </section>
