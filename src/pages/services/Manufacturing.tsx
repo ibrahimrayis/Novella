@@ -19,7 +19,7 @@ const Manufacturing = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen" dir={direction}>
       <Navbar />
       
       <main className="flex-grow">
@@ -136,16 +136,16 @@ const Manufacturing = () => {
                   {t("manufacturing.services.production.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.lean")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.production")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.workflow")}</span>
                   </li>
                 </ul>
@@ -158,16 +158,16 @@ const Manufacturing = () => {
                   {t("manufacturing.services.engineering.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.design")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.material")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.prototyping")}</span>
                   </li>
                 </ul>
@@ -180,16 +180,16 @@ const Manufacturing = () => {
                   {t("manufacturing.services.quality.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.inspection")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.process")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.improvement")}</span>
                   </li>
                 </ul>
@@ -202,16 +202,16 @@ const Manufacturing = () => {
                   {t("manufacturing.services.sustainable.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.energy")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.waste")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.eco")}</span>
                   </li>
                 </ul>
@@ -227,16 +227,16 @@ const Manufacturing = () => {
                   {t("manufacturing.services.supply.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.supplier")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.inventory")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.logistics")}</span>
                   </li>
                 </ul>
@@ -249,16 +249,16 @@ const Manufacturing = () => {
                   {t("manufacturing.services.custom.description")}
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.specialized")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.equipment")}</span>
                   </li>
-                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
-                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'}`}></span>
+                  <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
+                    <span className={`inline-block w-2 h-2 bg-novella-red rounded-full mt-2 ${isRTL ? 'ml-3' : 'mr-3'} flex-shrink-0`}></span>
                     <span>{t("manufacturing.features.control")}</span>
                   </li>
                 </ul>
@@ -284,25 +284,25 @@ const Manufacturing = () => {
                       {t("manufacturing.facilities.description")}
                     </p>
                     <ul className="space-y-3 mb-6">
-                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                         <svg className={`h-6 w-6 text-novella-red flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         <span>{t("manufacturing.facilities.space")}</span>
                       </li>
-                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                         <svg className={`h-6 w-6 text-novella-red flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         <span>{t("manufacturing.facilities.lines")}</span>
                       </li>
-                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                         <svg className={`h-6 w-6 text-novella-red flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         <span>{t("manufacturing.facilities.lab")}</span>
                       </li>
-                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse' : ''}`}>
+                      <li className={`flex items-start ${isRTL ? 'flex-row-reverse text-right' : ''}`}>
                         <svg className={`h-6 w-6 text-novella-red flex-shrink-0 ${isRTL ? 'ml-2' : 'mr-2'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
