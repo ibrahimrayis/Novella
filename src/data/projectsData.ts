@@ -1,4 +1,3 @@
-
 // Sample project data
 export const projectsData = {
   "modern-office-complex": {
@@ -12,7 +11,7 @@ export const projectsData = {
     solution: "We selected this exceptional development that features a master-planned approach with community spaces and modern architecture, providing our clients with an outstanding investment opportunity.",
     images: [
       "/lovable-uploads/c2d3c0ca-753b-4a98-afca-7ef9890dcd22.png",
-      "/lovable-uploads/ea28938e-81de-49e8-95d9-befe8572af37.png",
+      "/lovable-uploads/8656f141-3312-44ec-80f8-2d45f9ac497c.png",
       "/lovable-uploads/ac6b367c-d090-4f17-980d-01406c970c60.png"
     ],
     features: [
