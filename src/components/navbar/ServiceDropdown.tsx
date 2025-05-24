@@ -1,9 +1,15 @@
 
-import { useState } from 'react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ChevronDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
 import { services } from '@/data/navigationData';
+import { cn } from '@/lib/utils';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ServiceDropdownProps {
@@ -12,85 +18,94 @@ interface ServiceDropdownProps {
 }
 
 const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) => {
-  const [isOpen, setIsOpen] = useState(false);
   const { t, direction } = useLanguage();
   
-  const isServicesActive = services.some(service => isActive(service.href));
-
   if (isMobile) {
     return (
-      <div className="border-t border-white/10">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className={cn(
-            "w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 transition-colors",
-            direction === 'rtl' ? 'text-right flex-row-reverse' : 'text-left',
-            isServicesActive && "bg-white/10 text-novella-red font-medium"
-          )}
-        >
-          <span>{t('common.services')}</span>
-          <ChevronDown className={cn("h-4 w-4 transition-transform", isOpen && "rotate-180")} />
-        </button>
-        
-        {isOpen && (
-          <div className="bg-black/50">
-            {services.map((service) => (
-              <Link
-                key={service.href}
-                to={service.href}
-                className={cn(
-                  "block px-8 py-2 text-sm text-white hover:bg-white/10 transition-colors",
-                  direction === 'rtl' ? 'text-right' : 'text-left',
-                  isActive(service.href) && "bg-white/10 text-novella-red font-medium"
-                )}
-              >
-                {service.title}
-              </Link>
-            ))}
-          </div>
-        )}
+      <div className="border-t border-white/10 mt-2">
+        <div className={cn(
+          "px-4 py-2 text-white font-medium",
+          direction === 'rtl' ? 'text-right' : 'text-left'
+        )}>
+          {t('common.services')}
+        </div>
+        {services.map((service) => (
+          service.isExternal ? (
+            <a
+              key={service.title}
+              href={service.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                "flex items-center px-8 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition-colors",
+                direction === 'rtl' ? 'text-right justify-between flex-row-reverse' : 'text-left justify-between'
+              )}
+            >
+              <span>{service.title}</span>
+              <ExternalLink size={16} className="opacity-60" />
+            </a>
+          ) : (
+            <Link
+              key={service.title}
+              to={service.href}
+              className={cn(
+                "block px-8 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition-colors",
+                direction === 'rtl' ? 'text-right' : 'text-left',
+                isActive(service.href) && "bg-white/10 text-novella-red"
+              )}
+            >
+              {service.title}
+            </Link>
+          )
+        ))}
       </div>
     );
   }
 
   return (
-    <li 
-      className="relative"
-      onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-    >
-      <button
-        className={cn(
-          "px-3 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors flex items-center",
-          direction === 'rtl' ? 'flex-row-reverse' : '',
-          isServicesActive && "text-novella-red font-semibold bg-white/10"
-        )}
-      >
-        {t('common.services')}
-        <ChevronDown className={cn(
-          "h-4 w-4",
-          direction === 'rtl' ? 'mr-1' : 'ml-1'
-        )} />
-      </button>
-      
-      {isOpen && (
-        <div className="absolute top-full left-0 mt-1 w-48 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 z-50">
-          {services.map((service) => (
-            <Link
-              key={service.href}
-              to={service.href}
-              className={cn(
-                "block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-md last:rounded-b-md transition-colors",
-                direction === 'rtl' ? 'text-right' : 'text-left',
-                isActive(service.href) && "bg-novella-red/10 text-novella-red font-medium"
-              )}
-            >
-              {service.title}
-            </Link>
-          ))}
-        </div>
-      )}
-    </li>
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger 
+            className={cn(
+              "px-3 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors bg-transparent",
+              services.some(service => !service.isExternal && isActive(service.href)) && "text-novella-red font-semibold bg-white/10"
+            )}
+          >
+            {t('common.services')}
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="w-48 p-2 bg-white dark:bg-gray-800 shadow-lg rounded-md">
+              {services.map((service) => (
+                service.isExternal ? (
+                  <a
+                    key={service.title}
+                    href={service.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between w-full px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors"
+                  >
+                    <span>{service.title}</span>
+                    <ExternalLink size={14} className="opacity-60" />
+                  </a>
+                ) : (
+                  <Link
+                    key={service.title}
+                    to={service.href}
+                    className={cn(
+                      "block w-full px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors",
+                      isActive(service.href) && "bg-gray-100 dark:bg-gray-700 text-novella-red"
+                    )}
+                  >
+                    {service.title}
+                  </Link>
+                )
+              ))}
+            </div>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
   );
 };
 

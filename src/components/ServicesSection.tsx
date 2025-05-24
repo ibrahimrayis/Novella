@@ -64,8 +64,8 @@ const ServicesSection = () => {
             }
             description={t("services.b2bDesc")}
             icon={<Code size={40} />}
-            link="/novella-tech"
-            isExternalLink={false}
+            link="https://novellaltd.tech"
+            isExternalLink={true}
           />
         </div>
       </div>

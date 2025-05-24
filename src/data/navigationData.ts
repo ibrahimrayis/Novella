@@ -4,7 +4,7 @@ export const services = [
   { title: "Import & Export", href: "/services/import-export" },
   { title: "Manufacturing", href: "/services/manufacturing" },
   { title: "Real Estate", href: "/services/real-estate" },
-  { title: "Novella Tech", href: "/novella-tech", isExternal: false },
+  { title: "Novella Tech", href: "https://novellaltd.tech", isExternal: true },
 ];
 
 export const navItems = [
