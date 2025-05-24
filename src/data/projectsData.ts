@@ -1,3 +1,4 @@
+
 // Sample project data
 export const projectsData = {
   "modern-office-complex": {
@@ -55,7 +56,7 @@ export const projectsData = {
     solution: "Our design incorporated elements that respect the historical significance of the area while introducing contemporary living standards. The 27 blocks are arranged to create community-focused neighborhoods within the larger development.",
     images: [
       "/lovable-uploads/e6d71d7a-a12e-422f-8042-d51d3b2ef4e0.png",
-      "/lovable-uploads/bb41439a-2952-4312-848e-6afc7f1f7428.png",
+      "/lovable-uploads/6571ee55-577a-47e4-8f9d-836afc5b3f23.png",
       "/lovable-uploads/ac6b367c-d090-4f17-980d-01406c970c60.png"
     ],
     features: [
