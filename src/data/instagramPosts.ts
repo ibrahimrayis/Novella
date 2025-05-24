@@ -2,7 +2,7 @@ export const instagramPosts = [
   {
     id: "1",
     imageUrl: "/lovable-uploads/e8dcaefb-474a-4928-9036-df9adddef88a.png",
-    caption: "Exciting developments in our latest construction project! Our team is working hard to deliver excellence in every detail. #Construction #Quality #NovellaLtd",
+    caption: "An engaging and fruitful discussion with the Sakarya Governor on launching a states twinning initiative between Sakarya and a Sudanese state, aiming for cooperation in diverse areas",
     timestamp: "2024-01-15T10:30:00Z",
     likes: 127,
     permalink: "https://www.instagram.com/p/example1/"
