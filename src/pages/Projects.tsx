@@ -71,7 +71,7 @@ const projectsData = [
     id: 9,
     title: "Logistics Center",
     category: "Industrial",
-    image: "/lovable-uploads/7475093d-7db2-4197-a465-0f7845f8db24.png",
+    image: "/lovable-uploads/b0a2cacc-9c8e-408f-b49a-fc36fb6751ad.png",
     slug: "logistics-center"
   }
 ];
