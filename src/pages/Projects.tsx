@@ -62,9 +62,9 @@ const projectsData = [
   },
   {
     id: 8,
-    title: "Mixed-Use Development",
+    title: "VENEZIA MEGA RESIDENCE",
     category: "Residential",
-    image: "/lovable-uploads/64507106-a75f-4af2-a450-ecc46d3d7273.png",
+    image: "/lovable-uploads/87845749-0d05-4085-a80b-0d9c1eb49d4d.png",
     slug: "mixed-use-development"
   },
   {
