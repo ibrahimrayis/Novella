@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -28,7 +27,7 @@ const projectsData = [
   {
     id: 3,
     title: "MEGA GARDEN",
-    category: "Industrial",
+    category: "Residential",
     image: "/lovable-uploads/830bd7c6-9ca8-45b8-bc0d-d79c3d34adb2.png",
     slug: "industrial-facility"
   },
