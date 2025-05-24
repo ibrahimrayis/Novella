@@ -99,7 +99,7 @@ export const projectsData = {
     challenge: "Creating a medium-scale residential development in the established Zeytinburnu district that offers modern living without disrupting the existing urban fabric.",
     solution: "We designed a balanced approach with 4 residential blocks that complement the surrounding architecture. The 11-floor buildings maximize space efficiency while ensuring each of the 528 units has excellent access to light and views.",
     images: [
-      "/lovable-uploads/c9b49626-f18c-4dbf-a2de-a6e89645ec27.png",
+      "/lovable-uploads/830bd7c6-9ca8-45b8-bc0d-d79c3d34adb2.png",
       "/lovable-uploads/13fbcb36-849b-4270-b6bc-ba5ad9639f11.png",
       "/lovable-uploads/7475093d-7db2-4197-a465-0f7845f8db24.png"
     ],

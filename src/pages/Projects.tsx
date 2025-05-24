@@ -26,9 +26,9 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "Industrial Facility",
+    title: "MEGA GARDEN",
     category: "Industrial",
-    image: "/lovable-uploads/4fa5f518-fa61-4305-829c-3bfec8dd5376.png",
+    image: "/lovable-uploads/830bd7c6-9ca8-45b8-bc0d-d79c3d34adb2.png",
     slug: "industrial-facility"
   },
   {
