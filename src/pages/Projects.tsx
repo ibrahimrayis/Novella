@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -50,7 +49,7 @@ const projectsData = [
     id: 6,
     title: "Manufacturing Plant",
     category: "Industrial",
-    image: "/lovable-uploads/614c0fe9-3102-4574-a97e-91ccd1586ede.png",
+    image: "/lovable-uploads/64507106-a75f-4af2-a450-ecc46d3d7273.png",
     slug: "manufacturing-plant"
   },
   {
@@ -64,7 +63,7 @@ const projectsData = [
     id: 8,
     title: "Mixed-Use Development",
     category: "Residential",
-    image: "/lovable-uploads/b0d8d188-c702-44ee-bb3e-ee71e40194d2.png",
+    image: "/lovable-uploads/64507106-a75f-4af2-a450-ecc46d3d7273.png",
     slug: "mixed-use-development"
   },
   {
