@@ -15,6 +15,41 @@ export const tr = {
     contactOurTeam: "Ekibimizle İletişime Geç",
     viewSimilarProjects: "Benzer Projeleri Görüntüle"
   },
+  home: {
+    pageTitle: "Novella Ltd - İnşaat, İthalat/İhracat ve İmalat",
+    hero: {
+      title: "İnovasyonu Tasarlıyor, Başarıyı İnşa Ediyoruz",
+      subtitle: "Novella'da, benzersiz ihtiyaçlarınıza göre uyarlanmış istisnai inşaat, üretim ve uluslararası ticaret çözümleri sunmak için vizyonumuzu uzmanlığımızla birleştiriyoruz.",
+      ctaText: "Hizmetlerimizi Keşfedin"
+    },
+    testimonials: {
+      title: "Müşteri Görüşleri",
+      subtitle: "Müşterilerimizin hizmetlerimiz ve mükemmelliğe olan bağlılığımız hakkında söyledikleri",
+      testimonial1: {
+        content: "Novella'nın ofis binası projemize yaklaşımı istisnai idi. Vizyonumuzu anladılar ve beklentilerimizin ötesinde, zamanında ve bütçe dahilinde teslim ettiler.",
+        author: "Ali Yılmaz",
+        role: "CEO",
+        company: "TechSphere Solutions"
+      },
+      testimonial2: {
+        content: "İthalat/ihracat ihtiyaçlarımız için Novella ile çalışmak tedarik zincirimizi dönüştürdü. Uzmanlıkları ve küresel ağları iş büyümemiz için paha biçilmez oldu.",
+        author: "Sophia Chen",
+        role: "Operasyon Direktörü",
+        company: "Global Trade Inc."
+      },
+      testimonial3: {
+        content: "Novella tarafından şirketimiz için geliştirilen üretim tesisleri üretim verimliliğimizi önemli ölçüde artırdı. Detaylara gösterdikleri özen ve kalite olağanüstü.",
+        author: "Mehmet Kaya",
+        role: "Üretim Müdürü",
+        company: "Industrial Innovations"
+      }
+    },
+    cta: {
+      title: "Bir Sonraki Projenize Başlamaya Hazır mısınız?",
+      subtitle: "İster inşaat, ister ithalat ve ihracat hizmetleri veya üretim çözümleri ihtiyacınız olsun, hedeflerinize ulaşmanıza yardımcı olmak için buradayız.",
+      buttonText: "Bugün Bize Ulaşın"
+    }
+  },
   about: {
     title: "Novella Ltd Hakkında",
     subtitle: "Yolculuğumuz, değerlerimiz ve geleceğe dair vizyonumuz hakkında bilgi edinin",

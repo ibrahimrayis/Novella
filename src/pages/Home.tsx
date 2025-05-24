@@ -10,11 +10,14 @@ import RealEstateSection from "@/components/RealEstateSection";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
 import SectionTitle from "@/components/SectionTitle";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Home = () => {
+  const { t } = useLanguage();
+
   useEffect(() => {
-    document.title = "Novella Ltd - Construction, Import/Export & Manufacturing";
-  }, []);
+    document.title = t("home.pageTitle");
+  }, [t]);
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -22,9 +25,9 @@ const Home = () => {
       
       <main className="flex-grow">
         <HeroSection
-          title="Designing Innovation, Building Success"
-          subtitle="At Novella, we combine vision with expertise to deliver exceptional construction, manufacturing, and international trade solutions—tailored to your unique needs."
-          ctaText="Discover Our Services"
+          title={t("home.hero.title")}
+          subtitle={t("home.hero.subtitle")}
+          ctaText={t("home.hero.ctaText")}
           ctaLink="/services/construction"
           backgroundImage="/lovable-uploads/0e699234-99c4-4ab4-bf5f-acdf31bf2cf0.png"
         />
@@ -38,39 +41,39 @@ const Home = () => {
         <section className="section-padding bg-gray-50">
           <div className="container mx-auto px-4 md:px-6">
             <SectionTitle 
-              title="Client Testimonials" 
-              subtitle="What our clients say about our services and commitment to excellence"
+              title={t("home.testimonials.title")} 
+              subtitle={t("home.testimonials.subtitle")}
             />
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <TestimonialCard
-                content="Novella's approach to our office building project was exceptional. They understood our vision and delivered beyond our expectations, on time and within budget."
-                author="Ali Yilmaz"
-                role="CEO"
-                company="TechSphere Solutions"
+                content={t("home.testimonials.testimonial1.content")}
+                author={t("home.testimonials.testimonial1.author")}
+                role={t("home.testimonials.testimonial1.role")}
+                company={t("home.testimonials.testimonial1.company")}
               />
               
               <TestimonialCard
-                content="Working with Novella for our import/export needs has transformed our supply chain. Their expertise and global network have been invaluable to our business growth."
-                author="Sophia Chen"
-                role="Operations Director"
-                company="Global Trade Inc."
+                content={t("home.testimonials.testimonial2.content")}
+                author={t("home.testimonials.testimonial2.author")}
+                role={t("home.testimonials.testimonial2.role")}
+                company={t("home.testimonials.testimonial2.company")}
               />
               
               <TestimonialCard
-                content="The manufacturing facilities developed by Novella for our company have significantly improved our production efficiency. Their attention to detail and quality is outstanding."
-                author="Mehmet Kaya"
-                role="Production Manager"
-                company="Industrial Innovations"
+                content={t("home.testimonials.testimonial3.content")}
+                author={t("home.testimonials.testimonial3.author")}
+                role={t("home.testimonials.testimonial3.role")}
+                company={t("home.testimonials.testimonial3.company")}
               />
             </div>
           </div>
         </section>
 
         <CTASection 
-          title="Ready to Start Your Next Project?"
-          subtitle="Whether you need construction, import & export services, or manufacturing solutions, we're here to help you achieve your goals."
-          buttonText="Contact Us Today"
+          title={t("home.cta.title")}
+          subtitle={t("home.cta.subtitle")}
+          buttonText={t("home.cta.buttonText")}
           buttonLink="/contact"
           backgroundImage="/lovable-uploads/259ac89e-f9dc-4539-a1d2-7140ab91439d.png"
         />
