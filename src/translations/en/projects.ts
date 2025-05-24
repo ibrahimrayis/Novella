@@ -1,4 +1,5 @@
 
+
 export const projects = {
   title: "Our Projects",
   heroSubtitle: "Explore our portfolio of completed and ongoing projects across various sectors",
@@ -8,7 +9,7 @@ export const projects = {
   commercial: "Commercial",
   industrial: "Industrial",
   delivery: "Delivery",
-  portfolioTitle: "Project Portfolio",
+  portfolioTitle: "Projects & Properties",
   portfolioSubtitle: "Browse through our diverse range of projects showcasing our expertise and innovation",
   allProjects: "All Projects",
   projectOverview: "Project Overview",
@@ -28,3 +29,4 @@ export const projects = {
   ctaSubtitle: "Get in touch with our team to discuss how we can bring your vision to life with our expertise and dedication to excellence.",
   ctaButton: "Start Your Project"
 };
+

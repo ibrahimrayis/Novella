@@ -131,7 +131,7 @@ export const ar = {
     commercial: "تجاري",
     industrial: "صناعي",
     delivery: "التسليم",
-    portfolioTitle: "محفظة المشاريع",
+    portfolioTitle: "المشاريع والعقارات",
     portfolioSubtitle: "تصفح مجموعتنا المتنوعة من المشاريع التي تعرض خبرتنا وابتكارنا",
     allProjects: "جميع المشاريع",
     projectOverview: "نظرة عامة على المشروع",
