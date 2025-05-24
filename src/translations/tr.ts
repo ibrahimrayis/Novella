@@ -1,3 +1,5 @@
+import { contact } from './tr/contact';
+
 export const tr = {
   common: {
     home: "Ana Sayfa",

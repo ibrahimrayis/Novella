@@ -1,3 +1,5 @@
+import { contact } from './ar/contact';
+
 export const ar = {
   common: {
     home: "الرئيسية",

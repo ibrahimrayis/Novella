@@ -1,7 +1,9 @@
+import { contact } from './ru/contact';
+
 export const ru = {
   common: {
     home: "Главная",
-    projects: "Проекты", 
+    projects: "Проекты",
     events: "События",
     about: "О нас",
     services: "Услуги",
