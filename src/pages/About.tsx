@@ -96,7 +96,7 @@ const About = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
               <div className="bg-white rounded-lg shadow p-6 flex flex-col items-center text-center">
                 <Briefcase className="h-10 w-10 text-novella-red mb-4" />
-                <h3 className="text-3xl sm:text-4xl font-bold text-novella-navy mb-2">150+</h3>
+                <h3 className="text-3xl sm:text-4xl font-bold text-novella-navy mb-2">100+</h3>
                 <p className="text-gray-600">{t('about.projectsCompleted')}</p>
               </div>
               
