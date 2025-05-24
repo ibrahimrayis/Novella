@@ -11,12 +11,14 @@ import ServiceDropdown from './navbar/ServiceDropdown';
 import MobileMenu from './navbar/MobileMenu';
 import LanguageSelector from './LanguageSelector';
 import { navItems } from '@/data/navigationData';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isMobile = useIsMobile();
   const location = useLocation();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,9 +70,9 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-4">
             <ul className="flex items-center space-x-2">
               {navItems.map((item) => (
-                <li key={item.title}>
+                <li key={item.titleKey}>
                   <NavbarLink
-                    title={item.title}
+                    titleKey={item.titleKey}
                     href={item.href}
                     icon={item.icon}
                     isActive={isActive(item.href)}
@@ -86,7 +88,7 @@ const Navbar = () => {
               <LanguageSelector />
               
               <Link to="/contact">
-                <Button className="bg-novella-red hover:bg-red-700 text-white">Contact Us</Button>
+                <Button className="bg-novella-red hover:bg-red-700 text-white">{t('common.contactUs')}</Button>
               </Link>
             </div>
           </div>

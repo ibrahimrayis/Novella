@@ -8,8 +8,8 @@ export const services = [
 ];
 
 export const navItems = [
-  { title: "Home", href: "/" },
-  { title: "Projects", href: "/projects" },
-  { title: "Events", href: "/events", icon: "Instagram" },
-  { title: "About", href: "/about" },
+  { titleKey: "common.home", href: "/" },
+  { titleKey: "common.projects", href: "/projects" },
+  { titleKey: "common.events", href: "/events", icon: "Instagram" },
+  { titleKey: "common.about", href: "/about" },
 ];

@@ -2,15 +2,18 @@
 import { Link } from 'react-router-dom';
 import { Instagram } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface NavbarLinkProps {
-  title: string;
+  titleKey: string;
   href: string;
   icon?: string;
   isActive: boolean;
 }
 
-const NavbarLink = ({ title, href, icon, isActive }: NavbarLinkProps) => {
+const NavbarLink = ({ titleKey, href, icon, isActive }: NavbarLinkProps) => {
+  const { t } = useLanguage();
+  
   return (
     <Link 
       to={href}
@@ -20,7 +23,7 @@ const NavbarLink = ({ title, href, icon, isActive }: NavbarLinkProps) => {
       )}
     >
       <span className="flex items-center">
-        {title} {icon === "Instagram" && <Instagram size={16} className="ml-1" />}
+        {t(titleKey)} {icon === "Instagram" && <Instagram size={16} className="ml-1" />}
       </span>
     </Link>
   );
