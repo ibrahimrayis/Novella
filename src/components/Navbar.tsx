@@ -18,7 +18,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const isMobile = useIsMobile();
   const location = useLocation();
-  const { t } = useLanguage();
+  const { t, direction } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,7 +68,10 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            <ul className="flex items-center space-x-4">
+            <ul className={cn(
+              "flex items-center",
+              direction === 'rtl' ? 'space-x-reverse space-x-6' : 'space-x-6'
+            )}>
               {navItems.map((item) => (
                 <li key={item.titleKey}>
                   <NavbarLink
