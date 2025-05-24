@@ -287,5 +287,77 @@ export const tr = {
       subtitle: "İthalat ve ihracat hizmetlerimizin işletmenizin uluslararası pazarda başarılı olmasına nasıl yardımcı olabileceğini tartışmak için bugün bizimle iletişime geçin.",
       button: "Ticaret Uzmanlarımızla İletişime Geçin"
     }
+  },
+  construction: {
+    title: "İnşaat Hizmetleri",
+    subtitle: "Her projenin yapının ötesinde bir hikayesi vardır",
+    overview: "İnşaat Mükemmelliği",
+    overviewSubtitle: "Kaliteli ve kalıcı değer inşa etmek",
+    description1: "Novella'da inşaat sadece tuğla ve harçtan ibaret değil – insanların gelişebileceği üst kalite, kalıcı alanlar yaratmakla ilgilidir. Sadece derin inşaat bilgimize güvenmiyoruz; binaları tasarlama ve işletme deneyimimizden kazandığımız içgörüleri daha iyi bir sonuç yaratmak için dahil ediyoruz – sizin için daha büyük etki ve kalıcı değer.",
+    description2: "Novella inşaat ekibi, siz ve hedefleriniz hakkında bildiklerimizi kullanarak vizyonunuzu gerçekleştirmeye yardımcı olmak için düşünceli ve proaktif bir yaklaşım benimsiyor, sadece mevcut durumu kabul etmek veya sipariş almak değil. Genellikle gözden kaçan fırsatları ortaya çıkarmak için zor soruları sormaktan çekinmiyoruz. Bu yüzden, ham maddeleri kalıcı hikayelere dönüştürüyoruz.",
+    getInTouch: "İletişime Geçin",
+    services: {
+      title: "İnşaat Hizmetlerimiz",
+      subtitle: "Tüm inşaat ihtiyaçlarınız için kapsamlı çözümler",
+      architectural: {
+        title: "Mimari Tasarım",
+        description: "Mimari tasarım hizmetlerimiz yaratıcılık ve işlevselliği birleştirerek, hem estetik açıdan memnun edici hem de özel ihtiyaçlarınız için pratik olan alanlar yaratır."
+      },
+      project: {
+        title: "Proje Yönetimi",
+        description: "Deneyimli proje yöneticilerimiz, inşaat projenizin başından sonuna kadar sorunsuz bir şekilde yürümesini, kalite, program ve bütçeyi korumasını sağlar."
+      },
+      civil: {
+        title: "İnşaat Mühendisliği",
+        description: "İnşaat mühendisliği ekibimiz, altyapı gelişimi için kapsamlı çözümler sunarak yapısal bütünlük ve yönetmeliklere uyum sağlar."
+      },
+      management: {
+        title: "İnşaat Yönetimi",
+        description: "İnşaat yönetimi hizmetlerimiz, yapım sürecinin tüm yönlerini denetler, yüklenicileri koordine eder ve verimli yürütmeyi sağlar."
+      },
+      safety: {
+        title: "Güvenlik ve Uyum",
+        description: "Tüm inşaat projelerimiz boyunca en yüksek güvenlik ve düzenleyici uyum standartlarını koruyoruz."
+      },
+      postConstruction: {
+        title: "İnşaat Sonrası",
+        description: "Taahhüdümüz proje tamamlanmasının ötesine uzanır, sorunsuz devir ve devam eden destek sağlar."
+      }
+    },
+    features: {
+      conceptualDesign: "Kavramsal tasarım geliştirme",
+      visualization: "3D görselleştirme ve modelleme",
+      sustainableDesign: "Sürdürülebilir tasarım çözümleri",
+      planning: "Kapsamlı planlama ve programlama",
+      budget: "Bütçe geliştirme ve yönetimi",
+      quality: "Kalite kontrolü ve risk yönetimi",
+      structural: "Yapısal tasarım ve analiz",
+      site: "Saha geliştirme ve tesviye",
+      infrastructure: "Altyapı planlaması ve tasarımı",
+      contractor: "Yüklenici seçimi ve yönetimi",
+      supervision: "Saha denetimi ve koordinasyonu",
+      progress: "İlerleme izleme ve raporlama",
+      safetyProgram: "Güvenlik programı geliştirme",
+      regulatory: "Düzenleyici uyum yönetimi",
+      safetyTraining: "Güvenlik eğitimi ve izleme",
+      facility: "Tesis devreye alma ve test etme",
+      documentation: "Belgeleme ve garanti yönetimi",
+      maintenance: "Devam eden bakım desteği"
+    },
+    projectsShowcase: {
+      title: "Öne Çıkan İnşaat Projeleri",
+      subtitle: "Uzmanlığımızı ve kaliteye olan bağlılığımızı gösteren bir vitrin",
+      commercial: "Ticari Proje",
+      residential: "Konut Projesi",
+      industrial: "Endüstriyel Proje",
+      officeComplex: "Modern Ofis Kompleksi",
+      residentialTower: "Konut Kulesi",
+      industrialFacility: "Endüstriyel Tesis",
+      istanbul: "İstanbul, Türkiye",
+      izmit: "İzmit, Türkiye"
+    },
+    ctaTitle: "Bir Sonraki Projenize Başlamaya Hazır mısınız?",
+    ctaSubtitle: "Proje ihtiyaçlarınızı ve vizyonunuzu görüşmek için inşaat uzmanlarımızla ücretsiz bir danışma alın.",
+    ctaButton: "Ücretsiz Danışmanlık Alın"
   }
 };
