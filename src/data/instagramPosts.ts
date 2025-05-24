@@ -36,7 +36,7 @@ export const instagramPosts = [
   {
     id: "5",
     imageUrl: "/lovable-uploads/d3608369-3f43-406d-bd8b-c4b53c03e172.png",
-    caption: "Team meeting discussing our upcoming projects. Collaboration and planning are key to our success. #Teamwork #Planning #Success",
+    caption: "Discussions drive progress, raise ideas, and build connections. These moments of dialogue turn vision into success. #LeadershipInAction #DrivingChange #StrategicDialogue",
     timestamp: "2024-01-05T11:00:00Z",
     likes: 92,
     permalink: "https://www.instagram.com/p/example5/"
