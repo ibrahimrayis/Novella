@@ -46,7 +46,7 @@ const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) =
             </a>
           ) : (
             <Link
-              key={service.title}
+              key={service.titleKey || service.title}
               to={service.href}
               className={cn(
                 "block px-8 py-2 text-gray-300 hover:bg-white/10 hover:text-white transition-colors",
@@ -54,7 +54,7 @@ const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) =
                 isActive(service.href) && "bg-white/10 text-novella-red"
               )}
             >
-              {service.title}
+              {service.titleKey ? t(service.titleKey) : service.title}
             </Link>
           )
         ))}
@@ -90,14 +90,14 @@ const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) =
                   </a>
                 ) : (
                   <Link
-                    key={service.title}
+                    key={service.titleKey || service.title}
                     to={service.href}
                     className={cn(
                       "block w-full px-3 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors",
                       isActive(service.href) && "bg-gray-100 dark:bg-gray-700 text-novella-red"
                     )}
                   >
-                    {service.title}
+                    {service.titleKey ? t(service.titleKey) : service.title}
                   </Link>
                 )
               ))}
