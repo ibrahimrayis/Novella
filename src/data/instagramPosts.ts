@@ -1,4 +1,5 @@
 
+
 export const instagramPosts = [
   {
     id: "1",
@@ -67,7 +68,7 @@ export const instagramPosts = [
   {
     id: "9",
     imageUrl: "/lovable-uploads/1ba14fa5-aa92-4e84-8308-b4e6b2db287b.png",
-    caption: "Proud to support the Sudanese Agricultural Forum in Turkey. We deeply appreciate the presence of Sudan's Minister of Finance and the opportunity to engage in meaningful dialogue around agriculture and development.",
+    caption: "Honored by the presence of Sudan's Minister of Finance at the Sudanese Agricultural Forum in Turkey. Proud to support this important event and contribute to meaningful discussions on agriculture and sustainable development.",
     timestamp: "2023-12-25T18:00:00Z",
     likes: 187,
     permalink: "https://www.instagram.com/p/example9/"
