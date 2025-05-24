@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -34,9 +33,9 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Shopping Center",
+    title: "SELVI PARK",
     category: "Commercial",
-    image: "/lovable-uploads/4fa5f518-fa61-4305-829c-3bfec8dd5376.png",
+    image: "/lovable-uploads/bfbad59d-2149-412c-a006-9919fdccf225.png",
     slug: "shopping-center"
   },
   {
