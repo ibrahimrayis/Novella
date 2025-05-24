@@ -14,7 +14,7 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, isActive }: MobileMenuProps) => {
-  const { t } = useLanguage();
+  const { t, direction } = useLanguage();
   
   if (!isOpen) return null;
   
@@ -26,7 +26,8 @@ const MobileMenu = ({ isOpen, isActive }: MobileMenuProps) => {
             key={item.titleKey}
             to={item.href} 
             className={cn(
-              "flex items-center px-4 py-2 text-white hover:bg-white/10 transition-colors",
+              "flex items-center px-4 py-3 text-white hover:bg-white/10 transition-colors",
+              direction === 'rtl' ? 'text-right' : 'text-left',
               isActive(item.href) && "bg-white/10 text-novella-red font-medium"
             )}
           >
@@ -36,9 +37,15 @@ const MobileMenu = ({ isOpen, isActive }: MobileMenuProps) => {
         
         <ServiceDropdown isActive={isActive} isMobile={true} />
         
-        <div className="px-4 py-2 border-t border-white/10">
-          <div className="flex items-center justify-between">
-            <span className="text-white text-sm">Language</span>
+        <div className={cn(
+          "px-4 py-3 border-t border-white/10",
+          direction === 'rtl' ? 'text-right' : 'text-left'
+        )}>
+          <div className={cn(
+            "flex items-center",
+            direction === 'rtl' ? 'justify-between flex-row-reverse' : 'justify-between'
+          )}>
+            <span className="text-white text-sm">{direction === 'rtl' ? 'اللغة' : 'Language'}</span>
             <LanguageSelector />
           </div>
         </div>

@@ -13,7 +13,7 @@ interface ServiceDropdownProps {
 
 const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, direction } = useLanguage();
   
   const isServicesActive = services.some(service => isActive(service.href));
 
@@ -23,11 +23,12 @@ const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) =
         <button
           onClick={() => setIsOpen(!isOpen)}
           className={cn(
-            "w-full flex items-center justify-between px-4 py-2 text-white hover:bg-white/10 transition-colors",
+            "w-full flex items-center justify-between px-4 py-3 text-white hover:bg-white/10 transition-colors",
+            direction === 'rtl' ? 'text-right flex-row-reverse' : 'text-left',
             isServicesActive && "bg-white/10 text-novella-red font-medium"
           )}
         >
-          {t('common.services')}
+          <span>{t('common.services')}</span>
           <ChevronDown className={cn("h-4 w-4 transition-transform", isOpen && "rotate-180")} />
         </button>
         
@@ -39,6 +40,7 @@ const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) =
                 to={service.href}
                 className={cn(
                   "block px-8 py-2 text-sm text-white hover:bg-white/10 transition-colors",
+                  direction === 'rtl' ? 'text-right' : 'text-left',
                   isActive(service.href) && "bg-white/10 text-novella-red font-medium"
                 )}
               >
@@ -60,11 +62,15 @@ const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) =
       <button
         className={cn(
           "px-3 py-2 rounded-md font-medium text-white hover:text-novella-red transition-colors flex items-center",
+          direction === 'rtl' ? 'flex-row-reverse' : '',
           isServicesActive && "text-novella-red font-semibold bg-white/10"
         )}
       >
         {t('common.services')}
-        <ChevronDown className="ml-1 h-4 w-4" />
+        <ChevronDown className={cn(
+          "h-4 w-4",
+          direction === 'rtl' ? 'mr-1' : 'ml-1'
+        )} />
       </button>
       
       {isOpen && (
@@ -75,6 +81,7 @@ const ServiceDropdown = ({ isActive, isMobile = false }: ServiceDropdownProps) =
               to={service.href}
               className={cn(
                 "block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 first:rounded-t-md last:rounded-b-md transition-colors",
+                direction === 'rtl' ? 'text-right' : 'text-left',
                 isActive(service.href) && "bg-novella-red/10 text-novella-red font-medium"
               )}
             >

@@ -22,14 +22,14 @@ const LanguageSelector = () => {
           variant="outline" 
           size="sm"
           className={cn(
-            "transition-all h-9",
+            "transition-all h-9 px-3",
             isMobile 
               ? "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20" 
               : "bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/20"
           )}
         >
-          <div className="flex items-center justify-center">
-            <Globe className="h-4 w-4 mr-1 text-white opacity-70" />
+          <div className="flex items-center justify-center space-x-1.5">
+            <Globe className="h-4 w-4 text-white opacity-70" />
             <span className="text-white text-xs font-medium">{currentLanguage.code.toUpperCase()}</span>
           </div>
         </Button>
@@ -40,7 +40,7 @@ const LanguageSelector = () => {
             key={lang.code} 
             onClick={() => setLanguage(lang)}
             className={cn(
-              "cursor-pointer flex items-center justify-between", 
+              "cursor-pointer flex items-center justify-between py-2.5", 
               currentLanguage.code === lang.code ? "bg-muted font-medium" : ""
             )}
           >
