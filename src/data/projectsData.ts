@@ -144,7 +144,7 @@ export const projectsData = {
     solution: "The design emphasizes accessibility and visibility, with a modern commercial complex that maximizes exposure for businesses while providing efficient internal circulation and connection to nearby transportation.",
     images: [
       "/lovable-uploads/35a35189-1081-4b7f-8d9a-752d623087bc.png",
-      "/lovable-uploads/217b0ff4-1cf2-4ecc-a3e3-5e9748d39c4e.png",
+      "/lovable-uploads/5cfe05f6-a5a2-4ae4-9332-1e558f35edce.png",
       "/lovable-uploads/ea28938e-81de-49e8-95d9-befe8572af37.png"
     ],
     features: [
