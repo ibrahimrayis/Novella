@@ -86,12 +86,14 @@ const Navbar = () => {
               <ServiceDropdown isActive={isActive} />
             </ul>
             
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               <ThemeToggle />
-              <LanguageSelector />
+              <div className="ml-1">
+                <LanguageSelector />
+              </div>
               
               <Link to="/contact">
-                <Button className="bg-novella-red hover:bg-red-700 text-white ml-2">{t('common.contactUs')}</Button>
+                <Button className="bg-novella-red hover:bg-red-700 text-white ml-1">{t('common.contactUs')}</Button>
               </Link>
             </div>
           </div>
