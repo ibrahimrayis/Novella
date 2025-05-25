@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -156,6 +157,7 @@ const Projects = () => {
                   category={getCategoryTranslation(project.category)}
                   image={project.image}
                   slug={project.slug}
+                  isClickable={project.title !== "Luxury Apartments"}
                 />
               ))}
             </div>
