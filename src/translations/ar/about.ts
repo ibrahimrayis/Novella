@@ -1,4 +1,5 @@
 
+
 export const about = {
   title: "حول شركة نوفيلا المحدودة",
   subtitle: "تعرف على رحلتنا وقيمنا ورؤيتنا للمستقبل",
@@ -47,3 +48,4 @@ export const about = {
   readyToCollaborateSubtitle: "تواصل معنا لمناقشة كيف يمكن لشركة نوفيلا أن تساعد في تحقيق رؤيتك بخبرتنا وتفانينا في التميز.",
   contactUsToday: "اتصل بنا اليوم"
 };
+
