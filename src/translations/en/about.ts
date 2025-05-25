@@ -1,10 +1,9 @@
-
 export const about = {
   title: "About Novella Ltd",
   subtitle: "Learn about our journey, values, and vision for the future",
   ctaText: "Contact Us",
   whoWeAre: "Who We Are?",
-  whoWeAreDesc1: "Novella serves as the leading division within the extensive Novella Group Alliance, renowned for its steadfast dedication to delivering exceptional construction and design services. Established in 2020, right from our inception, we swiftly gained prominence within the industry, positioning ourselves at the forefront of innovation, and prioritizing accountability and integrity.",
+  whoWeAreDesc1: "Novella Ltd serves as the leading division within the extensive Novella Group Alliance, renowned for its steadfast dedication to delivering exceptional construction and design services. Established in 2020, right from our inception, we swiftly gained prominence within the industry, positioning ourselves at the forefront of innovation, and prioritizing accountability and integrity.",
   whoWeAreDesc2: "Through the integration of cutting-edge technologies and a commitment to Safety, Quality and Sustainability, we are establishing new standards for excellence. Our unwavering commitment to innovative solutions, professionalism, and ensuring client satisfaction sets us apart in the market.",
   ourStory: "Our Story",
   ourStoryDesc1: "Novella Construction and Imports/Exports and Manufacturing Ltd serves as the leading division within the extensive Novella Group Alliance, renowned for its steadfast dedication to delivering exceptional construction and design services.",
