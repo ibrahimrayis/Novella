@@ -101,7 +101,7 @@ export const projectsData = {
     images: [
       "/lovable-uploads/830bd7c6-9ca8-45b8-bc0d-d79c3d34adb2.png",
       "/lovable-uploads/c1b7a85f-0edd-478e-9f83-8784706eed23.png",
-      "/lovable-uploads/7475093d-7db2-4197-a465-0f7845f8db24.png"
+      "/lovable-uploads/f304f8fb-5f28-4c1a-8f18-e557271277cc.png"
     ],
     features: [
       "Strategic Urban Location",
