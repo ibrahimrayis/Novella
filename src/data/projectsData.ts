@@ -1,4 +1,3 @@
-
 // Sample project data
 export const projectsData = {
   "modern-office-complex": {
@@ -145,7 +144,7 @@ export const projectsData = {
     images: [
       "/lovable-uploads/35a35189-1081-4b7f-8d9a-752d623087bc.png",
       "/lovable-uploads/5cfe05f6-a5a2-4ae4-9332-1e558f35edce.png",
-      "/lovable-uploads/ea28938e-81de-49e8-95d9-befe8572af37.png"
+      "/lovable-uploads/7d313252-5f2c-46ef-828c-301e303a50f2.png"
     ],
     features: [
       "Prime Commercial Location",
