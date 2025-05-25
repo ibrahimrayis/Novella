@@ -35,7 +35,7 @@ const projectsData = [
     id: 4,
     title: "NIVO BY NIBA",
     category: "Commercial",
-    image: "/lovable-uploads/bfbad59d-2149-412c-a006-9919fdccf225.png",
+    image: "/lovable-uploads/030baa3d-c22c-4cd6-b66b-5290d87043b5.png",
     slug: "shopping-center"
   },
   {
