@@ -33,7 +33,7 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "SELVI PARK",
+    title: "NIVO BY NIBA",
     category: "Commercial",
     image: "/lovable-uploads/bfbad59d-2149-412c-a006-9919fdccf225.png",
     slug: "shopping-center"

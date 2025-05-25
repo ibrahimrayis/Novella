@@ -134,7 +134,7 @@ export const projectsData = {
     }
   },
   "shopping-center": {
-    title: "NIVO ISTANBUL",
+    title: "NIVO BY NIBA",
     category: "Commercial",
     location: "Küçükçekmece district, Istanbul, European side",
     client: "Novella Commercial Developments",
