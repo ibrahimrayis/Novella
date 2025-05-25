@@ -86,20 +86,29 @@ const Navbar = () => {
               <ServiceDropdown isActive={isActive} />
             </ul>
             
-            <div className="flex items-center space-x-2">
+            <div className={cn(
+              "flex items-center",
+              direction === 'rtl' ? 'space-x-reverse space-x-2' : 'space-x-2'
+            )}>
               <ThemeToggle />
-              <div className="ml-1">
+              <div className={cn(direction === 'rtl' ? 'mr-1' : 'ml-1')}>
                 <LanguageSelector />
               </div>
               
               <Link to="/contact">
-                <Button className="bg-novella-red hover:bg-red-700 text-white ml-2">{t('common.contactUs')}</Button>
+                <Button className={cn(
+                  "bg-novella-red hover:bg-red-700 text-white",
+                  direction === 'rtl' ? 'mr-2' : 'ml-2'
+                )}>{t('common.contactUs')}</Button>
               </Link>
             </div>
           </div>
 
           {/* Mobile Navigation Controls */}
-          <div className="md:hidden flex items-center space-x-3">
+          <div className={cn(
+            "md:hidden flex items-center",
+            direction === 'rtl' ? 'space-x-reverse space-x-3' : 'space-x-3'
+          )}>
             <ThemeToggle />
             
             <button 
