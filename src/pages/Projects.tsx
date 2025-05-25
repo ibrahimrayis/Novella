@@ -157,7 +157,13 @@ const Projects = () => {
                   category={getCategoryTranslation(project.category)}
                   image={project.image}
                   slug={project.slug}
-                  isClickable={project.title !== "Luxury Apartments"}
+                  isClickable={![
+                    "Luxury Apartments",
+                    "Manufacturing Plant", 
+                    "Corporate Headquarters",
+                    "VENEZIA MEGA RESIDENCE",
+                    "Aviation and Infrastructure"
+                  ].includes(project.title)}
                 />
               ))}
             </div>
